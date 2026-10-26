@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lucenta V-Sculpt GlowWand™ | Lucenta Labs</title>
+  <meta name="description" content="Sculpt, contour, and restore your natural jawline definition. Clinically-proven beauty technology. Free US delivery.">
+  <meta name="theme-color" content="#141312">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Lucenta V-Sculpt GlowWand™ | Lucenta Labs">
+  <meta property="og:description" content="The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, 42°C soothing thermal warming, and multi-spectrum LED therapy into a medical-grade, lux...">
+  <meta property="og:image" content="imgaes/unnamed.webp_20261025152135.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       LUCENTA LABS — PRODUCT DETAIL PAGE (PDP) DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --color-bg: #FAF8F5;
+      --color-surface: #FFFFFF;
+      --color-surface-subtle: #F6F3EE;
+      --color-text-main: #141312;
+      --color-text-muted: #5F5B56;
+      --color-text-subtle: #8A8580;
+      --color-border: #E8E2DA;
+      --color-border-light: #F0ECE5;
+      --color-accent-rose: #C27E69;
+      --color-accent-rose-soft: #F7EFEA;
+      --color-accent-dark: #141312;
+      --color-accent-gold: #B88B4A;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Italiana', 'Playfair Display', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 2px 8px rgba(20, 19, 18, 0.04);
+      --shadow-md: 0 8px 24px rgba(20, 19, 18, 0.07);
+      --shadow-lg: 0 16px 40px rgba(20, 19, 18, 0.1);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+      --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-text-main); line-height: 1.6; }
+    img, video { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; }
+
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Top Announcement Bar */
+    .announcement-bar {
+      background: var(--color-accent-dark);
+      color: #FFFFFF;
+      padding: 0.65rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+    .announcement-bar span { opacity: 0.95; }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 82px;
+    }
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    @media (max-width: 860px) {
+      .header__nav { display: none; }
+      .header__inner { height: 72px; }
+    }
+    .header__link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text-main);
+      transition: color var(--transition);
+    }
+    .header__link:hover { color: var(--color-accent-rose); }
+
+    .header__brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header__logo {
+      height: 62px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .header__logo { height: 50px; }
+    }
+
+    .header__cart-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      transition: transform var(--transition);
+    }
+    .header__cart-btn:hover { transform: scale(1.05); }
+    .header__cart-count {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--color-accent-rose);
+      color: #FFFFFF;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      padding: 1.25rem 0 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--color-text-subtle);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumbs a:hover { color: var(--color-text-main); }
+    .breadcrumbs-sep { color: var(--color-border); }
+    .breadcrumbs-current { color: var(--color-text-main); font-weight: 600; }
+
+    /* ==========================================================================
+       PDP HERO SECTION (2-Column Showcase)
+       ========================================================================== */
+    .pdp-hero {
+      padding: 1.5rem 0 4rem;
+    }
+    .pdp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (min-width: 992px) {
+      .pdp-grid {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    /* Left: Media Gallery */
+    .pdp-gallery-wrap {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .pdp-gallery-wrap {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .pdp-thumbs {
+      display: flex;
+      gap: 0.65rem;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    @media (min-width: 768px) {
+      .pdp-thumbs {
+        flex-direction: column;
+        width: 84px;
+        flex-shrink: 0;
+        overflow-x: visible;
+      }
+    }
+    .pdp-thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 2px solid transparent;
+      background: var(--color-surface);
+      cursor: pointer;
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+    @media (min-width: 768px) {
+      .pdp-thumb { width: 84px; height: 84px; }
+    }
+    .pdp-thumb.is-active {
+      border-color: var(--color-accent-dark);
+      box-shadow: var(--shadow-sm);
+    }
+    .pdp-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .pdp-main-media {
+      position: relative;
+      flex: 1;
+      aspect-ratio: 1 / 1;
+      background: #ECE5DF;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+    }
+    .pdp-main-media img, .pdp-main-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+    .pdp-media-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-accent-rose);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Right: Sticky Purchase Column */
+    .pdp-purchase-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    @media (min-width: 992px) {
+      .pdp-purchase-col {
+        position: sticky;
+        top: 104px;
+      }
+    }
+
+    .pdp-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent-rose);
+    }
+
+    .pdp-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.65rem);
+      line-height: 1.15;
+      color: var(--color-text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .pdp-reviews-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+    .pdp-stars {
+      display: flex;
+      color: var(--color-accent-gold);
+    }
+    .pdp-rating-num { font-weight: 700; }
+    .pdp-reviews-link {
+      color: var(--color-text-muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Price Box */
+    .pdp-price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 0.75rem 0;
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .pdp-price-current {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .pdp-price-compare {
+      font-size: 1.15rem;
+      text-decoration: line-through;
+      color: var(--color-text-subtle);
+    }
+    .pdp-savings-pill {
+      background: var(--color-accent-rose-soft);
+      color: var(--color-accent-rose);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Live viewers urgency */
+    .pdp-live-urgency {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      color: #276749;
+      font-weight: 600;
+    }
+    .pulse-dot-green {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #276749;
+      box-shadow: 0 0 0 0 rgba(39, 103, 73, 0.6);
+      animation: pulseGreen 2s infinite;
+      display: inline-block;
+    }
+    @keyframes pulseGreen {
+      0% { box-shadow: 0 0 0 0 rgba(39, 103, 73, 0.6); }
+      70% { box-shadow: 0 0 0 6px rgba(39, 103, 73, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(39, 103, 73, 0); }
+    }
+
+    /* Short description */
+    .pdp-short-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Actions: Qty + Add to Bag */
+    .pdp-actions-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 0.5rem;
+    }
+    .pdp-qty-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .pdp-qty-picker {
+      display: inline-flex;
+      align-items: center;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      background: var(--color-surface);
+      height: 52px;
+      padding: 0 8px;
+    }
+    .pdp-qty-btn {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--color-text-main);
+      border-radius: 50%;
+    }
+    .pdp-qty-btn:hover { background: var(--color-surface-subtle); }
+    .pdp-qty-input {
+      width: 40px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      background: transparent;
+    }
+
+    .btn-add-bag {
+      flex: 1;
+      height: 52px;
+      background: var(--color-accent-dark);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 8px 20px rgba(20, 19, 18, 0.16);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .btn-add-bag:hover {
+      background: #2D2B29;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(20, 19, 18, 0.22);
+    }
+
+    .btn-express-checkout {
+      width: 100%;
+      height: 48px;
+      background: #5A31F4;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color var(--transition);
+    }
+    .btn-express-checkout:hover { background: #4825CB; }
+
+    /* Trust Guarantee Strip */
+    .pdp-trust-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      padding: 1rem 1.25rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+    .pdp-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pdp-trust-item svg { color: var(--color-accent-rose); flex-shrink: 0; }
+    .pdp-trust-item strong { color: var(--color-text-main); }
+
+    /* Micro-Accordions */
+    .pdp-accordions {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--color-border);
+      margin-top: 0.5rem;
+    }
+    .pdp-acc-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .pdp-acc-header {
+      width: 100%;
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--color-text-main);
+      text-align: left;
+    }
+    .pdp-acc-header svg {
+      transition: transform var(--transition);
+      color: var(--color-text-muted);
+    }
+    .pdp-acc-item.is-open .pdp-acc-header svg {
+      transform: rotate(180deg);
+    }
+    .pdp-acc-body {
+      display: none;
+      padding-bottom: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+    .pdp-acc-item.is-open .pdp-acc-body {
+      display: block;
+    }
+
+    .pdp-spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 0.825rem;
+    }
+    .pdp-spec-label { color: var(--color-text-subtle); }
+    .pdp-spec-val { font-weight: 600; color: var(--color-text-main); }
+
+    .pdp-box-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .pdp-box-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .pdp-box-item svg { color: var(--color-accent-rose); }
+
+    /* ==========================================================================
+       SCIENCE & EDITORIAL BREAKDOWN SECTION
+       ========================================================================== */
+    .pdp-science-section {
+      padding: 4.5rem 0;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .pdp-science-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+    .pdp-science-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 0.75rem;
+    }
+    .pdp-science-header p {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+    }
+
+    .pdp-features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .pdp-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .pdp-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .pdp-feature-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pdp-feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-accent-rose-soft);
+      color: var(--color-accent-rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pdp-feature-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .pdp-feature-card p {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       RELATED PRODUCTS
+       ========================================================================== */
+    .pdp-related-section {
+      padding: 4.5rem 0;
+    }
+    .pdp-related-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.25rem;
+    }
+    .pdp-related-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+    }
+
+    .pdp-related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 600px) {
+      .pdp-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .related-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition);
+    }
+    .related-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .related-card__img-wrap {
+      position: relative;
+      aspect-ratio: 16 / 11;
+      background: #ECE5DF;
+      overflow: hidden;
+    }
+    .related-card__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .related-card:hover .related-card__img-wrap img {
+      transform: scale(1.04);
+    }
+    .related-card__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--color-accent-rose);
+    }
+    .related-card__info {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .related-card__cat {
+      font-size: 0.72rem;
+      color: var(--color-text-subtle);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .related-card__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
+    .related-card__price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 0.25rem;
+    }
+    .related-card__price { font-weight: 800; font-size: 1.05rem; }
+    .related-card__compare { text-decoration: line-through; color: var(--color-text-subtle); font-size: 0.85rem; }
+
+    /* Footer */
+    .footer {
+      background: var(--color-accent-dark);
+      color: #FFFFFF;
+      padding: 4.5rem 0 2.5rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 1.3fr 0.9fr 0.8fr; }
+    }
+    .footer-logo {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .footer-desc {
+      font-size: 0.875rem;
+      color: #A5A19C;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+    .footer-h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-links a { font-size: 0.85rem; color: #A5A19C; transition: color var(--transition); }
+    .footer-links a:hover { color: #FFFFFF; }
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: #7D7873;
+    }
+    @media (min-width: 640px) {
+      .footer-bottom { flex-direction: row; justify-content: space-between; }
+    }
+
+    /* Cart Drawer */
+    .cart-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .cart-drawer-overlay.is-open { opacity: 1; pointer-events: auto; }
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 420px;
+      background: #FFFFFF;
+      z-index: 101;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+    }
+    .cart-drawer.is-open { transform: translateX(0); }
+    .cart-header {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-header h3 { font-size: 1.15rem; font-weight: 700; }
+    .cart-body { flex: 1; overflow-y: auto; padding: 1.25rem; }
+    .cart-footer { padding: 1.25rem; border-top: 1px solid var(--color-border); }
+    .cart-checkout-btn {
+      width: 100%;
+      height: 50px;
+      background: var(--color-accent-dark);
+      color: #FFFFFF;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>Free Tracked US Shipping on all orders &middot; 30-Day Risk-Free At-Home Trial</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <nav class="header__nav" aria-label="Main Navigation">
+          <a href="index.html#products" class="header__link">All Devices</a>
+          <a href="index.html#ritual" class="header__link">The Ritual</a>
+          <a href="index.html#reviews" class="header__link">Client Results</a>
+          <a href="index.html#faq" class="header__link">FAQ</a>
+        </nav>
+
+        <a href="index.html" class="header__brand" aria-label="Lucenta Labs Home">
+          <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo">
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="index.html#products" class="header__link" style="font-weight: 600;">Shop</a>
+          <button class="header__cart-btn" onclick="openCartDrawer()" aria-label="Open Shopping Bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="header__cart-count" id="cart-counter-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumbs-sep">/</span>
+      <a href="index.html#products">Devices</a>
+      <span class="breadcrumbs-sep">/</span>
+      <span class="breadcrumbs-current">Lucenta V-Sculpt GlowWand™</span>
+    </nav>
+  </div>
+
+  <!-- PDP Hero: Interactive Gallery & Sticky Purchase Form -->
+  <section class="pdp-hero">
+    <div class="container">
+      <div class="pdp-grid">
+
+        <!-- Left: Interactive Gallery -->
+        <div class="pdp-gallery-wrap">
+          <div class="pdp-thumbs">
+            
+    <button class="pdp-thumb is-active" onclick="switchPdpMedia(0, 'imgaes/unnamed.webp_20261025152135.jpg')" aria-label="View image 1">
+      <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand on blush pink silk">
+    </button>
+  
+    <button class="pdp-thumb " onclick="switchPdpMedia(1, 'imgaes/Woman_using_facial_massager_device_20261025142138.jpg')" aria-label="View image 2">
+      <img src="imgaes/Woman_using_facial_massager_device_20261025142138.jpg" alt="Woman applying GlowWand along jawline contour">
+    </button>
+  
+    <button class="pdp-thumb " onclick="switchPdpMedia(2, 'imgaes/Skincare_device_feature_diagram_20261025133406.jpg')" aria-label="View image 3">
+      <img src="imgaes/Skincare_device_feature_diagram_20261025133406.jpg" alt="Lucenta V-Sculpt technology engineering diagram">
+    </button>
+  
+    <button class="pdp-thumb " onclick="switchPdpMedia(3, 'imgaes/Woman_holding_skincare_device_20261025143628.jpg')" aria-label="View image 4">
+      <img src="imgaes/Woman_holding_skincare_device_20261025143628.jpg" alt="Lucenta V-Sculpt device ergonomic grip">
+    </button>
+  
+          </div>
+          <div class="pdp-main-media" id="pdp-main-media-box">
+            <span class="pdp-media-badge">Save 43%</span>
+            <img id="pdp-main-img" src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand on blush pink silk">
+          </div>
+        </div>
+
+        <!-- Right: Sticky Purchase Column -->
+        <div class="pdp-purchase-col">
+          <span class="pdp-eyebrow">Flagship Hero Device • EMS + Thermal + Photonic</span>
+          <h1 class="pdp-title">Lucenta V-Sculpt GlowWand™</h1>
+
+          <!-- Reviews Row -->
+          <div class="pdp-reviews-row">
+            <div class="pdp-stars">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <span class="pdp-rating-num">4.9</span>
+            <a href="#reviews" class="pdp-reviews-link">(2,840+ verified sculptors)</a>
+          </div>
+
+          <!-- Price Row -->
+          <div class="pdp-price-box">
+            <span class="pdp-price-current">$39.99 USD</span>
+            <span class="pdp-price-compare">$69.99 USD</span>
+            <span class="pdp-savings-pill">Save 43%</span>
+          </div>
+
+          <!-- Live Urgency Trigger -->
+          <div class="pdp-live-urgency">
+            <span class="pulse-dot-green"></span>
+            <span>28 people viewing right now &middot; In stock, ships today</span>
+          </div>
+
+          <!-- Short Description -->
+          <p class="pdp-short-desc">The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, 42°C soothing thermal warming, and multi-spectrum LED therapy into a medical-grade, luxury at-home skincare device. Engineered specifically to stimulate deep facial muscles, drain lymphatic fluids, and visibly sharpen cheekbone and jawline contours in just 5 minutes a day.</p>
+
+          <!-- Purchase Actions: Qty + Add to Bag + Buy Now -->
+          <div class="pdp-actions-wrap">
+            <div class="pdp-qty-row">
+              <div class="pdp-qty-picker">
+                <button class="pdp-qty-btn" onclick="updatePdpQty(-1)" aria-label="Decrease quantity">&minus;</button>
+                <input type="text" id="pdp-qty-input" class="pdp-qty-input" value="1" readonly>
+                <button class="pdp-qty-btn" onclick="updatePdpQty(1)" aria-label="Increase quantity">&plus;</button>
+              </div>
+
+              <button class="btn-add-bag" onclick="addCurrentProductToBag('lucenta-v-sculpt-glowwand')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+
+            <button class="btn-express-checkout" onclick="buyCurrentProductNow('50857591865483')">
+              <span>Instant Checkout with Shopify</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <!-- Trust Guarantee Strip -->
+          <div class="pdp-trust-strip">
+            <div class="pdp-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Free Tracked US Shipping</strong> &mdash; Express 3&ndash;7 day delivery.</span>
+            </div>
+            <div class="pdp-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>30-Day Risk-Free Trial</strong> &mdash; Visible contour or 100% refund.</span>
+            </div>
+            <div class="pdp-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Dermatologist Tested</strong> &mdash; Safe for all skin types, non-invasive.</span>
+            </div>
+          </div>
+
+          <!-- Micro-Accordions (Overview, Routine, In the Box, Shipping) -->
+          <div class="pdp-accordions">
+            <div class="pdp-acc-item is-open">
+              <button class="pdp-acc-header" onclick="toggleAcc(this)">
+                <span>The Technology &amp; Science</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pdp-acc-body">
+                Sculpt, contour, and restore your natural jawline definition. Engineered with clinical parameters designed to lift the SMAS muscle layer, accelerate cellular ATP synthesis, and facilitate drainage of puffy interstitial fluids.
+              </div>
+            </div>
+
+            <div class="pdp-acc-item">
+              <button class="pdp-acc-header" onclick="toggleAcc(this)">
+                <span>Specifications &amp; Battery</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pdp-acc-body">
+                
+    <div class="pdp-spec-row">
+      <span class="pdp-spec-label">Technology</span>
+      <span class="pdp-spec-val">EMS, 42°C Thermal Warming, Multi-Wave LED</span>
+    </div>
+  
+    <div class="pdp-spec-row">
+      <span class="pdp-spec-label">Battery Life</span>
+      <span class="pdp-spec-val">Up to 3 weeks on a single USB-C charge</span>
+    </div>
+  
+    <div class="pdp-spec-row">
+      <span class="pdp-spec-label">Session Time</span>
+      <span class="pdp-spec-val">5 minutes per targeted zone</span>
+    </div>
+  
+    <div class="pdp-spec-row">
+      <span class="pdp-spec-label">Materials</span>
+      <span class="pdp-spec-val">Medical-Grade Zinc Alloy, Hypoallergenic Probe</span>
+    </div>
+  
+    <div class="pdp-spec-row">
+      <span class="pdp-spec-label">Warranty</span>
+      <span class="pdp-spec-val">1-Year Full Replacement Guarantee</span>
+    </div>
+  
+              </div>
+            </div>
+
+            <div class="pdp-acc-item">
+              <button class="pdp-acc-header" onclick="toggleAcc(this)">
+                <span>What's In The Box</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pdp-acc-body">
+                <ul class="pdp-box-list">
+                  
+    <li class="pdp-box-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>1x Lucenta V-Sculpt GlowWand™ Device</span>
+    </li>
+  
+    <li class="pdp-box-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>1x Magnetic USB-C Fast-Charging Cable</span>
+    </li>
+  
+    <li class="pdp-box-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>1x Velvet Protective Travel Pouch</span>
+    </li>
+  
+    <li class="pdp-box-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>1x Step-by-Step Sculpting Guide & Ritual Card</span>
+    </li>
+  
+    <li class="pdp-box-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>1x Certificate of Authenticity & 1-Year Warranty</span>
+    </li>
+  
+                </ul>
+              </div>
+            </div>
+
+            <div class="pdp-acc-item">
+              <button class="pdp-acc-header" onclick="toggleAcc(this)">
+                <span>30-Day Guarantee &amp; Shipping</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pdp-acc-body">
+                Every Lucenta Labs device comes with our 30-Day Risk-Free Trial. If you do not see visibly lifted contours and healthier skin within 30 days of consistent use, return it for a prompt, courteous 100% refund. Includes free US tracked shipping.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Science Deep-Dive Section -->
+  <section class="pdp-science-section">
+    <div class="container">
+      <div class="pdp-science-header">
+        <span class="pdp-eyebrow">CLINICALLY-INSPIRED ENGINEERING</span>
+        <h2>High-Tech Precision Meets Luxury Ritual</h2>
+        <p>Engineered without compromise to deliver non-invasive lifting that rivals in-office spa treatments from home.</p>
+      </div>
+
+      <div class="pdp-features-grid">
+        
+    <div class="pdp-feature-card">
+      <div class="pdp-feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <h4>Targeted EMS Microcurrent</h4>
+        <p>Sends gentle, non-invasive electrical waves through facial tissue to contract and tone deeper facial muscles, creating an immediate lifting effect.</p>
+      </div>
+    </div>
+  
+    <div class="pdp-feature-card">
+      <div class="pdp-feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <h4>42°C Thermal Warming</h4>
+        <p>Gently warms skin surface to dilate capillaries, improve blood circulation, and increase hyaluronic and collagen serum absorption by up to 300%.</p>
+      </div>
+    </div>
+  
+    <div class="pdp-feature-card">
+      <div class="pdp-feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <h4>Multi-Spectrum Photonic LED</h4>
+        <p>Red light (630nm) stimulates natural collagen synthesis; Blue light (465nm) purifies blemish-causing bacteria; Amber light revitalizes dull texture.</p>
+      </div>
+    </div>
+  
+    <div class="pdp-feature-card">
+      <div class="pdp-feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <h4>Contour-Lock Ergonomics</h4>
+        <p>Engineered with a 45-degree angle probe that naturally hugs the mandible bone, zygomatic cheek curves, and delicate cervical neck lines.</p>
+      </div>
+    </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products / Cross-Sell (As in references) -->
+  <section class="pdp-related-section">
+    <div class="container">
+      <div class="pdp-related-header">
+        <div>
+          <span class="pdp-eyebrow">COMPLETE YOUR RITUAL</span>
+          <h3>Frequently Paired Together</h3>
+        </div>
+        <a href="index.html#products" style="font-weight: 600; text-decoration: underline; font-size: 0.85rem;">View Full Collection &rarr;</a>
+      </div>
+
+      <div class="pdp-related-grid">
+        
+      <a href="lucenta-neck-face-led-sculptor.html" class="related-card">
+        <div class="related-card__img-wrap">
+          <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Lucenta Neck & Face LED Sculptor">
+          <span class="related-card__badge">Save 45%</span>
+        </div>
+        <div class="related-card__info">
+          <span class="related-card__cat">LED Light Therapy & Thermal Massagers</span>
+          <h4 class="related-card__title">Lucenta Neck & Face LED Sculptor</h4>
+          <div class="related-card__price-row">
+            <span class="related-card__price">$32.99 USD</span>
+            <span class="related-card__compare">$59.99</span>
+          </div>
+        </div>
+      </a>
+    
+      <a href="ultimate-v-contour-system.html" class="related-card">
+        <div class="related-card__img-wrap">
+          <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg" alt="Ultimate V-Contour System (Dual-Device Set)">
+          <span class="related-card__badge">Save $50 (45%)</span>
+        </div>
+        <div class="related-card__info">
+          <span class="related-card__cat">Complete Skincare Ritual Bundles</span>
+          <h4 class="related-card__title">Ultimate V-Contour System (Dual-Device Set)</h4>
+          <div class="related-card__price-row">
+            <span class="related-card__price">$59.99 USD</span>
+            <span class="related-card__compare">$109.99</span>
+          </div>
+        </div>
+      </a>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Obsidian Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="logo-footer-transparent.png" alt="Lucenta Labs" class="footer-logo">
+          <p class="footer-desc">Lucenta Labs redefines beauty technology with clinical microcurrent and photonic therapy designed for luxury minimalism and non-invasive facial sculpting.</p>
+        </div>
+        <div>
+          <h4 class="footer-h4">Collection</h4>
+          <ul class="footer-links">
+            <li><a href="lucenta-v-sculpt-glowwand.html">Lucenta V-Sculpt GlowWand™</a></li>
+            <li><a href="lucenta-neck-face-led-sculptor.html">Neck &amp; Face LED Sculptor</a></li>
+            <li><a href="ultimate-v-contour-system.html">Ultimate V-Contour System</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-h4">Guarantees</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq">30-Day Risk-Free Trial</a></li>
+            <li><a href="index.html#faq">Tracked Express US Delivery</a></li>
+            <li><a href="index.html#faq">1-Year Care™ Warranty</a></li>
+            <li><a href="index.html#faq">Dermatologist Approved</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lucenta Labs. All rights reserved.</p>
+        <p>Designed for Luxury Minimalism &middot; High-Tech Beauty</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3>Your Bag (<span id="cart-drawer-count">0</span>)</h3>
+      <button onclick="closeCartDrawer()" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-items-container">
+      <!-- Dynamic cart items -->
+    </div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 700;">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00 USD</span>
+      </div>
+      <button class="cart-checkout-btn" onclick="proceedToCheckout()">
+        <span>Proceed to Checkout</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <script>
+    // Quantity logic
+    let currentQty = 1;
+    function updatePdpQty(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      document.getElementById('pdp-qty-input').value = currentQty;
+    }
+
+    // Media Switcher
+    function switchPdpMedia(idx, src) {
+      document.querySelectorAll('.pdp-thumb').forEach((t, i) => {
+        t.classList.toggle('is-active', i === idx);
+      });
+      const img = document.getElementById('pdp-main-img');
+      if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+          img.src = src;
+          img.style.opacity = '1';
+        }, 150);
+      }
+    }
+
+    // Accordions
+    function toggleAcc(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('is-open');
+    }
+
+    // Cart Management
+    let cart = JSON.parse(localStorage.getItem('lucenta_cart') || '[]');
+
+    function saveCart() {
+      localStorage.setItem('lucenta_cart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function addCurrentProductToBag(key) {
+      const pData = {"lucenta-v-sculpt-glowwand":{"slug":"lucenta-v-sculpt-glowwand.html","title":"Lucenta V-Sculpt GlowWand™","eyebrow":"Flagship Hero Device • EMS + Thermal + Photonic","rating":"4.9","reviewsCount":"2,840","price":39.99,"comparePrice":69.99,"savings":"Save 43%","variantId":"50857591865483","viewersCount":"28","category":"Facial Sculpting & Microcurrent","tagline":"Sculpt, contour, and restore your natural jawline definition.","description":"The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, 42°C soothing thermal warming, and multi-spectrum LED therapy into a medical-grade, luxury at-home skincare device. Engineered specifically to stimulate deep facial muscles, drain lymphatic fluids, and visibly sharpen cheekbone and jawline contours in just 5 minutes a day.","gallery":[{"src":"imgaes/unnamed.webp_20261025152135.jpg","alt":"Lucenta V-Sculpt GlowWand on blush pink silk"},{"src":"imgaes/Woman_using_facial_massager_device_20261025142138.jpg","alt":"Woman applying GlowWand along jawline contour"},{"src":"imgaes/Skincare_device_feature_diagram_20261025133406.jpg","alt":"Lucenta V-Sculpt technology engineering diagram"},{"src":"imgaes/Woman_holding_skincare_device_20261025143628.jpg","alt":"Lucenta V-Sculpt device ergonomic grip"}],"videoSrc":"imgaes/Woman_massaging_cheek_with_device_20261025145106.mp4","features":[{"title":"Targeted EMS Microcurrent","desc":"Sends gentle, non-invasive electrical waves through facial tissue to contract and tone deeper facial muscles, creating an immediate lifting effect."},{"title":"42°C Thermal Warming","desc":"Gently warms skin surface to dilate capillaries, improve blood circulation, and increase hyaluronic and collagen serum absorption by up to 300%."},{"title":"Multi-Spectrum Photonic LED","desc":"Red light (630nm) stimulates natural collagen synthesis; Blue light (465nm) purifies blemish-causing bacteria; Amber light revitalizes dull texture."},{"title":"Contour-Lock Ergonomics","desc":"Engineered with a 45-degree angle probe that naturally hugs the mandible bone, zygomatic cheek curves, and delicate cervical neck lines."}],"specs":[{"label":"Technology","val":"EMS, 42°C Thermal Warming, Multi-Wave LED"},{"label":"Battery Life","val":"Up to 3 weeks on a single USB-C charge"},{"label":"Session Time","val":"5 minutes per targeted zone"},{"label":"Materials","val":"Medical-Grade Zinc Alloy, Hypoallergenic Probe"},{"label":"Warranty","val":"1-Year Full Replacement Guarantee"}],"boxIncludes":["1x Lucenta V-Sculpt GlowWand™ Device","1x Magnetic USB-C Fast-Charging Cable","1x Velvet Protective Travel Pouch","1x Step-by-Step Sculpting Guide & Ritual Card","1x Certificate of Authenticity & 1-Year Warranty"],"related":["lucenta-neck-face-led-sculptor","ultimate-v-contour-system"]},"lucenta-neck-face-led-sculptor":{"slug":"lucenta-neck-face-led-sculptor.html","title":"Lucenta Neck & Face LED Sculptor","eyebrow":"Photonic LED Therapy • Sonic Vibration Massage","rating":"4.8","reviewsCount":"1,920","price":32.99,"comparePrice":59.99,"savings":"Save 45%","variantId":"50857491398795","viewersCount":"19","category":"LED Light Therapy & Thermal Massagers","tagline":"Radiance revived. Smooth horizontal neck lines and restore elasticity.","description":"An ergonomic curvature device designed specifically for the delicate neck, décolletage, and lower facial contours. Featuring triple-mode photonic light therapy combined with high-frequency sonic vibrations and thermal warmth to smooth horizontal neck rings (\"tech neck\") and tighten sagging skin.","gallery":[{"src":"imgaes/Woman_applying_beauty_device_to_20261025141945.jpg","alt":"Woman applying LED Sculptor along cervical neck line"},{"src":"imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg","alt":"Lucenta Neck and Face LED Sculptor studio profile"},{"src":"imgaes/Woman_using_skincare_device_20261025133047.jpg","alt":"Facial upward contouring stroke"},{"src":"imgaes/Handheld_beauty_device_on_satin_20261025141203.jpg","alt":"Ergonomic dolphin-tail probe contour"}],"videoSrc":null,"features":[{"title":"Triple-Wave LED Therapy","desc":"Red light for collagen & firming; Blue light for calming inflammation and clarifying; Green light for lymphatic balance and smoothing texture."},{"title":"High-Frequency Sonic Vibration","desc":"11,000 vibrations per minute gently awaken facial tissue, promoting micro-circulation and lymphatic drainage."},{"title":"Dolphin-Tail Curvature","desc":"Anatomically molded to hug the collarbones, neck vertebrae, and jawline with 360-degree continuous glide."},{"title":"Thermal Comfort Mode","desc":"Mild therapeutic heat releases trapped neck and shoulder tension while accelerating topical serum delivery."}],"specs":[{"label":"Light Modes","val":"Red (630nm), Blue (465nm), Green (525nm)"},{"label":"Vibration Frequency","val":"11,000 RPM Acoustic Micro-Vibrations"},{"label":"Charging","val":"USB-C Rechargeable Lithium-Ion"},{"label":"Weight","val":"98g (Ultra-lightweight travel design)"},{"label":"Warranty","val":"1-Year Full Replacement Guarantee"}],"boxIncludes":["1x Lucenta Neck & Face LED Sculptor","1x USB-C Quick-Charge Cable","1x Microfiber Polishing Cloth","1x Cervical Massage Diagram Card","1x 1-Year Manufacturer Warranty"],"related":["lucenta-v-sculpt-glowwand","ultimate-v-contour-system"]},"ultimate-v-contour-system":{"slug":"ultimate-v-contour-system.html","title":"Ultimate V-Contour System (Dual-Device Set)","eyebrow":"Complete Clinical Ritual • GlowWand + Neck Sculptor Bundle","rating":"5.0","reviewsCount":"870","price":59.99,"comparePrice":109.99,"savings":"Save $50 (45%)","variantId":"50857587114123","viewersCount":"41","category":"Complete Skincare Ritual Bundles","tagline":"The complete at-home sculpting & radiance routine. Save $50.","description":"The pinnacle of the Lucenta Labs sculpting philosophy. Pairs the flagship Lucenta V-Sculpt GlowWand with the targeted Neck & Face LED Sculptor. Target deep facial muscles and jawline definition while simultaneously rejuvenating the neck and décolletage for comprehensive, age-defying results.","gallery":[{"src":"imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg","alt":"Both Lucenta sculpting devices together on luxury silk"},{"src":"imgaes/unnamed.webp_20261025152135.jpg","alt":"Lucenta V-Sculpt GlowWand"},{"src":"imgaes/Woman_applying_beauty_device_to_20261025141945.jpg","alt":"Neck sculptor in application"},{"src":"imgaes/Handheld_beauty_device_on_satin_20261025141203.jpg","alt":"Complete dual-device collection"}],"videoSrc":"imgaes/Woman_massaging_cheek_with_device_20261025145106.mp4","features":[{"title":"Full-Spectrum At-Home Clinic","desc":"Combines microcurrent muscle stimulation, 3-wavelength LED phototherapy, thermal warming, and high-frequency sonic drainage."},{"title":"Dual-Zone Synergy","desc":"Use the GlowWand for cheekbones, brow lifting, and jaw contouring; use the Sculptor for full neck and décolletage firming."},{"title":"Instant $50 Bundle Savings","desc":"Receive both full-size medical-grade devices and luxury travel packaging at our guaranteed lowest bundle price."},{"title":"Complimentary Priority US Delivery","desc":"Includes expedited tracked delivery directly from our US warehouse with priority handling."}],"specs":[{"label":"Devices Included","val":"1x V-Sculpt GlowWand + 1x Neck & Face LED Sculptor"},{"label":"Target Areas","val":"Jawline, Cheeks, Under-Eye, Forehead, Neck, Décolleté"},{"label":"Charging","val":"Individual USB-C Fast-Charging for both units"},{"label":"Suitability","val":"All skin types, non-invasive, dermatologist tested"},{"label":"Guarantee","val":"30-Day In-Home Trial + 1-Year Full Warranty"}],"boxIncludes":["1x Lucenta V-Sculpt GlowWand™ Device","1x Lucenta Neck & Face LED Sculptor","2x USB-C Fast-Charging Cables","2x Velvet Protective Cases","1x Master 10-Minute Clinical Protocol Booklet","1x 1-Year Dual-Device Warranty Registration"],"related":["lucenta-v-sculpt-glowwand","lucenta-neck-face-led-sculptor"]}};
+      const item = pData[key];
+      if (!item) return;
+
+      const existing = cart.find(i => i.handle === key);
+      if (existing) {
+        existing.qty += currentQty;
+      } else {
+        cart.push({
+          handle: key,
+          title: item.title,
+          price: item.price,
+          image: item.gallery[0].src,
+          variantId: item.variantId,
+          qty: currentQty
+        });
+      }
+      saveCart();
+      openCartDrawer();
+    }
+
+    function buyCurrentProductNow(variantId) {
+      const storeDomain = 'vqxruv-9t.myshopify.com';
+      window.location.href = 'https://' + storeDomain + '/cart/' + variantId + ':' + currentQty;
+    }
+
+    function openCartDrawer() {
+      document.getElementById('cart-drawer').classList.add('is-open');
+      document.getElementById('cart-drawer-overlay').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCartDrawer() {
+      document.getElementById('cart-drawer').classList.remove('is-open');
+      document.getElementById('cart-drawer-overlay').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((acc, i) => acc + i.qty, 0);
+      const total = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+
+      document.getElementById('cart-counter-badge').textContent = count;
+      document.getElementById('cart-drawer-count').textContent = count;
+      document.getElementById('cart-subtotal').textContent = '$' + total.toFixed(2) + ' USD';
+
+      const container = document.getElementById('cart-items-container');
+      if (cart.length === 0) {
+        container.innerHTML = '<div style="text-align: center; padding: 3rem 1rem; color: #8A8580;"><p>Your bag is empty.</p><a href="index.html#products" style="display: inline-block; margin-top: 1rem; font-weight: 700; text-decoration: underline;">Explore Devices &rarr;</a></div>';
+      } else {
+        container.innerHTML = cart.map(i => `
+          <div style="display: flex; gap: 12px; margin-bottom: 1.25rem; align-items: center;">
+            <img src="${i.image}" alt="${i.title}" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid #E8E2DA;">
+            <div style="flex: 1;">
+              <h5 style="font-size: 0.875rem; font-weight: 700;">${i.title}</h5>
+              <p style="font-size: 0.8125rem; color: #5F5B56;">$${i.price.toFixed(2)} USD &times; ${i.qty}</p>
+            </div>
+            <button onclick="removeCartItem('${i.handle}')" style="font-size: 0.8rem; color: #8A8580; text-decoration: underline;">Remove</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    function removeCartItem(handle) {
+      cart = cart.filter(i => i.handle !== handle);
+      saveCart();
+    }
+
+    function proceedToCheckout() {
+      if (cart.length === 0) return;
+      const storeDomain = 'vqxruv-9t.myshopify.com';
+      const permalink = cart.filter(i => i.variantId).map(i => i.variantId + ':' + i.qty).join(',');
+      window.location.href = 'https://' + storeDomain + '/cart/' + permalink;
+    }
+
+    // Init UI
+    updateCartUI();
+  </script>
+</body>
+</html>
