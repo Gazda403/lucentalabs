@@ -432,6 +432,108 @@
       z-index: 2;
     }
 
+    .hero-purchase-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Mobile-Only Flow: 1. Headline -> 2. Video -> 3. Sleek Compact CTA -> 4. Paragraph */
+    @media (max-width: 991px) {
+      .hero-section {
+        padding: 1.5rem 0 3rem;
+      }
+
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .hero-content {
+        display: contents;
+      }
+
+      /* 1. Headline & Name */
+      .hero-header-block {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .hero-header-block .hero-title {
+        font-size: clamp(2.1rem, 7vw, 2.75rem);
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      /* 2. Video in Motion */
+      .hero-media-card {
+        order: 2;
+        margin: 0.25rem 0;
+      }
+
+      /* 3. Sleek Compact Call To Action & Price */
+      .hero-purchase-block {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        background: #FFFFFF;
+        border: 1px solid var(--color-border);
+        border-radius: 18px;
+        padding: 1rem 1.15rem;
+        box-shadow: 0 6px 20px rgba(20, 19, 18, 0.05);
+      }
+
+      .hero-purchase-block .hero-pricing {
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+
+      .hero-purchase-block .hero-pricing__current {
+        font-size: 1.55rem;
+        font-weight: 800;
+      }
+
+      .hero-purchase-block .hero-actions {
+        max-width: 100%;
+        margin: 0;
+      }
+
+      .hero-purchase-block .btn-primary {
+        padding: 0.95rem 1.4rem;
+        font-size: 0.925rem;
+      }
+
+      .hero-purchase-block .btn-secondary {
+        display: none;
+      }
+
+      .hero-purchase-block .hero-guarantee-pills {
+        justify-content: center;
+        gap: 0.6rem;
+        font-size: 0.72rem;
+        padding-top: 2px;
+      }
+
+      /* 4. Paragraph Description */
+      .hero-tagline {
+        order: 4;
+        font-size: 0.925rem;
+        line-height: 1.6;
+        color: var(--color-text-muted);
+        margin-top: 0.25rem;
+      }
+    }
+
     .hero-rating {
       display: inline-flex;
       align-items: center;
@@ -2446,56 +2548,60 @@
         
         <!-- Left: Hero Copy & Value Drivers -->
         <div class="hero-content">
-          <div class="hero-rating">
-            <div class="hero-stars" aria-label="5 stars rating">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <div class="hero-header-block">
+            <div class="hero-rating">
+              <div class="hero-stars" aria-label="5 stars rating">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <span>4.9/5 from 2,840+ verified sculptors</span>
             </div>
-            <span>4.9/5 from 2,840+ verified sculptors</span>
-          </div>
 
-          <h1 class="hero-title editorial-title">
-            Sculpt, contour, <br><span class="serif-italic">&amp; lift</span> from home.
-          </h1>
+            <h1 class="hero-title editorial-title">
+              Sculpt, contour, <br><span class="serif-italic">&amp; lift</span> from home.
+            </h1>
+          </div>
 
           <p class="hero-tagline">
             The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, thermal warming, and multi-spectrum LED therapy to stimulate facial muscles, promote lymphatic drainage, and sharpen your natural jawline structure.
           </p>
 
-          <!-- Price & Discount Preview -->
-          <div class="hero-pricing">
-            <span class="hero-pricing__current">$39.99 USD</span>
-            <span class="hero-pricing__compare">$69.99 USD</span>
-            <span class="hero-pricing__badge">Save 43%</span>
-          </div>
-
-          <!-- Hero CTAs -->
-          <div class="hero-actions">
-            <button class="btn-primary" onclick="quickAddToCart('lucenta-v-sculpt-glowwand')">
-              <span>Claim Your V-Sculpt GlowWand</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <a href="#products" class="btn-secondary">
-              <span>View All Devices</span>
-            </a>
-          </div>
-
-          <!-- Guarantee badges -->
-          <div class="hero-guarantee-pills">
-            <div class="hero-guarantee-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>30-Day Money-Back</span>
+          <div class="hero-purchase-block">
+            <!-- Price & Discount Preview -->
+            <div class="hero-pricing">
+              <span class="hero-pricing__current">$39.99 USD</span>
+              <span class="hero-pricing__compare">$69.99 USD</span>
+              <span class="hero-pricing__badge">Save 43%</span>
             </div>
-            <div class="hero-guarantee-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Free Tracked US Shipping</span>
+
+            <!-- Hero CTAs -->
+            <div class="hero-actions">
+              <button class="btn-primary" onclick="quickAddToCart('lucenta-v-sculpt-glowwand')">
+                <span>Claim Your V-Sculpt GlowWand</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <a href="#products" class="btn-secondary">
+                <span>View All Devices</span>
+              </a>
             </div>
-            <div class="hero-guarantee-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Dermatologist Tested</span>
+
+            <!-- Guarantee badges -->
+            <div class="hero-guarantee-pills">
+              <div class="hero-guarantee-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>30-Day Money-Back</span>
+              </div>
+              <div class="hero-guarantee-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Free Tracked US Shipping</span>
+              </div>
+              <div class="hero-guarantee-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Dermatologist Tested</span>
+              </div>
             </div>
           </div>
         </div>
