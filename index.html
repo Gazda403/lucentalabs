@@ -220,7 +220,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 78px;
+      height: 86px;
     }
 
     /* Desktop Navigation */
@@ -266,14 +266,31 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 52px;
+      height: 72px;
     }
 
     .header__logo {
-      height: 42px;
+      height: 66px;
       width: auto;
       object-fit: contain;
       display: block;
+      transition: transform var(--transition-fast);
+    }
+
+    .header__logo:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .header__inner {
+        height: 74px;
+      }
+      .header__brand {
+        height: 60px;
+      }
+      .header__logo {
+        height: 54px;
+      }
     }
 
     /* Header Actions */
@@ -1755,11 +1772,12 @@
     .footer-logo-wrap {
       display: flex;
       align-items: center;
-      height: 48px;
+      height: 78px;
+      margin-bottom: 0.25rem;
     }
 
     .footer-logo {
-      height: 40px;
+      height: 72px;
       width: auto;
       object-fit: contain;
       display: block;
