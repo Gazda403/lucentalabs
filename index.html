@@ -1775,6 +1775,196 @@
     }
 
     /* ==========================================================================
+       POLICIES & LEGAL TRANSPARENCY SECTION
+       ========================================================================== */
+    .policies-section {
+      padding: 5.5rem 0;
+      background: var(--color-bg-secondary);
+      position: relative;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .policy-tabs-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-tab-btn {
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 1.5px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: all 0.25s var(--ease-luxury);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .policy-tab-btn:hover {
+      border-color: var(--color-accent-dark);
+      color: var(--color-text-main);
+      transform: translateY(-2px);
+    }
+
+    .policy-tab-btn.is-active {
+      background: var(--color-accent-dark);
+      color: #FFFFFF;
+      border-color: var(--color-accent-dark);
+      box-shadow: 0 4px 14px rgba(20, 19, 18, 0.15);
+    }
+
+    .policy-tab-panel {
+      display: none;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      animation: policyFadeIn 0.35s var(--ease-luxury) forwards;
+    }
+
+    @media (min-width: 768px) {
+      .policy-tab-panel {
+        padding: 3.5rem 3rem;
+      }
+    }
+
+    .policy-tab-panel.is-active {
+      display: block;
+    }
+
+    @keyframes policyFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .policy-header {
+      border-bottom: 1px solid var(--color-border-light);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .policy-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent-rose);
+    }
+
+    .policy-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      line-height: 1.2;
+      color: var(--color-text-main);
+    }
+
+    .policy-lead {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    .policy-body {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .policy-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .policy-block-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .policy-block-title .policy-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--color-accent-rose-soft);
+      color: var(--color-accent-rose);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .policy-block-text {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .policy-highlight-box {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-left: 3.5px solid var(--color-accent-rose);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      margin-top: 0.5rem;
+      font-size: 0.925rem;
+      line-height: 1.6;
+      color: var(--color-text-main);
+    }
+
+    .policy-contact-card {
+      background: linear-gradient(135deg, #FAF8F5 0%, #F3EFE9 100%);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .policy-contact-card {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .policy-contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .policy-contact-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-subtle);
+      font-weight: 700;
+    }
+    .policy-contact-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+    }
+    .policy-contact-value a {
+      color: var(--color-accent-rose);
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
        FOOTER
        ========================================================================== */
     .footer {
@@ -1793,8 +1983,8 @@
 
     @media (min-width: 768px) {
       .footer-grid {
-        grid-template-columns: 1.3fr 0.9fr 0.8fr;
-        gap: 4rem;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+        gap: 3rem;
       }
     }
 
@@ -4049,6 +4239,208 @@
   </section>
 
   <!-- ==========================================================================
+       POLICIES & LEGAL TRANSPARENCY SECTION
+       ========================================================================== -->
+  <section class="policies-section" id="policies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Transparency &amp; Assurance</span>
+        <h2 class="section-title editorial-title">Customer Care &amp; Store Policies</h2>
+        <p class="section-description">
+          Review our shipping terms, 30-day money-back guarantee, privacy standards, and direct support contact info below.
+        </p>
+      </div>
+
+      <!-- Policy Navigation Tabs -->
+      <div class="policy-tabs-nav" role="tablist" aria-label="Store Policies">
+        <button class="policy-tab-btn is-active" data-policy="shipping-policy" onclick="switchPolicyTab('shipping-policy', false)" role="tab" aria-selected="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>Shipping Policy</span>
+        </button>
+        <button class="policy-tab-btn" data-policy="refund-policy" onclick="switchPolicyTab('refund-policy', false)" role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          <span>Refund &amp; Return Policy</span>
+        </button>
+        <button class="policy-tab-btn" data-policy="terms-policy" onclick="switchPolicyTab('terms-policy', false)" role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Terms of Service</span>
+        </button>
+        <button class="policy-tab-btn" data-policy="privacy-policy" onclick="switchPolicyTab('privacy-policy', false)" role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Privacy Policy</span>
+        </button>
+        <button class="policy-tab-btn" data-policy="contact-info" onclick="switchPolicyTab('contact-info', false)" role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Contact Information</span>
+        </button>
+      </div>
+
+      <!-- Panel 1: Shipping Policy -->
+      <div class="policy-tab-panel is-active" id="shipping-policy" role="tabpanel">
+        <div class="policy-header">
+          <span class="policy-badge">Free US Tracked Delivery</span>
+          <h3 class="policy-title">Shipping Policy</h3>
+          <p class="policy-lead">At Lucenta Labs, we are committed to delivering your skincare technology quickly and securely. Please review our shipping terms and delivery timelines below.</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">1</span> Order Processing Time</h4>
+            <p class="policy-block-text">All orders are processed within 1 to 2 business days (excluding weekends and major holidays) after receiving your order confirmation email. Once your order has been dispatched, you will receive a shipping confirmation email containing your tracking number and carrier details.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">2</span> Shipping Rates &amp; Delivery Estimates (United States)</h4>
+            <p class="policy-block-text"><strong>Free Tracked US Shipping:</strong> $0.00 (Standard delivery time: 5 to 9 business days after dispatch). All US orders are shipped via tracked carrier services (including USPS, SpeedX, or regional logistics partners depending on destination efficiency).</p>
+            <div class="policy-highlight-box">
+              <strong>100% Free Shipping:</strong> Free shipping is automatically applied to all US orders with zero minimum spend required.
+            </div>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">3</span> Tracking Your Order</h4>
+            <p class="policy-block-text">Once your package has shipped, a tracking link will automatically be sent to your email. Please allow 24–48 hours for tracking information to update in the carrier system.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">4</span> Shipping Address &amp; Package Loss</h4>
+            <p class="policy-block-text">Please ensure your shipping address is entered correctly at checkout. Lucenta Labs is not responsible for orders delivered to incorrect addresses provided by the buyer. If your package is delayed, missing, or marked as delivered but not received, please contact our support team at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> within 14 days so we can assist with carrier claims and replacements.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Refund & Return Policy -->
+      <div class="policy-tab-panel" id="refund-policy" role="tabpanel">
+        <div class="policy-header">
+          <span class="policy-badge">30-Day Risk-Free Guarantee</span>
+          <h3 class="policy-title">Refund &amp; Return Policy</h3>
+          <p class="policy-lead">We stand behind the quality of our beauty-tech devices with our 30-Day Risk-Free Guarantee. If you are not completely satisfied with your results, we are here to help.</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">1</span> 30-Day Risk-Free Trial</h4>
+            <p class="policy-block-text">You have 30 calendar days from the date of delivery to request a return or full refund for your Lucenta Labs device. To initiate a return, please contact us at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with your order number and reason for return.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">2</span> Return Eligibility &amp; Conditions</h4>
+            <p class="policy-block-text">To be eligible for a return under our 30-day guarantee:
+              <br>• The device must be free from physical damage caused by misuse, immersion in water, or drops.
+              <br>• The item must include all original accessories, charging cables, and packaging.
+              <br>• Customers are responsible for return shipping costs unless the device arrived damaged or defective upon opening.
+            </p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">3</span> Damaged, Defective, or Incorrect Items</h4>
+            <p class="policy-block-text">Please inspect your order upon reception. If your device arrives damaged, defective, or does not turn on/charge:
+              <br>• Contact us immediately at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with photos or a short video demonstrating the issue.
+              <br>• We will send a brand-new replacement unit at zero cost to you or issue a full refund immediately—no return of the damaged unit required in most cases.
+            </p>
+            <div class="policy-highlight-box">
+              <strong>Hassle-Free Replacement:</strong> Defective items reported within 14 days are replaced immediately with priority dispatch.
+            </div>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">4</span> Refund Processing</h4>
+            <p class="policy-block-text">Once your return is received and inspected, your refund will be processed back to your original payment method within 3 to 5 business days.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Terms of Service -->
+      <div class="policy-tab-panel" id="terms-policy" role="tabpanel">
+        <div class="policy-header">
+          <span class="policy-badge">Legal Notice</span>
+          <h3 class="policy-title">Terms of Service</h3>
+          <p class="policy-lead">Please read these terms carefully before accessing or using our website and purchasing our skincare technology devices.</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">1</span> Overview &amp; Acceptable Use</h4>
+            <p class="policy-block-text">By visiting our site and/or purchasing from Lucenta Labs, you engage in our "Service" and agree to be bound by these Terms of Service. Our store sells at-home beauty and skincare tools, including microcurrent, thermal, and LED therapy devices designed strictly for cosmetic and external personal use.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">2</span> Product Disclaimer &amp; Safety Guidelines</h4>
+            <p class="policy-block-text"><strong>Cosmetic Device Notice:</strong> Lucenta Labs products (including the Lucenta V-Sculpt Pro and Lucenta Neck &amp; Face LED Sculptor) are cosmetic beauty tools intended for skin rejuvenation, muscle toning, and serum absorption. They are not medical devices and are not intended to diagnose, treat, cure, or prevent any medical condition or disease.</p>
+            <div class="policy-highlight-box">
+              <strong>Usage Restrictions:</strong> Do not use EMS microcurrent or thermal devices if you have a pacemaker, implanted metal electronic devices, active facial skin infections, open wounds, or severe medical skin conditions without consulting a physician prior to use. Always follow the included instruction manual regarding skin hydration and treatment times.
+            </div>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">3</span> Pricing &amp; Modifications</h4>
+            <p class="policy-block-text">Prices for our products are subject to change without notice. We reserve the right at any time to modify or discontinue any product or service without liability. For any legal or operational inquiries regarding these terms, reach us at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">4</span> Governing Law</h4>
+            <p class="policy-block-text">These Terms of Service and any separate agreements shall be governed by and construed in accordance with applicable commerce laws.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4: Privacy Policy -->
+      <div class="policy-tab-panel" id="privacy-policy" role="tabpanel">
+        <div class="policy-header">
+          <span class="policy-badge">Data Privacy &amp; Security</span>
+          <h3 class="policy-title">Privacy Policy</h3>
+          <p class="policy-lead">Lucenta Labs respects your personal privacy. This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from our store.</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">1</span> Information We Collect</h4>
+            <p class="policy-block-text">When you purchase an item, we collect order details including your name, shipping address, billing address, payment information (processed securely through encrypted gateways like Shopify Payments/PayPal), email address, and phone number. When you browse our site, we automatically collect device information, IP address, time zone, and cookies to improve site performance and analytics.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">2</span> How We Use Your Information</h4>
+            <p class="policy-block-text">We use your information to:
+              <br>• Fulfill and ship your orders, send tracking updates, and process refunds.
+              <br>• Communicate with you regarding customer support inquiries.
+              <br>• Screen orders for potential fraud or risk.
+              <br>• Provide targeted advertising and promotional updates (if opted in).
+            </p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">3</span> Data Security</h4>
+            <p class="policy-block-text">Your personal and payment details are encrypted using Secure Sockets Layer (SSL) technology and industry-standard protocols. We do not store raw credit card numbers on our servers.</p>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title"><span class="policy-num">4</span> Contact Us</h4>
+            <p class="policy-block-text">For more information about our privacy practices or questions, please contact us by email at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 5: Contact Information -->
+      <div class="policy-tab-panel" id="contact-info" role="tabpanel">
+        <div class="policy-header">
+          <span class="policy-badge">Concierge Support</span>
+          <h3 class="policy-title">Contact Information</h3>
+          <p class="policy-lead">We are here to assist you with any questions regarding your order, device usage, or shipping status.</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-contact-card">
+            <div class="policy-contact-item">
+              <span class="policy-contact-label">Store Name</span>
+              <span class="policy-contact-value">Lucenta Labs</span>
+            </div>
+            <div class="policy-contact-item">
+              <span class="policy-contact-label">Support Email</span>
+              <span class="policy-contact-value"><a href="mailto:lucentalabs@gmail.com">lucentalabs@gmail.com</a></span>
+            </div>
+            <div class="policy-contact-item">
+              <span class="policy-contact-label">Support Hours</span>
+              <span class="policy-contact-value">Mon – Fri, 9:00 AM – 6:00 PM (EST)</span>
+            </div>
+            <div class="policy-contact-item">
+              <span class="policy-contact-label">Response Time</span>
+              <span class="policy-contact-value">Within 24 business hours</span>
+            </div>
+          </div>
+          <div class="policy-block">
+            <h4 class="policy-block-title">How To Reach Us For Orders &amp; Returns</h4>
+            <p class="policy-block-text">For return requests, order changes, or tracking support, please email us directly at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with your order number in the subject line. Our dedicated beauty specialists will assist you within one business day.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
   <footer class="footer">
@@ -4069,9 +4461,20 @@
           <ul class="footer-links">
             <li><a href="#products" class="footer-link">Lucenta V-Sculpt Pro</a></li>
             <li><a href="#products" class="footer-link">Neck &amp; Face LED Sculptor</a></li>
-            <li><a href="#products" class="footer-link">Ultimate V-Contour System (Bundle)</a></li>
+            <li><a href="#products" class="footer-link">Ultimate V-Contour System</a></li>
             <li><a href="#breakdown" class="footer-link">Clinical Technology</a></li>
             <li><a href="#ritual" class="footer-link">The 5-Minute Routine</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Policies</h4>
+          <ul class="footer-links">
+            <li><a href="#shipping-policy" class="footer-link" onclick="switchPolicyTab('shipping-policy', true)">Shipping Policy</a></li>
+            <li><a href="#refund-policy" class="footer-link" onclick="switchPolicyTab('refund-policy', true)">Refund &amp; Return Policy</a></li>
+            <li><a href="#terms-policy" class="footer-link" onclick="switchPolicyTab('terms-policy', true)">Terms of Service</a></li>
+            <li><a href="#privacy-policy" class="footer-link" onclick="switchPolicyTab('privacy-policy', true)">Privacy Policy</a></li>
+            <li><a href="#contact-info" class="footer-link" onclick="switchPolicyTab('contact-info', true)">Contact Information</a></li>
           </ul>
         </div>
 
@@ -4086,6 +4489,9 @@
               <button type="submit" class="footer-submit">Join</button>
             </div>
           </form>
+          <p style="font-size: 0.8125rem; color: #A8A29E; margin-top: 0.5rem;">
+            Concierge Support: <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>
+          </p>
         </div>
 
       </div>
@@ -4813,6 +5219,50 @@
         pressLogos.innerHTML += pressLogos.innerHTML;
         pressLogos.dataset.cloned = 'true';
       }
+
+      /* ---- 6. Customer Care & Policies Interactive Tabs Controller ---- */
+      window.switchPolicyTab = function(policyId, scrollIntoView) {
+        var tabBtns = document.querySelectorAll('.policy-tab-btn');
+        var tabPanels = document.querySelectorAll('.policy-tab-panel');
+        if (!tabBtns.length || !tabPanels.length) return;
+
+        tabBtns.forEach(function (btn) {
+          var isMatch = btn.getAttribute('data-policy') === policyId;
+          btn.classList.toggle('is-active', isMatch);
+          btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+        });
+
+        tabPanels.forEach(function (panel) {
+          var isMatch = panel.id === policyId;
+          panel.classList.toggle('is-active', isMatch);
+        });
+
+        if (scrollIntoView) {
+          var sec = document.getElementById('policies');
+          if (sec) {
+            sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      };
+
+      document.querySelectorAll('.policy-tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var policyId = btn.getAttribute('data-policy');
+          if (policyId) {
+            window.switchPolicyTab(policyId, false);
+          }
+        });
+      });
+
+      function checkPolicyHash() {
+        var hash = window.location.hash ? window.location.hash.substring(1) : '';
+        var validPolicies = ['shipping-policy', 'refund-policy', 'terms-policy', 'privacy-policy', 'contact-info'];
+        if (validPolicies.indexOf(hash) !== -1) {
+          window.switchPolicyTab(hash, true);
+        }
+      }
+      window.addEventListener('load', checkPolicyHash);
+      window.addEventListener('hashchange', checkPolicyHash);
 
     })();
   </script>
