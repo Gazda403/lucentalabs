@@ -2433,6 +2433,100 @@
     .toast-notification svg {
       color: var(--color-accent-rose);
     }
+
+    /* ==========================================================================
+       PREMIUM SCROLL ANIMATIONS — LUCENTA LABS
+       Intersection Observer powered — no external libraries
+       ========================================================================== */
+
+    /* Base animation state — elements start invisible */
+    .anim-ready {
+      opacity: 0;
+      transition:
+        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .anim-slide-up   { transform: translateY(44px); }
+    .anim-slide-left { transform: translateX(-44px); }
+    .anim-slide-right{ transform: translateX(44px); }
+    .anim-scale      { transform: scale(0.93); }
+    .anim-fade       { transform: none; }
+
+    /* Visible state — fires when element enters viewport */
+    .anim-ready.is-visible {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    /* Stagger delay tiers */
+    .anim-d1 { transition-delay: 0.04s; }
+    .anim-d2 { transition-delay: 0.10s; }
+    .anim-d3 { transition-delay: 0.16s; }
+    .anim-d4 { transition-delay: 0.22s; }
+    .anim-d5 { transition-delay: 0.28s; }
+    .anim-d6 { transition-delay: 0.34s; }
+    .anim-d7 { transition-delay: 0.40s; }
+
+    /* Headline clip-path text reveal */
+    @keyframes luxuryClipReveal {
+      from { clip-path: inset(0 100% 0 0); opacity: 0; }
+      to   { clip-path: inset(0 0%   0 0); opacity: 1; }
+    }
+
+    /* Floating micro-pulse on hero media badge after page load */
+    @keyframes heroBadgePulse {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .hero-floating-quote {
+      animation: heroBadgePulse 4s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    /* Shimmer sweep on section subtitles */
+    @keyframes shimmerSweep {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .section-subtitle.is-visible {
+      background: linear-gradient(
+        90deg,
+        var(--color-text-subtle) 0%,
+        var(--color-accent-rose) 50%,
+        var(--color-text-subtle) 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmerSweep 2.5s linear forwards;
+    }
+
+    /* Press logo stripe reveal */
+    .press-strip .press-item {
+      transition:
+        opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.4s ease;
+    }
+
+    /* Product card lift on hover (enhanced) */
+    .product-card-wrapper.anim-ready.is-visible .product-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.35s ease;
+    }
+
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .anim-ready {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -4050,5 +4144,135 @@
     // Initialize UI
     updateCartUI();
   </script>
+
+  <!-- ================================================================
+       PREMIUM SCROLL ANIMATION ENGINE — LUCENTA LABS
+       Pure vanilla JS — Intersection Observer API
+       ================================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---- Element selectors and their animation types ---- */
+      var ANIM_MAP = [
+        /* Landing page sections */
+        { sel: '.hero-eyebrow',            anim: 'slide-up',    stagger: false },
+        { sel: '.hero-title',              anim: 'slide-up',    stagger: false },
+        { sel: '.hero-tagline',            anim: 'slide-up',    stagger: false },
+        { sel: '.hero-purchase-block',     anim: 'slide-up',    stagger: false },
+        { sel: '.hero-guarantee-pill',     anim: 'fade',        stagger: true  },
+        { sel: '.guarantee-strip',         anim: 'fade',        stagger: false },
+        { sel: '.guarantee-item',          anim: 'slide-up',    stagger: true  },
+        { sel: '.press-item',              anim: 'fade',        stagger: true  },
+        { sel: '.section-header',          anim: 'slide-up',    stagger: false },
+        { sel: '.section-subtitle',        anim: 'fade',        stagger: false },
+        { sel: '.product-card-wrapper',    anim: 'slide-up',    stagger: true  },
+        { sel: '.statement-headline',      anim: 'slide-up',    stagger: false },
+        { sel: '.statement-body',          anim: 'slide-up',    stagger: false },
+        { sel: '.breakdown-media',         anim: 'slide-left',  stagger: false },
+        { sel: '.breakdown-content',       anim: 'slide-right', stagger: false },
+        { sel: '.breakdown-hotspot',       anim: 'scale',       stagger: true  },
+        { sel: '.ritual-step',             anim: 'slide-up',    stagger: true  },
+        { sel: '.reviews-header',          anim: 'slide-up',    stagger: false },
+        { sel: '.review-card',             anim: 'slide-up',    stagger: true  },
+        { sel: '.faq-item',                anim: 'slide-up',    stagger: true  },
+        { sel: '.footer-brand',            anim: 'fade',        stagger: false },
+        { sel: '.footer-col',              anim: 'slide-up',    stagger: true  },
+        /* PDP selectors */
+        { sel: '.pdp-eyebrow',             anim: 'fade',        stagger: false },
+        { sel: '.pdp-title',               anim: 'slide-up',    stagger: false },
+        { sel: '.pdp-reviews-row',         anim: 'fade',        stagger: false },
+        { sel: '.pdp-price-box',           anim: 'slide-up',    stagger: false },
+        { sel: '.pdp-live-urgency',        anim: 'fade',        stagger: false },
+        { sel: '.pdp-short-desc',          anim: 'slide-up',    stagger: false },
+        { sel: '.pdp-actions-wrap',        anim: 'slide-up',    stagger: false },
+        { sel: '.pdp-trust-item',          anim: 'fade',        stagger: true  },
+        { sel: '.pdp-acc-item',            anim: 'slide-up',    stagger: true  },
+        { sel: '.pdp-science-header',      anim: 'slide-up',    stagger: false },
+        { sel: '.pdp-feature-card',        anim: 'slide-up',    stagger: true  },
+        { sel: '.related-card',            anim: 'slide-up',    stagger: true  },
+        { sel: '.pdp-related-header',      anim: 'slide-up',    stagger: false },
+      ];
+
+      var DELAY_CLS = ['anim-d1','anim-d2','anim-d3','anim-d4','anim-d5','anim-d6','anim-d7'];
+
+      /* ---- Prepare elements ---- */
+      function prepareElements() {
+        ANIM_MAP.forEach(function (rule) {
+          var els = document.querySelectorAll(rule.sel);
+          els.forEach(function (el, idx) {
+            if (el.classList.contains('anim-ready')) return;
+            el.classList.add('anim-ready', 'anim-' + rule.anim);
+            if (rule.stagger) {
+              el.classList.add(DELAY_CLS[idx % DELAY_CLS.length]);
+            }
+            observer.observe(el);
+          });
+        });
+      }
+
+      /* ---- Intersection Observer ---- */
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            /* Small stagger within the transition-delay already set in CSS */
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      /* Run immediately and again after Shopify web components render */
+      prepareElements();
+      setTimeout(prepareElements, 800);
+      setTimeout(prepareElements, 2000);
+
+      /* ---- Subtle hero parallax drift ---- */
+      var heroMedia = document.getElementById('hero-media-container');
+      if (heroMedia) {
+        window.addEventListener('scroll', function () {
+          var scrollY = window.scrollY || window.pageYOffset;
+          var rate = scrollY * 0.12;
+          heroMedia.style.transform = 'translateY(' + rate + 'px)';
+        }, { passive: true });
+      }
+
+      /* ---- Animated stat counters ---- */
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-count');
+        if (!raw) return;
+        var target = parseFloat(raw);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var decimals = raw.includes('.') ? raw.split('.')[1].length : 0;
+        var duration = 1400;
+        var start = performance.now();
+        function step(now) {
+          var progress = Math.min((now - start) / duration, 1);
+          var ease = 1 - Math.pow(1 - progress, 3);
+          el.textContent = (target * ease).toFixed(decimals) + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('[data-count]').forEach(function (el) {
+        counterObserver.observe(el);
+      });
+
+    })();
+  </script>
+
 </body>
 </html>
