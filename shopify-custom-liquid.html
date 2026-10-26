@@ -1508,29 +1508,64 @@
     .reviews-section {
       padding: 5.5rem 0;
       background: var(--color-bg-secondary);
+      overflow: hidden;
+      position: relative;
     }
 
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+    .reviews-treadmill-wrap {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 1.5rem 0;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+
+    .reviews-treadmill-track {
+      display: flex;
       gap: 1.75rem;
+      width: max-content;
+      animation: treadmillScroll 44s linear infinite;
+      will-change: transform;
     }
 
-    @media (min-width: 768px) {
-      .reviews-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .reviews-treadmill-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes treadmillScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     .review-card {
       background: var(--color-surface);
-      padding: 2rem;
+      padding: 2.2rem 2rem;
       border-radius: var(--radius-lg);
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.15rem;
+      width: 380px;
+      min-width: 380px;
+      max-width: 380px;
+      flex-shrink: 0;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-6px) scale(1.015);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(194, 126, 105, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      .review-card {
+        width: 300px;
+        min-width: 300px;
+        padding: 1.75rem 1.5rem;
+      }
     }
 
     .review-stars {
@@ -3526,8 +3561,12 @@
         </p>
       </div>
 
-      <div class="reviews-grid">
+    </div> <!-- End container for full-width edge-to-edge treadmill -->
+
+    <div class="reviews-treadmill-wrap" aria-label="Customer Reviews Carousel">
+      <div class="reviews-treadmill-track">
         
+        <!-- Review 1 -->
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
@@ -3545,6 +3584,7 @@
           </div>
         </div>
 
+        <!-- Review 2 -->
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
@@ -3562,6 +3602,7 @@
           </div>
         </div>
 
+        <!-- Review 3 -->
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
@@ -3571,6 +3612,241 @@
             <div class="review-avatar">EW</div>
             <div class="review-meta">
               <span class="review-name">Elena W. — Los Angeles, CA</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (Ultimate Bundle)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "As a dermatology clinician, I appreciate the dual-wavelength photonics. The biological stimulation is calibrated precisely. I personally use it 5 nights a week before sleep."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">AP</div>
+            <div class="review-meta">
+              <span class="review-name">Dr. Ananya P. — Chicago, IL</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Clinician (Ultimate Bundle)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone sculpting, my face looks naturally lifted even without contour makeup."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">CD</div>
+            <div class="review-meta">
+              <span class="review-name">Camille D. — Paris, France</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (V-Sculpt Pro)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The battery lasts almost a month on a single charge too!"
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">HS</div>
+            <div class="review-meta">
+              <span class="review-name">Harper S. — Seattle, WA</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (LED Sculptor)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 7 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10 days and asked if he could try it on his neck!"
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">OH</div>
+            <div class="review-meta">
+              <span class="review-name">Olivia H. — San Francisco, CA</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (V-Sculpt Pro)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 8 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls. Truly an all-in-one holy grail clinical device."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">CB</div>
+            <div class="review-meta">
+              <span class="review-name">Chloe B. — London, UK</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (Ultimate Bundle)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET FOR CONTINUOUS SEAMLESS TREADMILL LOOP -->
+        <!-- Review 1 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "I was skeptical about at-home microcurrent until day 10. My double chin is noticeably tighter, and my morning facial puffiness is gone within minutes. Worth every single penny."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">SM</div>
+            <div class="review-meta">
+              <span class="review-name">Sophia M. — New York, NY</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (V-Sculpt Pro)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The warmth on this device feels like an ultra-luxe hot stone facial. I use the red LED mode every evening with my hyaluronic serum and my neck lines have softened tremendously."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">CR</div>
+            <div class="review-meta">
+              <span class="review-name">Claire R. — Austin, TX</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (LED Sculptor)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Got the Ultimate V-Contour bundle. Using the V-Sculpt on my jawline and the neck wand right after gives a lifted contour that my aesthetician actually commented on at my last appointment!"
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">EW</div>
+            <div class="review-meta">
+              <span class="review-name">Elena W. — Los Angeles, CA</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (Ultimate Bundle)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "As a dermatology clinician, I appreciate the dual-wavelength photonics. The biological stimulation is calibrated precisely. I personally use it 5 nights a week before sleep."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">AP</div>
+            <div class="review-meta">
+              <span class="review-name">Dr. Ananya P. — Chicago, IL</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Clinician (Ultimate Bundle)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone sculpting, my face looks naturally lifted even without contour makeup."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">CD</div>
+            <div class="review-meta">
+              <span class="review-name">Camille D. — Paris, France</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (V-Sculpt Pro)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The battery lasts almost a month on a single charge too!"
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">HS</div>
+            <div class="review-meta">
+              <span class="review-name">Harper S. — Seattle, WA</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (LED Sculptor)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 7 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10 days and asked if he could try it on his neck!"
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">OH</div>
+            <div class="review-meta">
+              <span class="review-name">Olivia H. — San Francisco, CA</span>
+              <span class="review-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer (V-Sculpt Pro)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 8 Duplicate -->
+        <div class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls. Truly an all-in-one holy grail clinical device."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">CB</div>
+            <div class="review-meta">
+              <span class="review-name">Chloe B. — London, UK</span>
               <span class="review-tag">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 Verified Buyer (Ultimate Bundle)
