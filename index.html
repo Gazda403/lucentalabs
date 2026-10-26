@@ -2464,6 +2464,32 @@
       box-shadow: 0 0 8px #FFFFFF, 0 0 16px var(--color-accent-rose);
     }
 
+    /* Hero Load Entrance Cascade (Fires immediately upon opening page) */
+    @keyframes heroLoadReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(32px) scale(0.96);
+        filter: blur(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+      }
+    }
+    .hero-header-block {
+      animation: heroLoadReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: 0.1s;
+    }
+    .hero-tagline {
+      animation: heroLoadReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: 0.28s;
+    }
+    .hero-purchase-block {
+      animation: heroLoadReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: 0.42s;
+    }
+
     /* 2. Base Reveal States — High-End Optical Blur + Subtle Scale Shift */
     .anim-ready {
       opacity: 0;
@@ -4345,11 +4371,6 @@
       /* ---- Element selectors and their animation types ---- */
       var ANIM_MAP = [
         /* Landing page sections */
-        { sel: '.hero-eyebrow',            anim: 'slide-up',    stagger: false },
-        { sel: '.hero-title',              anim: 'slide-up',    stagger: false },
-        { sel: '.hero-tagline',            anim: 'slide-up',    stagger: false },
-        { sel: '.hero-purchase-block',     anim: 'slide-up',    stagger: false },
-        { sel: '.hero-guarantee-pill',     anim: 'fade',        stagger: true  },
         { sel: '.hero-rating',             anim: 'fade',        stagger: false },
         { sel: '.guarantee-strip',         anim: 'fade',        stagger: false },
         { sel: '.guarantee-item',          anim: 'slide-up',    stagger: true  },
