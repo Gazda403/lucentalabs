@@ -529,6 +529,60 @@
     }
     .pdp-box-item svg { color: var(--color-accent-rose); }
 
+    /* How To Use Video Section */
+    .pdp-how-to-use {
+      margin-top: 1.75rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .pdp-how-to-use__header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .pdp-how-to-use__icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-accent-rose-soft);
+      color: var(--color-accent-rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pdp-how-to-use__title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      letter-spacing: 0.01em;
+    }
+    .pdp-how-to-use__subtitle {
+      font-size: 0.75rem;
+      color: var(--color-text-subtle);
+      margin-top: 1px;
+    }
+    .pdp-how-to-use__video-wrap {
+      position: relative;
+      background: #0a0a0a;
+    }
+    .pdp-how-to-use__video-wrap video {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 340px;
+      object-fit: cover;
+    }
+    /* Left column wrapper to stack gallery + how-to-use */
+    .pdp-left-col {
+      display: flex;
+      flex-direction: column;
+    }
+
     /* ==========================================================================
        SCIENCE & EDITORIAL BREAKDOWN SECTION
        ========================================================================== */
@@ -1002,30 +1056,53 @@
     <div class="container">
       <div class="pdp-grid">
 
-        <!-- Left: Interactive Gallery -->
-        <div class="pdp-gallery-wrap">
-          <div class="pdp-thumbs">
-            
-    <button class="pdp-thumb is-active" onclick="switchPdpMedia(0, 'imgaes/Woman_applying_beauty_device_to_20261025141945.jpg')" aria-label="View image 1">
-      <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Woman applying LED Sculptor along cervical neck line">
-    </button>
-  
-    <button class="pdp-thumb " onclick="switchPdpMedia(1, 'imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg')" aria-label="View image 2">
-      <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg" alt="Lucenta Neck and Face LED Sculptor studio profile">
-    </button>
-  
-    <button class="pdp-thumb " onclick="switchPdpMedia(2, 'imgaes/Woman_using_skincare_device_20261025133047.jpg')" aria-label="View image 3">
-      <img src="imgaes/Woman_using_skincare_device_20261025133047.jpg" alt="Facial upward contouring stroke">
-    </button>
-  
-    <button class="pdp-thumb " onclick="switchPdpMedia(3, 'imgaes/Handheld_beauty_device_on_satin_20261025141203.jpg')" aria-label="View image 4">
-      <img src="imgaes/Handheld_beauty_device_on_satin_20261025141203.jpg" alt="Ergonomic dolphin-tail probe contour">
-    </button>
-  
+        <!-- Left: Interactive Gallery + How to Use -->
+        <div class="pdp-left-col">
+          <div class="pdp-gallery-wrap">
+            <div class="pdp-thumbs">
+              
+      <button class="pdp-thumb is-active" onclick="switchPdpMedia(0, 'imgaes/Woman_applying_beauty_device_to_20261025141945.jpg')" aria-label="View image 1">
+        <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Woman applying LED Sculptor along cervical neck line">
+      </button>
+    
+      <button class="pdp-thumb " onclick="switchPdpMedia(1, 'imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg')" aria-label="View image 2">
+        <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg" alt="Lucenta Neck and Face LED Sculptor studio profile">
+      </button>
+    
+      <button class="pdp-thumb " onclick="switchPdpMedia(2, 'imgaes/Woman_using_skincare_device_20261025133047.jpg')" aria-label="View image 3">
+        <img src="imgaes/Woman_using_skincare_device_20261025133047.jpg" alt="Facial upward contouring stroke">
+      </button>
+    
+      <button class="pdp-thumb " onclick="switchPdpMedia(3, 'imgaes/Handheld_beauty_device_on_satin_20261025141203.jpg')" aria-label="View image 4">
+        <img src="imgaes/Handheld_beauty_device_on_satin_20261025141203.jpg" alt="Ergonomic dolphin-tail probe contour">
+      </button>
+    
+            </div>
+            <div class="pdp-main-media" id="pdp-main-media-box">
+              <span class="pdp-media-badge">Save 45%</span>
+              <img id="pdp-main-img" src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Woman applying LED Sculptor along cervical neck line">
+            </div>
           </div>
-          <div class="pdp-main-media" id="pdp-main-media-box">
-            <span class="pdp-media-badge">Save 45%</span>
-            <img id="pdp-main-img" src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Woman applying LED Sculptor along cervical neck line">
+
+          <!-- How to Use Section -->
+          <div class="pdp-how-to-use">
+            <div class="pdp-how-to-use__header">
+              <div class="pdp-how-to-use__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+              <div>
+                <div class="pdp-how-to-use__title">How to Use</div>
+                <div class="pdp-how-to-use__subtitle">Watch the neck &amp; face sculpting tutorial</div>
+              </div>
+            </div>
+            <div class="pdp-how-to-use__video-wrap">
+              <video controls playsinline preload="metadata">
+                <source src="how to use it.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
 
