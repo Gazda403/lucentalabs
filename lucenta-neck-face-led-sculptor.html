@@ -569,14 +569,20 @@
     .pdp-how-to-use__video-wrap {
       position: relative;
       background: #0a0a0a;
-      aspect-ratio: 9 / 16;
-      max-height: 600px;
     }
     .pdp-how-to-use__video-wrap video {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: contain;
+    }
+    /* Portrait 9:16 (e.g. GlowWand) */
+    .pdp-how-to-use__video-wrap--portrait {
+      aspect-ratio: 9 / 16;
+    }
+    /* Landscape 4:3 (e.g. LED Sculptor) */
+    .pdp-how-to-use__video-wrap--landscape {
+      aspect-ratio: 4 / 3;
     }
     /* Left column wrapper to stack gallery + how-to-use */
     .pdp-left-col {
@@ -1098,7 +1104,7 @@
                 <div class="pdp-how-to-use__subtitle">Watch the neck &amp; face sculpting tutorial</div>
               </div>
             </div>
-            <div class="pdp-how-to-use__video-wrap">
+            <div class="pdp-how-to-use__video-wrap pdp-how-to-use__video-wrap--landscape">
               <video controls playsinline preload="metadata">
                 <source src="how to use it.mp4" type="video/mp4">
                 Your browser does not support the video tag.
