@@ -4854,8 +4854,12 @@
       observer.observe(ctx, { childList: true, subtree: true });
     });
 
-    // State
-    let cart = [];
+    // State — persisted per device via localStorage
+    let cart = JSON.parse(localStorage.getItem('lucenta_cart') || '[]');
+
+    function saveCart() {
+      localStorage.setItem('lucenta_cart', JSON.stringify(cart));
+    }
 
     // ==========================================
     // 1. HERO VIDEO-TO-IMAGE TRANSITION
@@ -4939,6 +4943,7 @@
     }
 
     function updateCartUI() {
+      saveCart();
       const count = cart.reduce((sum, item) => sum + item.qty, 0);
       const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
