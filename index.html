@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Lucenta Labs | Luxury Facial Sculpting &amp; High-Tech Skincare Devices</title>
-  <meta name="description" content="Sculpt, contour, and lift from the comfort of home. Clinically-inspired EMS microcurrent, thermal warming, and LED therapy at Lucenta Labs. Free US delivery.">
+  <meta name="description"
+    content="Sculpt, contour, and lift from the comfort of home. Clinically-inspired EMS microcurrent, thermal warming, and LED therapy at Lucenta Labs. Free US delivery.">
   <meta name="theme-color" content="#141312">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lucenta Labs | Luxury Beauty Tech &amp; Facial Sculpting">
-  <meta property="og:description" content="Experience non-invasive jawline contouring and medical-grade skin rejuvenation. 30-Day Risk-Free Trial.">
+  <meta property="og:description"
+    content="Experience non-invasive jawline contouring and medical-grade skin rejuvenation. 30-Day Risk-Free Trial.">
   <meta property="og:image" content="imgaes/unnamed.webp_20261025152135.jpg">
 
   <!-- Performance Hints & Preloads -->
@@ -20,7 +23,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="imgaes/unnamed.webp_20261025152135.webp" type="image/webp" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Shopify Storefront Web Components Script -->
   <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
@@ -72,7 +77,9 @@
       --transition-slow: 0.8s var(--ease-luxury);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -97,7 +104,8 @@
       position: relative;
     }
 
-    img, video {
+    img,
+    video {
       display: block;
       max-width: 100%;
       height: auto;
@@ -107,7 +115,8 @@
       display: contents;
     }
 
-    .press-marquee-track, .reviews-track {
+    .press-marquee-track,
+    .reviews-track {
       will-change: transform;
       transform: translate3d(0, 0, 0);
       backface-visibility: hidden;
@@ -119,7 +128,12 @@
       backface-visibility: hidden;
     }
 
-    .breakdown-section, .ritual-section, .comparison-section, .reviews-section, .faq-section, .policies-section {
+    .breakdown-section,
+    .ritual-section,
+    .comparison-section,
+    .reviews-section,
+    .faq-section,
+    .policies-section {
       content-visibility: auto;
       contain-intrinsic-size: 1px 700px;
     }
@@ -310,9 +324,11 @@
       .header__inner {
         height: 74px;
       }
+
       .header__brand {
         height: 60px;
       }
+
       .header__logo {
         height: 54px;
       }
@@ -781,9 +797,17 @@
     }
 
     @keyframes pulseAnimation {
-      0% { box-shadow: 0 0 0 0 rgba(194, 126, 105, 0.7); }
-      70% { box-shadow: 0 0 0 8px rgba(194, 126, 105, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(194, 126, 105, 0); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(194, 126, 105, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(194, 126, 105, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(194, 126, 105, 0);
+      }
     }
 
     .hero-replay-btn {
@@ -859,6 +883,7 @@
       .hero-content {
         order: 1;
       }
+
       .hero-media-card {
         order: 2;
         margin-top: 0.5rem;
@@ -1410,11 +1435,19 @@
     }
 
     @keyframes hotspotPulse {
-      0% { transform: scale(0.85); opacity: 1; }
-      100% { transform: scale(1.4); opacity: 0; }
+      0% {
+        transform: scale(0.85);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
     }
 
-    .hotspot-pin:hover, .hotspot-pin.is-active {
+    .hotspot-pin:hover,
+    .hotspot-pin.is-active {
       transform: scale(1.15);
       background: var(--color-accent-rose);
     }
@@ -1437,8 +1470,8 @@
       box-shadow: var(--shadow-lg);
     }
 
-    .hotspot-pin:hover + .hotspot-tooltip,
-    .hotspot-pin:focus + .hotspot-tooltip,
+    .hotspot-pin:hover+.hotspot-tooltip,
+    .hotspot-pin:focus+.hotspot-tooltip,
     .hotspot-tooltip.is-active {
       opacity: 1;
       transform: translateY(0);
@@ -1656,8 +1689,13 @@
     }
 
     @keyframes treadmillScroll {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .review-card {
@@ -1867,8 +1905,15 @@
     }
 
     @keyframes policyFadeIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .policy-header {
@@ -1962,16 +2007,19 @@
       grid-template-columns: 1fr;
       gap: 1.25rem;
     }
+
     @media (min-width: 640px) {
       .policy-contact-card {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     .policy-contact-item {
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
+
     .policy-contact-label {
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -1979,11 +2027,13 @@
       color: var(--color-text-subtle);
       font-weight: 700;
     }
+
     .policy-contact-value {
       font-size: 1rem;
       font-weight: 600;
       color: var(--color-text-main);
     }
+
     .policy-contact-value a {
       color: var(--color-accent-rose);
       text-decoration: underline;
@@ -2241,8 +2291,15 @@
     }
 
     @keyframes modalFadeIn {
-      from { opacity: 0; transform: scale(0.96) translateY(12px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
+      from {
+        opacity: 0;
+        transform: scale(0.96) translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
 
     .product-modal__wrapper {
@@ -2702,6 +2759,7 @@
       pointer-events: none;
       transition: width 0.1s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     #luxury-scroll-progress::after {
       content: '';
       position: absolute;
@@ -2721,20 +2779,24 @@
         transform: translateY(32px) scale(0.96);
         filter: blur(10px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0) scale(1);
         filter: blur(0px);
       }
     }
+
     .hero-header-block {
       animation: heroLoadReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
       animation-delay: 0.1s;
     }
+
     .hero-tagline {
       animation: heroLoadReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
       animation-delay: 0.28s;
     }
+
     .hero-purchase-block {
       animation: heroLoadReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
       animation-delay: 0.42s;
@@ -2749,11 +2811,31 @@
         filter 0.95s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform, filter;
     }
-    .anim-slide-up   { transform: translateY(38px) scale(0.97); filter: blur(6px); }
-    .anim-slide-left { transform: translateX(-38px) scale(0.97); filter: blur(6px); }
-    .anim-slide-right{ transform: translateX(38px) scale(0.97); filter: blur(6px); }
-    .anim-scale      { transform: scale(0.91); filter: blur(6px); }
-    .anim-fade       { transform: translateY(14px); filter: blur(4px); }
+
+    .anim-slide-up {
+      transform: translateY(38px) scale(0.97);
+      filter: blur(6px);
+    }
+
+    .anim-slide-left {
+      transform: translateX(-38px) scale(0.97);
+      filter: blur(6px);
+    }
+
+    .anim-slide-right {
+      transform: translateX(38px) scale(0.97);
+      filter: blur(6px);
+    }
+
+    .anim-scale {
+      transform: scale(0.91);
+      filter: blur(6px);
+    }
+
+    .anim-fade {
+      transform: translateY(14px);
+      filter: blur(4px);
+    }
 
     /* Active state when revealed */
     .anim-ready.is-visible {
@@ -2763,20 +2845,49 @@
     }
 
     /* Stagger tiers */
-    .anim-d1 { transition-delay: 0.05s; }
-    .anim-d2 { transition-delay: 0.12s; }
-    .anim-d3 { transition-delay: 0.19s; }
-    .anim-d4 { transition-delay: 0.26s; }
-    .anim-d5 { transition-delay: 0.33s; }
-    .anim-d6 { transition-delay: 0.40s; }
-    .anim-d7 { transition-delay: 0.47s; }
+    .anim-d1 {
+      transition-delay: 0.05s;
+    }
+
+    .anim-d2 {
+      transition-delay: 0.12s;
+    }
+
+    .anim-d3 {
+      transition-delay: 0.19s;
+    }
+
+    .anim-d4 {
+      transition-delay: 0.26s;
+    }
+
+    .anim-d5 {
+      transition-delay: 0.33s;
+    }
+
+    .anim-d6 {
+      transition-delay: 0.40s;
+    }
+
+    .anim-d7 {
+      transition-delay: 0.47s;
+    }
 
     /* 3. Hero Floating Levitation */
     @keyframes luxuryHeroFloat {
-      0%   { transform: translateY(0); }
-      50%  { transform: translateY(-7px); }
-      100% { transform: translateY(0); }
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
     }
+
     .hero-media-card {
       animation: luxuryHeroFloat 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
     }
@@ -2791,6 +2902,7 @@
       opacity: 0.55;
       animation: ambientGlowDrift 16s ease-in-out infinite alternate;
     }
+
     .ambient-glow-orb--rose {
       width: 420px;
       height: 420px;
@@ -2798,6 +2910,7 @@
       top: -80px;
       right: -80px;
     }
+
     .ambient-glow-orb--gold {
       width: 360px;
       height: 360px;
@@ -2807,10 +2920,19 @@
       animation-duration: 20s;
       animation-direction: alternate-reverse;
     }
+
     @keyframes ambientGlowDrift {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(30px, -25px) scale(1.12); }
-      100% { transform: translate(-20px, 20px) scale(0.95); }
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(30px, -25px) scale(1.12);
+      }
+
+      100% {
+        transform: translate(-20px, 20px) scale(0.95);
+      }
     }
 
     /* 5. 3D Magnetic Interactive Tilt & Specular Cursor Glare */
@@ -2820,6 +2942,7 @@
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
       position: relative;
     }
+
     .tilt-card-3d::after {
       content: '';
       position: absolute;
@@ -2831,6 +2954,7 @@
       transition: opacity 0.35s ease;
       z-index: 5;
     }
+
     .tilt-card-3d:hover::after {
       opacity: 1;
     }
@@ -2840,10 +2964,12 @@
       overflow: hidden;
       position: relative;
     }
+
     .product-card__media-wrap img,
     .product-card__media-wrap shopify-media {
       transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
     }
+
     .product-card:hover .product-card__media-wrap img,
     .product-card:hover .product-card__media-wrap shopify-media {
       transform: scale(1.055);
@@ -2868,6 +2994,7 @@
       transition: transform 0.3s var(--ease-luxury), background-color 0.3s ease;
       z-index: 10;
     }
+
     .hotspot-pin::before,
     .hotspot-pin::after {
       content: '';
@@ -2877,50 +3004,76 @@
       border: 1.5px solid var(--color-accent-rose);
       pointer-events: none;
     }
+
     .hotspot-pin::before {
       animation: hotspotSonar 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     }
+
     .hotspot-pin::after {
       animation: hotspotSonar 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
       animation-delay: 1.3s;
     }
+
     @keyframes hotspotSonar {
-      0%   { transform: scale(0.8); opacity: 0.9; }
-      100% { transform: scale(2.4); opacity: 0; }
+      0% {
+        transform: scale(0.8);
+        opacity: 0.9;
+      }
+
+      100% {
+        transform: scale(2.4);
+        opacity: 0;
+      }
     }
-    .hotspot-pin:hover, .hotspot-pin.is-active {
+
+    .hotspot-pin:hover,
+    .hotspot-pin.is-active {
       transform: scale(1.22);
       background: var(--color-accent-rose);
       box-shadow: 0 0 20px rgba(194, 126, 105, 0.6);
     }
 
     /* 8. Specular Light Streak Sweep on Primary CTAs */
-    .btn-primary, .btn-add-to-cart, .hero-cta-btn, .pdp-cta-btn {
+    .btn-primary,
+    .btn-add-to-cart,
+    .hero-cta-btn,
+    .pdp-cta-btn {
       position: relative;
       overflow: hidden;
     }
-    .btn-primary::after, .btn-add-to-cart::after, .hero-cta-btn::after, .pdp-cta-btn::after {
+
+    .btn-primary::after,
+    .btn-add-to-cart::after,
+    .hero-cta-btn::after,
+    .pdp-cta-btn::after {
       content: '';
       position: absolute;
       top: -60%;
       left: 0;
       width: 70%;
       height: 220%;
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.22) 50%,
-        transparent 100%
-      );
+      background: linear-gradient(90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.22) 50%,
+          transparent 100%);
       transform: translateX(-180%) rotate(25deg);
       animation: luxuryCtaSheen 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       pointer-events: none;
       will-change: transform;
     }
+
     @keyframes luxuryCtaSheen {
-      0%   { transform: translateX(-180%) rotate(25deg); }
-      22%  { transform: translateX(380%) rotate(25deg); }
-      100% { transform: translateX(380%) rotate(25deg); }
+      0% {
+        transform: translateX(-180%) rotate(25deg);
+      }
+
+      22% {
+        transform: translateX(380%) rotate(25deg);
+      }
+
+      100% {
+        transform: translateX(380%) rotate(25deg);
+      }
     }
 
     /* 9. Seamless Infinite Marquee for Press Publications */
@@ -2930,6 +3083,7 @@
       mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
     }
+
     .press-logos {
       display: flex;
       align-items: center;
@@ -2938,18 +3092,27 @@
       width: max-content;
       will-change: transform;
     }
+
     .press-logos:hover {
       animation-play-state: paused;
     }
+
     @keyframes pressMarqueeLoop {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
+
     .press-logo-text {
       transition: color 0.3s ease, transform 0.3s ease;
       display: inline-block;
       white-space: nowrap;
     }
+
     .press-logo-text:hover {
       color: var(--color-accent-rose);
       transform: translateY(-2px);
@@ -2957,17 +3120,41 @@
 
     /* 10. Star Twinkle Cascade on Review Badges */
     @keyframes starSparkle {
-      0%   { transform: scale(1); filter: brightness(1); }
-      50%  { transform: scale(1.18); filter: brightness(1.35) drop-shadow(0 0 4px #B88B4A); }
-      100% { transform: scale(1); filter: brightness(1); }
+      0% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+        filter: brightness(1.35) drop-shadow(0 0 4px #B88B4A);
+      }
+
+      100% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
     }
+
     .hero-rating.is-visible .hero-stars svg {
       animation: starSparkle 2s ease-in-out infinite;
     }
-    .hero-rating.is-visible .hero-stars svg:nth-child(2) { animation-delay: 0.15s; }
-    .hero-rating.is-visible .hero-stars svg:nth-child(3) { animation-delay: 0.30s; }
-    .hero-rating.is-visible .hero-stars svg:nth-child(4) { animation-delay: 0.45s; }
-    .hero-rating.is-visible .hero-stars svg:nth-child(5) { animation-delay: 0.60s; }
+
+    .hero-rating.is-visible .hero-stars svg:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .hero-rating.is-visible .hero-stars svg:nth-child(3) {
+      animation-delay: 0.30s;
+    }
+
+    .hero-rating.is-visible .hero-stars svg:nth-child(4) {
+      animation-delay: 0.45s;
+    }
+
+    .hero-rating.is-visible .hero-stars svg:nth-child(5) {
+      animation-delay: 0.60s;
+    }
 
     /* Reduce motion for accessibility */
     @media (prefers-reduced-motion: reduce) {
@@ -2977,40 +3164,58 @@
         filter: none !important;
         transition: none !important;
       }
+
       .press-logos {
         animation: none !important;
         width: 100% !important;
         justify-content: center !important;
       }
+
       .hero-media-card {
         animation: none !important;
       }
     }
 
-  
+
     /* Strict Mobile Viewport Overflow Protection */
-    html, body {
+    html,
+    body {
       overflow-x: hidden;
       max-width: 100%;
       width: 100%;
     }
 
-    section, header, footer, nav, .hero-section, .statement-section, .products-section, 
-    .breakdown-section, .ritual-section, .comparison-section, .reviews-section, 
-    .faq-section, .policies-section, .guarantee-strip, .press-strip {
+    section,
+    header,
+    footer,
+    nav,
+    .hero-section,
+    .statement-section,
+    .products-section,
+    .breakdown-section,
+    .ritual-section,
+    .comparison-section,
+    .reviews-section,
+    .faq-section,
+    .policies-section,
+    .guarantee-strip,
+    .press-strip {
       max-width: 100%;
       overflow-x: clip;
       box-sizing: border-box;
     }
 
     @media (max-width: 768px) {
-      html, body {
+
+      html,
+      body {
         overflow-x: hidden !important;
         max-width: 100vw !important;
         position: relative;
       }
 
-      .container, .container-wide {
+      .container,
+      .container-wide {
         padding: 0 1rem;
         max-width: 100%;
         box-sizing: border-box;
@@ -3029,24 +3234,37 @@
       }
 
       /* Prevent horizontal translation animation from pushing past screen width on mobile */
-      .anim-slide-right, .anim-slide-left {
+      .anim-slide-right,
+      .anim-slide-left {
         transform: translateY(24px) scale(0.98) !important;
       }
     }
-
   </style>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '29547078218223062');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=29547078218223062&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
+
 <body>
   <!-- Top Luxury Scroll Reading Progress Bar -->
   <div id="luxury-scroll-progress" aria-hidden="true"></div>
 
   <!-- Shopify Store Configuration -->
-  <shopify-store
-    store-domain="vqxruv-9t.myshopify.com"
-    public-access-token=""
-    country="US"
-    language="en"
-  >
+  <shopify-store store-domain="vqxruv-9t.myshopify.com" public-access-token="" country="US" language="en">
   </shopify-store>
 
   <!-- Native Shopify Cart Component -->
@@ -3102,7 +3320,8 @@
         <a href="#" class="header__brand" aria-label="Lucenta Labs Home">
           <picture>
             <source srcset="logo-navbar-transparent.webp" type="image/webp">
-            <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo" width="952" height="682" loading="eager" fetchpriority="high" decoding="async">
+            <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo" width="952" height="682"
+              loading="eager" fetchpriority="high" decoding="async">
           </picture>
         </a>
 
@@ -3110,13 +3329,15 @@
         <div class="header__actions">
           <a href="#products" class="header__cta-btn">
             <span>Shop Devices</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
           <button class="header__cart-btn" id="open-cart-btn" aria-label="Open Shopping Bag" onclick="openCartDrawer()">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <path d="M16 10a4 4 0 0 1-8 0"/>
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
             <span class="header__cart-count" id="cart-counter-badge">0</span>
           </button>
@@ -3131,7 +3352,8 @@
       <a href="#ritual" class="mobile-menu-link" onclick="toggleMobileMenu()">The 5-Minute Ritual</a>
       <a href="#reviews" class="mobile-menu-link" onclick="toggleMobileMenu()">Customer Results</a>
       <a href="#faq" class="mobile-menu-link" onclick="toggleMobileMenu()">Frequently Asked Questions</a>
-      <button class="btn-primary" style="margin-top: 0.5rem;" onclick="toggleMobileMenu(); window.location.href='#products';">
+      <button class="btn-primary" style="margin-top: 0.5rem;"
+        onclick="toggleMobileMenu(); window.location.href='#products';">
         <span>Explore Collection</span>
       </button>
     </div>
@@ -3146,17 +3368,32 @@
     <div class="ambient-glow-orb ambient-glow-orb--gold"></div>
     <div class="container-wide">
       <div class="hero-grid">
-        
+
         <!-- Left: Hero Copy & Value Drivers -->
         <div class="hero-content">
           <div class="hero-header-block">
             <div class="hero-rating">
               <div class="hero-stars" aria-label="5 stars rating">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
               </div>
               <span>4.9/5 from 2,840+ verified sculptors</span>
             </div>
@@ -3167,7 +3404,9 @@
           </div>
 
           <p class="hero-tagline">
-            The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, thermal warming, and multi-spectrum LED therapy to stimulate facial muscles, promote lymphatic drainage, and sharpen your natural jawline structure.
+            The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, thermal warming, and multi-spectrum
+            LED therapy to stimulate facial muscles, promote lymphatic drainage, and sharpen your natural jawline
+            structure.
           </p>
 
           <div class="hero-purchase-block">
@@ -3175,7 +3414,9 @@
             <div class="hero-actions">
               <button class="btn-primary" onclick="quickAddToCart('lucenta-v-sculpt-glowwand')">
                 <span>Claim Your V-Sculpt GlowWand</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </button>
               <a href="#products" class="btn-secondary">
                 <span>View All Devices</span>
@@ -3185,15 +3426,21 @@
             <!-- Guarantee badges -->
             <div class="hero-guarantee-pills">
               <div class="hero-guarantee-pill">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
                 <span>30-Day Money-Back</span>
               </div>
               <div class="hero-guarantee-pill">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
                 <span>Free Tracked US Shipping</span>
               </div>
               <div class="hero-guarantee-pill">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
                 <span>Dermatologist Tested</span>
               </div>
             </div>
@@ -3204,15 +3451,8 @@
         <div class="hero-media-card" id="hero-media-container">
           <div class="hero-media-wrapper">
             <!-- Hero Video: Plays automatically and seamlessly replaced when ended -->
-            <video
-              id="hero-video"
-              class="hero-video"
-              autoplay
-              muted
-              playsinline
-              preload="auto"
-              poster="imgaes/unnamed.webp_20261025152135.webp"
-            >
+            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto"
+              poster="imgaes/unnamed.webp_20261025152135.webp">
               <source src="1025.webm" type="video/webm">
               <source src="1025.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
@@ -3221,17 +3461,9 @@
             <!-- Replacement Image: Transitions in with luxury fade when video completes -->
             <picture>
               <source srcset="imgaes/unnamed.webp_20261025152135.webp" type="image/webp">
-              <img
-                id="hero-still"
-                src="imgaes/unnamed.webp_20261025152135.jpg"
-                alt="Lucenta V-Sculpt Pro on blush pink silk"
-                class="hero-still"
-                width="1376"
-                height="768"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              >
+              <img id="hero-still" src="imgaes/unnamed.webp_20261025152135.jpg"
+                alt="Lucenta V-Sculpt Pro on blush pink silk" class="hero-still" width="1376" height="768"
+                loading="eager" fetchpriority="high" decoding="async">
             </picture>
 
             <!-- Floating Video Pill -->
@@ -3242,13 +3474,17 @@
 
             <!-- Replay Film Button (appears after completion) -->
             <button id="hero-replay-btn" class="hero-replay-btn" onclick="replayHeroVideo()" title="Replay film">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 4v6h6M23 20v-6h-6" />
+                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15" />
+              </svg>
               <span>Replay Film</span>
             </button>
 
             <!-- Floating luxury quote pill -->
             <div class="hero-floating-quote">
-              <p class="hero-floating-quote__text">"A non-invasive miracle for sculpted cheekbones and lifted contours."</p>
+              <p class="hero-floating-quote__text">"A non-invasive miracle for sculpted cheekbones and lifted contours."
+              </p>
               <p class="hero-floating-quote__author">Vogue Beauty Edit</p>
             </div>
           </div>
@@ -3264,14 +3500,14 @@
   <section class="guarantee-strip">
     <div class="container">
       <div class="guarantee-grid">
-        
+
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="1" y="3" width="15" height="13" rx="2"/>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-              <circle cx="5.5" cy="18.5" r="2.5"/>
-              <circle cx="18.5" cy="18.5" r="2.5"/>
+              <rect x="1" y="3" width="15" height="13" rx="2" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
             </svg>
           </div>
           <div class="guarantee-details">
@@ -3283,7 +3519,7 @@
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
           <div class="guarantee-details">
@@ -3295,8 +3531,8 @@
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
             </svg>
           </div>
           <div class="guarantee-details">
@@ -3339,7 +3575,10 @@
             High-tech precision meets <span class="serif-italic">editorial elegance</span>.
           </h2>
           <p class="statement-body">
-            At Lucenta Labs, we believe clinical facial sculpting shouldn't require invasive procedures or high-priced med-spa subscriptions. Our devices harness precision microcurrent and photonic therapy to naturally re-energize dormant facial muscles, stimulate collagen synthesis, and define your natural jawline in just 5 minutes a day.
+            At Lucenta Labs, we believe clinical facial sculpting shouldn't require invasive procedures or high-priced
+            med-spa subscriptions. Our devices harness precision microcurrent and photonic therapy to naturally
+            re-energize dormant facial muscles, stimulate collagen synthesis, and define your natural jawline in just 5
+            minutes a day.
           </p>
 
           <div class="statement-stats">
@@ -3361,7 +3600,9 @@
         <div class="statement-imagery">
           <picture>
             <source srcset="imgaes/Woman_using_facial_massager_device_20261025142138.webp" type="image/webp">
-            <img src="imgaes/Woman_using_facial_massager_device_20261025142138.jpg" alt="Lucenta Labs facial sculpting in everyday beauty ritual" class="statement-img" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="imgaes/Woman_using_facial_massager_device_20261025142138.jpg"
+              alt="Lucenta Labs facial sculpting in everyday beauty ritual" class="statement-img" width="1024"
+              height="1024" loading="lazy" decoding="async">
           </picture>
         </div>
       </div>
@@ -3373,12 +3614,13 @@
        ========================================================================== -->
   <section class="products-section" id="products">
     <div class="container">
-      
+
       <div class="section-header">
         <span class="section-subtitle">Clinical Precision Devices</span>
         <h2 class="section-title editorial-title">The Lucenta Sculpting System</h2>
         <p class="section-description">
-          Each device is engineered with precision microcurrent and thermal wavelengths designed to work individually or in synergistic harmony.
+          Each device is engineered with precision microcurrent and thermal wavelengths designed to work individually or
+          in synergistic harmony.
         </p>
       </div>
 
@@ -3396,7 +3638,8 @@
                   <span class="pill-tag pill-tag--badge">Flagship Hero</span>
                 </div>
                 <div class="product-card__media-wrap" onclick="window.location.href='lucenta-v-sculpt-glowwand.html'">
-                  <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="product-card__image" width="400" height="400"></shopify-media>
+                  <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="product-card__image"
+                    width="400" height="400"></shopify-media>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
@@ -3407,15 +3650,24 @@
                   <p class="product-card__tagline">Sculpt, contour, and restore your natural glow.</p>
                   <ul class="product-card__features-list">
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>EMS Microcurrent: Tones underlying facial muscles</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Thermal Warming: Boosts circulation &amp; absorption</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Ergonomic Contour Lock: Jawline, cheeks &amp; neck</span>
                     </li>
                   </ul>
@@ -3431,7 +3683,12 @@
                     </div>
                     <div class="product-card__buttons">
                       <button class="btn-add-to-cart" onclick="quickAddToCart('lucenta-v-sculpt-glowwand')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                          <line x1="3" y1="6" x2="21" y2="6" />
+                          <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
                         <span>Add to Cart</span>
                       </button>
                       <a class="btn-view-details" href="lucenta-v-sculpt-glowwand.html">
@@ -3452,7 +3709,8 @@
                 <div class="product-card__media-wrap" onclick="window.location.href='lucenta-v-sculpt-glowwand.html'">
                   <picture>
                     <source srcset="imgaes/unnamed.webp_20261025152135.webp" type="image/webp">
-                    <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="product-card__image" width="1376" height="768" loading="lazy" decoding="async">
+                    <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand"
+                      class="product-card__image" width="1376" height="768" loading="lazy" decoding="async">
                   </picture>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
@@ -3462,15 +3720,24 @@
                   <p class="product-card__tagline">Sculpt, contour, and restore your natural glow.</p>
                   <ul class="product-card__features-list">
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>EMS Microcurrent: Tones underlying facial muscles</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Thermal Warming: Boosts circulation &amp; absorption</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Ergonomic Contour Lock: Jawline, cheeks &amp; neck</span>
                     </li>
                   </ul>
@@ -3484,7 +3751,12 @@
                     </div>
                     <div class="product-card__buttons">
                       <button class="btn-add-to-cart" onclick="quickAddToCart('lucenta-v-sculpt-glowwand')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                          <line x1="3" y1="6" x2="21" y2="6" />
+                          <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
                         <span>Add to Cart</span>
                       </button>
                       <a class="btn-view-details" href="lucenta-v-sculpt-glowwand.html">
@@ -3509,8 +3781,10 @@
                 <div class="product-card__ribbon">
                   <span class="pill-tag pill-tag--rose">LED Phototherapy</span>
                 </div>
-                <div class="product-card__media-wrap" onclick="window.location.href='lucenta-neck-face-led-sculptor.html'">
-                  <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="product-card__image" width="400" height="400"></shopify-media>
+                <div class="product-card__media-wrap"
+                  onclick="window.location.href='lucenta-neck-face-led-sculptor.html'">
+                  <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="product-card__image"
+                    width="400" height="400"></shopify-media>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
@@ -3518,18 +3792,28 @@
                   <h3 class="product-card__title">
                     <shopify-data query="product.title"></shopify-data>
                   </h3>
-                  <p class="product-card__tagline">Radiance, revived. Target fine lines and dull skin with multi-spectrum therapy.</p>
+                  <p class="product-card__tagline">Radiance, revived. Target fine lines and dull skin with
+                    multi-spectrum therapy.</p>
                   <ul class="product-card__features-list">
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>3-Color LED Modes: Red, Blue, Green</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Thermal Massage: Relaxes facial tension</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Sonic Vibration: Micro-circulation radiance</span>
                     </li>
                   </ul>
@@ -3544,8 +3828,14 @@
                       <span class="product-card__savings">Save 47%</span>
                     </div>
                     <div class="product-card__buttons">
-                      <button class="btn-add-to-cart" onclick="document.getElementById('cart').addLine(event).showModal();">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                      <button class="btn-add-to-cart"
+                        onclick="document.getElementById('cart').addLine(event).showModal();">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                          <line x1="3" y1="6" x2="21" y2="6" />
+                          <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
                         <span>Add to Cart</span>
                       </button>
                       <a class="btn-view-details" href="lucenta-neck-face-led-sculptor.html">
@@ -3563,28 +3853,41 @@
                 <div class="product-card__ribbon">
                   <span class="pill-tag pill-tag--rose">LED Phototherapy</span>
                 </div>
-                <div class="product-card__media-wrap" onclick="window.location.href='lucenta-neck-face-led-sculptor.html'">
+                <div class="product-card__media-wrap"
+                  onclick="window.location.href='lucenta-neck-face-led-sculptor.html'">
                   <picture>
                     <source srcset="imgaes/Woman_applying_beauty_device_to_20261025141945.webp" type="image/webp">
-                    <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Lucenta Neck & Face LED Sculptor" class="product-card__image" width="1024" height="1024" loading="lazy" decoding="async">
+                    <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg"
+                      alt="Lucenta Neck & Face LED Sculptor" class="product-card__image" width="1024" height="1024"
+                      loading="lazy" decoding="async">
                   </picture>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
                   <span class="product-card__category">LED Light Therapy &amp; Thermal</span>
                   <h3 class="product-card__title">Lucenta Neck &amp; Face LED Sculptor</h3>
-                  <p class="product-card__tagline">Radiance, revived. Target fine lines and dull skin with multi-spectrum therapy.</p>
+                  <p class="product-card__tagline">Radiance, revived. Target fine lines and dull skin with
+                    multi-spectrum therapy.</p>
                   <ul class="product-card__features-list">
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>3-Color LED Modes: Red, Blue, Green</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Thermal Massage: Relaxes facial tension</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Sonic Vibration: Micro-circulation radiance</span>
                     </li>
                   </ul>
@@ -3598,7 +3901,12 @@
                     </div>
                     <div class="product-card__buttons">
                       <button class="btn-add-to-cart" onclick="quickAddToCart('lucenta-neck-face-led-sculptor')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                          <line x1="3" y1="6" x2="21" y2="6" />
+                          <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
                         <span>Add to Cart</span>
                       </button>
                       <a class="btn-view-details" href="lucenta-neck-face-led-sculptor.html">
@@ -3624,7 +3932,8 @@
                   <span class="pill-tag pill-tag--badge">Most Popular • Save $50</span>
                 </div>
                 <div class="product-card__media-wrap" onclick="window.location.href='ultimate-v-contour-system.html'">
-                  <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="product-card__image" width="400" height="400"></shopify-media>
+                  <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="product-card__image"
+                    width="400" height="400"></shopify-media>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
@@ -3635,15 +3944,24 @@
                   <p class="product-card__tagline">The complete at-home sculpting &amp; radiance routine.</p>
                   <ul class="product-card__features-list">
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>1x Lucenta V-Sculpt GlowWand included</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>1x Lucenta Neck &amp; Face LED Sculptor</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Complete face, jawline &amp; neck renewal</span>
                     </li>
                   </ul>
@@ -3659,7 +3977,12 @@
                     </div>
                     <div class="product-card__buttons">
                       <button class="btn-add-to-cart" onclick="quickAddToCart('ultimate-v-contour-system')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                          <line x1="3" y1="6" x2="21" y2="6" />
+                          <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
                         <span>Add Bundle to Cart</span>
                       </button>
                       <a class="btn-view-details" href="ultimate-v-contour-system.html">
@@ -3680,7 +4003,9 @@
                 <div class="product-card__media-wrap" onclick="window.location.href='ultimate-v-contour-system.html'">
                   <picture>
                     <source srcset="imgaes/Commercial_beauty_devices_on_silk_20261025142614.webp" type="image/webp">
-                    <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg" alt="Ultimate V-Contour System Bundle" class="product-card__image" width="1024" height="1024" loading="lazy" decoding="async">
+                    <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg"
+                      alt="Ultimate V-Contour System Bundle" class="product-card__image" width="1024" height="1024"
+                      loading="lazy" decoding="async">
                   </picture>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
@@ -3690,15 +4015,24 @@
                   <p class="product-card__tagline">The complete at-home sculpting &amp; radiance routine.</p>
                   <ul class="product-card__features-list">
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>1x Lucenta V-Sculpt GlowWand included</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>1x Lucenta Neck &amp; Face LED Sculptor</span>
                     </li>
                     <li class="product-card__features-item">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       <span>Complete face, jawline &amp; neck renewal</span>
                     </li>
                   </ul>
@@ -3712,7 +4046,12 @@
                     </div>
                     <div class="product-card__buttons">
                       <button class="btn-add-to-cart" onclick="quickAddToCart('ultimate-v-contour-system')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                          <line x1="3" y1="6" x2="21" y2="6" />
+                          <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
                         <span>Add Bundle to Cart</span>
                       </button>
                       <a class="btn-view-details" href="ultimate-v-contour-system.html">
@@ -3739,57 +4078,69 @@
         <span class="section-subtitle">Bio-Engineered Architecture</span>
         <h2 class="section-title editorial-title">The Lucenta Difference</h2>
         <p class="section-description">
-          Click the interactive hotspots on the device to explore how our patent-pending engineering transforms your skincare routine.
+          Click the interactive hotspots on the device to explore how our patent-pending engineering transforms your
+          skincare routine.
         </p>
       </div>
 
       <div class="breakdown-grid">
-        
+
         <!-- Interactive Anatomy Image with Pins -->
         <div class="breakdown-interactive-card">
           <picture>
             <source srcset="imgaes/Skincare_device_feature_diagram_20261025133406.webp" type="image/webp">
-            <img src="imgaes/Skincare_device_feature_diagram_20261025133406.jpg" alt="Lucenta V-Sculpt Pro Feature Diagram" class="breakdown-image" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="imgaes/Skincare_device_feature_diagram_20261025133406.jpg"
+              alt="Lucenta V-Sculpt Pro Feature Diagram" class="breakdown-image" width="1024" height="1024"
+              loading="lazy" decoding="async">
           </picture>
-          
+
           <!-- Hotspot 1: Head -->
-          <button class="hotspot-pin" style="top: 24%; left: 49%;" aria-label="Biocompatible EMS Head Details" onclick="showHotspot(1)">1</button>
+          <button class="hotspot-pin" style="top: 24%; left: 49%;" aria-label="Biocompatible EMS Head Details"
+            onclick="showHotspot(1)">1</button>
           <div class="hotspot-tooltip" id="tooltip-1" style="top: 15%; left: 54%;">
-            <strong>Biocompatible EMS Head:</strong> Emits low-frequency microcurrent waves that simulate your body's natural cellular bio-electricity to tone jawline muscles.
+            <strong>Biocompatible EMS Head:</strong> Emits low-frequency microcurrent waves that simulate your body's
+            natural cellular bio-electricity to tone jawline muscles.
           </div>
 
           <!-- Hotspot 2: Display -->
-          <button class="hotspot-pin" style="top: 42%; left: 47%;" aria-label="Digital LED Screen Details" onclick="showHotspot(2)">2</button>
+          <button class="hotspot-pin" style="top: 42%; left: 47%;" aria-label="Digital LED Screen Details"
+            onclick="showHotspot(2)">2</button>
           <div class="hotspot-tooltip" id="tooltip-2" style="top: 40%; left: 54%;">
-            <strong>Smart LED Display:</strong> Displays active mode, velocity intensity level, and battery level for calibrated control.
+            <strong>Smart LED Display:</strong> Displays active mode, velocity intensity level, and battery level for
+            calibrated control.
           </div>
 
           <!-- Hotspot 3: Ergonomic Contour -->
-          <button class="hotspot-pin" style="top: 68%; left: 52%;" aria-label="Ergonomic Grip Details" onclick="showHotspot(3)">3</button>
+          <button class="hotspot-pin" style="top: 68%; left: 52%;" aria-label="Ergonomic Grip Details"
+            onclick="showHotspot(3)">3</button>
           <div class="hotspot-tooltip" id="tooltip-3" style="top: 65%; left: 58%;">
-            <strong>3D Ergonomic Lock:</strong> Designed to follow the natural contours of the mandible, zygomatic bone (cheekbones), and neck cords.
+            <strong>3D Ergonomic Lock:</strong> Designed to follow the natural contours of the mandible, zygomatic bone
+            (cheekbones), and neck cords.
           </div>
 
           <!-- Hotspot 4: Fast Charging -->
-          <button class="hotspot-pin" style="top: 86%; left: 48%;" aria-label="USB Charging Details" onclick="showHotspot(4)">4</button>
+          <button class="hotspot-pin" style="top: 86%; left: 48%;" aria-label="USB Charging Details"
+            onclick="showHotspot(4)">4</button>
           <div class="hotspot-tooltip" id="tooltip-4" style="top: 82%; left: 54%;">
-            <strong>Fast USB-C Recharge:</strong> High-density lithium-ion cell provides up to 3 weeks of daily 5-minute sculpting treatments on a single charge.
+            <strong>Fast USB-C Recharge:</strong> High-density lithium-ion cell provides up to 3 weeks of daily 5-minute
+            sculpting treatments on a single charge.
           </div>
         </div>
 
         <!-- Right Side Features -->
         <div class="breakdown-features-list">
-          
+
           <div class="feature-point">
             <div class="feature-point__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
             <div>
               <h4 class="feature-point__title">Microcurrent Neuromuscular Stimulation</h4>
               <p class="feature-point__desc">
-                Targeted microcurrent impulses reach deep into facial tissue to restore muscle tone, lift sagging skin along the jawline, and contour cheekbones naturally without downtime.
+                Targeted microcurrent impulses reach deep into facial tissue to restore muscle tone, lift sagging skin
+                along the jawline, and contour cheekbones naturally without downtime.
               </p>
             </div>
           </div>
@@ -3797,13 +4148,14 @@
           <div class="feature-point">
             <div class="feature-point__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
               </svg>
             </div>
             <div>
               <h4 class="feature-point__title">Intelligent 42°C Thermal Warming</h4>
               <p class="feature-point__desc">
-                Gentle, soothing thermal energy opens pores, boosts micro-circulation, and enables skincare peptides and serums to penetrate 3x deeper into the dermis.
+                Gentle, soothing thermal energy opens pores, boosts micro-circulation, and enables skincare peptides and
+                serums to penetrate 3x deeper into the dermis.
               </p>
             </div>
           </div>
@@ -3811,19 +4163,20 @@
           <div class="feature-point">
             <div class="feature-point__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="5"/>
-                <line x1="12" y1="1" x2="12" y2="3"/>
-                <line x1="12" y1="21" x2="12" y2="23"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="1" y1="12" x2="3" y2="12"/>
-                <line x1="21" y1="12" x2="23" y2="12"/>
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
               </svg>
             </div>
             <div>
               <h4 class="feature-point__title">Photonic Multi-Spectrum LED</h4>
               <p class="feature-point__desc">
-                Our trio-spectrum LED technology uses Red light (630nm) to spark collagen, Blue light (465nm) to eliminate blemish-causing bacteria, and Green light (520nm) to soothe redness.
+                Our trio-spectrum LED technology uses Red light (630nm) to spark collagen, Blue light (465nm) to
+                eliminate blemish-causing bacteria, and Green light (520nm) to soothe redness.
               </p>
             </div>
           </div>
@@ -3848,19 +4201,21 @@
       </div>
 
       <div class="ritual-grid">
-        
+
         <div class="ritual-card">
           <div class="ritual-card__media">
             <picture>
               <source srcset="imgaes/Woman_holding_skincare_device_20261025143628.webp" type="image/webp">
-              <img src="imgaes/Woman_holding_skincare_device_20261025143628.jpg" alt="Step 1: Prep and Apply Serum" width="1024" height="1024" loading="lazy" decoding="async">
+              <img src="imgaes/Woman_holding_skincare_device_20261025143628.jpg" alt="Step 1: Prep and Apply Serum"
+                width="1024" height="1024" loading="lazy" decoding="async">
             </picture>
             <span class="ritual-card__step-num">01</span>
           </div>
           <div class="ritual-card__body">
             <h3 class="ritual-card__title">Prep &amp; Hydrate</h3>
             <p class="ritual-card__text">
-              Cleanse your face thoroughly. Apply your favorite water-based hydrating serum, conductive gel, or facial oil to ensure smooth device glide and optimal electrical conductivity.
+              Cleanse your face thoroughly. Apply your favorite water-based hydrating serum, conductive gel, or facial
+              oil to ensure smooth device glide and optimal electrical conductivity.
             </p>
           </div>
         </div>
@@ -3869,14 +4224,16 @@
           <div class="ritual-card__media">
             <picture>
               <source srcset="imgaes/Woman_using_skincare_device_20261025133047.webp" type="image/webp">
-              <img src="imgaes/Woman_using_skincare_device_20261025133047.jpg" alt="Step 2: Sculpt and Lift" width="1024" height="1024" loading="lazy" decoding="async">
+              <img src="imgaes/Woman_using_skincare_device_20261025133047.jpg" alt="Step 2: Sculpt and Lift"
+                width="1024" height="1024" loading="lazy" decoding="async">
             </picture>
             <span class="ritual-card__step-num">02</span>
           </div>
           <div class="ritual-card__body">
             <h3 class="ritual-card__title">Glide &amp; Sculpt</h3>
             <p class="ritual-card__text">
-              Power on the V-Sculpt Pro. Glide upward along the jawline toward the ear, from smile lines up toward cheekbones, and over the brow line for 3–5 minutes.
+              Power on the V-Sculpt Pro. Glide upward along the jawline toward the ear, from smile lines up toward
+              cheekbones, and over the brow line for 3–5 minutes.
             </p>
           </div>
         </div>
@@ -3885,14 +4242,17 @@
           <div class="ritual-card__media">
             <picture>
               <source srcset="imgaes/Woman_applying_beauty_device_to_20261025141945.webp" type="image/webp">
-              <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Step 3: Rejuvenate Neck and Décolletage" width="1024" height="1024" loading="lazy" decoding="async">
+              <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg"
+                alt="Step 3: Rejuvenate Neck and Décolletage" width="1024" height="1024" loading="lazy"
+                decoding="async">
             </picture>
             <span class="ritual-card__step-num">03</span>
           </div>
           <div class="ritual-card__body">
             <h3 class="ritual-card__title">Restore &amp; Radiate</h3>
             <p class="ritual-card__text">
-              Switch to the Neck &amp; Face LED Sculptor. Use soothing upward sweeps along your neck and jawline to smooth tech-neck creases and lock in collagen regeneration.
+              Switch to the Neck &amp; Face LED Sculptor. Use soothing upward sweeps along your neck and jawline to
+              smooth tech-neck creases and lock in collagen regeneration.
             </p>
           </div>
         </div>
@@ -3984,19 +4344,22 @@
 
     <div class="reviews-treadmill-wrap" aria-label="Customer Reviews Carousel">
       <div class="reviews-treadmill-track">
-        
+
         <!-- Review 1 -->
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "I was skeptical about at-home microcurrent until day 10. My double chin is noticeably tighter, and my morning facial puffiness is gone within minutes. Worth every single penny."
+            "I was skeptical about at-home microcurrent until day 10. My double chin is noticeably tighter, and my
+            morning facial puffiness is gone within minutes. Worth every single penny."
           </p>
           <div class="review-author">
             <div class="review-avatar">SM</div>
             <div class="review-meta">
               <span class="review-name">Sophia M. — New York, NY</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (V-Sculpt Pro)
               </span>
             </div>
@@ -4007,14 +4370,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The warmth on this device feels like an ultra-luxe hot stone facial. I use the red LED mode every evening with my hyaluronic serum and my neck lines have softened tremendously."
+            "The warmth on this device feels like an ultra-luxe hot stone facial. I use the red LED mode every evening
+            with my hyaluronic serum and my neck lines have softened tremendously."
           </p>
           <div class="review-author">
             <div class="review-avatar">CR</div>
             <div class="review-meta">
               <span class="review-name">Claire R. — Austin, TX</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (LED Sculptor)
               </span>
             </div>
@@ -4025,14 +4391,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "Got the Ultimate V-Contour bundle. Using the V-Sculpt on my jawline and the neck wand right after gives a lifted contour that my aesthetician actually commented on at my last appointment!"
+            "Got the Ultimate V-Contour bundle. Using the V-Sculpt on my jawline and the neck wand right after gives a
+            lifted contour that my aesthetician actually commented on at my last appointment!"
           </p>
           <div class="review-author">
             <div class="review-avatar">EW</div>
             <div class="review-meta">
               <span class="review-name">Elena W. — Los Angeles, CA</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (Ultimate Bundle)
               </span>
             </div>
@@ -4043,14 +4412,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "As a dermatology clinician, I appreciate the dual-wavelength photonics. The biological stimulation is calibrated precisely. I personally use it 5 nights a week before sleep."
+            "As a dermatology clinician, I appreciate the dual-wavelength photonics. The biological stimulation is
+            calibrated precisely. I personally use it 5 nights a week before sleep."
           </p>
           <div class="review-author">
             <div class="review-avatar">AP</div>
             <div class="review-meta">
               <span class="review-name">Dr. Ananya P. — Chicago, IL</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Clinician (Ultimate Bundle)
               </span>
             </div>
@@ -4061,14 +4433,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone sculpting, my face looks naturally lifted even without contour makeup."
+            "The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone
+            sculpting, my face looks naturally lifted even without contour makeup."
           </p>
           <div class="review-author">
             <div class="review-avatar">CD</div>
             <div class="review-meta">
               <span class="review-name">Camille D. — Paris, France</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (V-Sculpt Pro)
               </span>
             </div>
@@ -4079,14 +4454,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The battery lasts almost a month on a single charge too!"
+            "I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The
+            battery lasts almost a month on a single charge too!"
           </p>
           <div class="review-author">
             <div class="review-avatar">HS</div>
             <div class="review-meta">
               <span class="review-name">Harper S. — Seattle, WA</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (LED Sculptor)
               </span>
             </div>
@@ -4097,14 +4475,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10 days and asked if he could try it on his neck!"
+            "My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10
+            days and asked if he could try it on his neck!"
           </p>
           <div class="review-author">
             <div class="review-avatar">OH</div>
             <div class="review-meta">
               <span class="review-name">Olivia H. — San Francisco, CA</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (V-Sculpt Pro)
               </span>
             </div>
@@ -4115,14 +4496,17 @@
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls. Truly an all-in-one holy grail clinical device."
+            "The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls.
+            Truly an all-in-one holy grail clinical device."
           </p>
           <div class="review-author">
             <div class="review-avatar">CB</div>
             <div class="review-meta">
               <span class="review-name">Chloe B. — London, UK</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (Ultimate Bundle)
               </span>
             </div>
@@ -4134,14 +4518,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "I was skeptical about at-home microcurrent until day 10. My double chin is noticeably tighter, and my morning facial puffiness is gone within minutes. Worth every single penny."
+            "I was skeptical about at-home microcurrent until day 10. My double chin is noticeably tighter, and my
+            morning facial puffiness is gone within minutes. Worth every single penny."
           </p>
           <div class="review-author">
             <div class="review-avatar">SM</div>
             <div class="review-meta">
               <span class="review-name">Sophia M. — New York, NY</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (V-Sculpt Pro)
               </span>
             </div>
@@ -4152,14 +4539,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The warmth on this device feels like an ultra-luxe hot stone facial. I use the red LED mode every evening with my hyaluronic serum and my neck lines have softened tremendously."
+            "The warmth on this device feels like an ultra-luxe hot stone facial. I use the red LED mode every evening
+            with my hyaluronic serum and my neck lines have softened tremendously."
           </p>
           <div class="review-author">
             <div class="review-avatar">CR</div>
             <div class="review-meta">
               <span class="review-name">Claire R. — Austin, TX</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (LED Sculptor)
               </span>
             </div>
@@ -4170,14 +4560,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "Got the Ultimate V-Contour bundle. Using the V-Sculpt on my jawline and the neck wand right after gives a lifted contour that my aesthetician actually commented on at my last appointment!"
+            "Got the Ultimate V-Contour bundle. Using the V-Sculpt on my jawline and the neck wand right after gives a
+            lifted contour that my aesthetician actually commented on at my last appointment!"
           </p>
           <div class="review-author">
             <div class="review-avatar">EW</div>
             <div class="review-meta">
               <span class="review-name">Elena W. — Los Angeles, CA</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (Ultimate Bundle)
               </span>
             </div>
@@ -4188,14 +4581,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "As a dermatology clinician, I appreciate the dual-wavelength photonics. The biological stimulation is calibrated precisely. I personally use it 5 nights a week before sleep."
+            "As a dermatology clinician, I appreciate the dual-wavelength photonics. The biological stimulation is
+            calibrated precisely. I personally use it 5 nights a week before sleep."
           </p>
           <div class="review-author">
             <div class="review-avatar">AP</div>
             <div class="review-meta">
               <span class="review-name">Dr. Ananya P. — Chicago, IL</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Clinician (Ultimate Bundle)
               </span>
             </div>
@@ -4206,14 +4602,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone sculpting, my face looks naturally lifted even without contour makeup."
+            "The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone
+            sculpting, my face looks naturally lifted even without contour makeup."
           </p>
           <div class="review-author">
             <div class="review-avatar">CD</div>
             <div class="review-meta">
               <span class="review-name">Camille D. — Paris, France</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (V-Sculpt Pro)
               </span>
             </div>
@@ -4224,14 +4623,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The battery lasts almost a month on a single charge too!"
+            "I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The
+            battery lasts almost a month on a single charge too!"
           </p>
           <div class="review-author">
             <div class="review-avatar">HS</div>
             <div class="review-meta">
               <span class="review-name">Harper S. — Seattle, WA</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (LED Sculptor)
               </span>
             </div>
@@ -4242,14 +4644,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10 days and asked if he could try it on his neck!"
+            "My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10
+            days and asked if he could try it on his neck!"
           </p>
           <div class="review-author">
             <div class="review-avatar">OH</div>
             <div class="review-meta">
               <span class="review-name">Olivia H. — San Francisco, CA</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (V-Sculpt Pro)
               </span>
             </div>
@@ -4260,14 +4665,17 @@
         <div class="review-card" aria-hidden="true">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">
-            "The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls. Truly an all-in-one holy grail clinical device."
+            "The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls.
+            Truly an all-in-one holy grail clinical device."
           </p>
           <div class="review-author">
             <div class="review-avatar">CB</div>
             <div class="review-meta">
               <span class="review-name">Chloe B. — London, UK</span>
               <span class="review-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Verified Buyer (Ultimate Bundle)
               </span>
             </div>
@@ -4292,54 +4700,80 @@
       </div>
 
       <div class="faq-list">
-        
+
         <div class="faq-item is-open">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>How does the EMS microcurrent technology actually work?</span>
-            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            EMS (Electrical Muscle Stimulation) produces gentle, painless microcurrent pulses that mirror your body's natural cellular electrical currents. These pulses gently contract and exercise the facial muscles beneath the skin, strengthening structural firmness and promoting lymphatic drainage for a lifted, contoured appearance.
+            EMS (Electrical Muscle Stimulation) produces gentle, painless microcurrent pulses that mirror your body's
+            natural cellular electrical currents. These pulses gently contract and exercise the facial muscles beneath
+            the skin, strengthening structural firmness and promoting lymphatic drainage for a lifted, contoured
+            appearance.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>Does the treatment hurt or cause discomfort?</span>
-            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            Not at all! The sensation is completely non-invasive and painless. Most users describe it as a gentle, soothing warmth paired with mild, invigorating micro-tingling. You can adjust the intensity from low to high to match your personal comfort.
+            Not at all! The sensation is completely non-invasive and painless. Most users describe it as a gentle,
+            soothing warmth paired with mild, invigorating micro-tingling. You can adjust the intensity from low to high
+            to match your personal comfort.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>Can I use my existing serums or facial oils?</span>
-            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            Yes! For best microcurrent conductivity, we recommend any water-based serum, hyaluronic acid, aloe gel, or conductive essence. The 42°C thermal warming actively dilates pores to boost your serum's active ingredient penetration by up to 300%.
+            Yes! For best microcurrent conductivity, we recommend any water-based serum, hyaluronic acid, aloe gel, or
+            conductive essence. The 42°C thermal warming actively dilates pores to boost your serum's active ingredient
+            penetration by up to 300%.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>How often should I use the device?</span>
-            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            We recommend using the Lucenta V-Sculpt Pro 3 to 5 times per week for 5 minutes per session during your initial 30 days. Once your desired contour definition is achieved, 2 to 3 sessions per week are ideal for long-term maintenance.
+            We recommend using the Lucenta V-Sculpt Pro 3 to 5 times per week for 5 minutes per session during your
+            initial 30 days. Once your desired contour definition is achieved, 2 to 3 sessions per week are ideal for
+            long-term maintenance.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>What is your 30-Day Money-Back Guarantee policy?</span>
-            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            We stand behind our craftsmanship 100%. Test your device in your daily beauty routine for 30 full days. If you are not thoroughly satisfied with your jawline contour and skin lift, simply reach out to our concierge support team for an effortless, full refund.
+            We stand behind our craftsmanship 100%. Test your device in your daily beauty routine for 30 full days. If
+            you are not thoroughly satisfied with your jawline contour and skin lift, simply reach out to our concierge
+            support team for an effortless, full refund.
           </div>
         </div>
 
@@ -4356,30 +4790,55 @@
         <span class="section-subtitle">Transparency &amp; Assurance</span>
         <h2 class="section-title editorial-title">Customer Care &amp; Store Policies</h2>
         <p class="section-description">
-          Review our shipping terms, 30-day money-back guarantee, privacy standards, and direct support contact info below.
+          Review our shipping terms, 30-day money-back guarantee, privacy standards, and direct support contact info
+          below.
         </p>
       </div>
 
       <!-- Policy Navigation Tabs -->
       <div class="policy-tabs-nav" role="tablist" aria-label="Store Policies">
-        <button class="policy-tab-btn is-active" data-policy="shipping-policy" onclick="switchPolicyTab('shipping-policy', false)" role="tab" aria-selected="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <button class="policy-tab-btn is-active" data-policy="shipping-policy"
+          onclick="switchPolicyTab('shipping-policy', false)" role="tab" aria-selected="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13" />
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
           <span>Shipping Policy</span>
         </button>
-        <button class="policy-tab-btn" data-policy="refund-policy" onclick="switchPolicyTab('refund-policy', false)" role="tab" aria-selected="false">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        <button class="policy-tab-btn" data-policy="refund-policy" onclick="switchPolicyTab('refund-policy', false)"
+          role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+          </svg>
           <span>Refund &amp; Return Policy</span>
         </button>
-        <button class="policy-tab-btn" data-policy="terms-policy" onclick="switchPolicyTab('terms-policy', false)" role="tab" aria-selected="false">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <button class="policy-tab-btn" data-policy="terms-policy" onclick="switchPolicyTab('terms-policy', false)"
+          role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>
           <span>Terms of Service</span>
         </button>
-        <button class="policy-tab-btn" data-policy="privacy-policy" onclick="switchPolicyTab('privacy-policy', false)" role="tab" aria-selected="false">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <button class="policy-tab-btn" data-policy="privacy-policy" onclick="switchPolicyTab('privacy-policy', false)"
+          role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
           <span>Privacy Policy</span>
         </button>
-        <button class="policy-tab-btn" data-policy="contact-info" onclick="switchPolicyTab('contact-info', false)" role="tab" aria-selected="false">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <button class="policy-tab-btn" data-policy="contact-info" onclick="switchPolicyTab('contact-info', false)"
+          role="tab" aria-selected="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
           <span>Contact Information</span>
         </button>
       </div>
@@ -4389,27 +4848,40 @@
         <div class="policy-header">
           <span class="policy-badge">Free US Tracked Delivery</span>
           <h3 class="policy-title">Shipping Policy</h3>
-          <p class="policy-lead">At Lucenta Labs, we are committed to delivering your skincare technology quickly and securely. Please review our shipping terms and delivery timelines below.</p>
+          <p class="policy-lead">At Lucenta Labs, we are committed to delivering your skincare technology quickly and
+            securely. Please review our shipping terms and delivery timelines below.</p>
         </div>
         <div class="policy-body">
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">1</span> Order Processing Time</h4>
-            <p class="policy-block-text">All orders are processed within 1 to 2 business days (excluding weekends and major holidays) after receiving your order confirmation email. Once your order has been dispatched, you will receive a shipping confirmation email containing your tracking number and carrier details.</p>
+            <p class="policy-block-text">All orders are processed within 1 to 2 business days (excluding weekends and
+              major holidays) after receiving your order confirmation email. Once your order has been dispatched, you
+              will receive a shipping confirmation email containing your tracking number and carrier details.</p>
           </div>
           <div class="policy-block">
-            <h4 class="policy-block-title"><span class="policy-num">2</span> Shipping Rates &amp; Delivery Estimates (United States)</h4>
-            <p class="policy-block-text"><strong>Free Tracked US Shipping:</strong> $0.00 (Standard delivery time: 5 to 9 business days after dispatch). All US orders are shipped via tracked carrier services (including USPS, SpeedX, or regional logistics partners depending on destination efficiency).</p>
+            <h4 class="policy-block-title"><span class="policy-num">2</span> Shipping Rates &amp; Delivery Estimates
+              (United States)</h4>
+            <p class="policy-block-text"><strong>Free Tracked US Shipping:</strong> $0.00 (Standard delivery time: 5 to
+              9 business days after dispatch). All US orders are shipped via tracked carrier services (including USPS,
+              SpeedX, or regional logistics partners depending on destination efficiency).</p>
             <div class="policy-highlight-box">
-              <strong>100% Free Shipping:</strong> Free shipping is automatically applied to all US orders with zero minimum spend required.
+              <strong>100% Free Shipping:</strong> Free shipping is automatically applied to all US orders with zero
+              minimum spend required.
             </div>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">3</span> Tracking Your Order</h4>
-            <p class="policy-block-text">Once your package has shipped, a tracking link will automatically be sent to your email. Please allow 24–48 hours for tracking information to update in the carrier system.</p>
+            <p class="policy-block-text">Once your package has shipped, a tracking link will automatically be sent to
+              your email. Please allow 24–48 hours for tracking information to update in the carrier system.</p>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">4</span> Shipping Address &amp; Package Loss</h4>
-            <p class="policy-block-text">Please ensure your shipping address is entered correctly at checkout. Lucenta Labs is not responsible for orders delivered to incorrect addresses provided by the buyer. If your package is delayed, missing, or marked as delivered but not received, please contact our support team at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> within 14 days so we can assist with carrier claims and replacements.</p>
+            <p class="policy-block-text">Please ensure your shipping address is entered correctly at checkout. Lucenta
+              Labs is not responsible for orders delivered to incorrect addresses provided by the buyer. If your package
+              is delayed, missing, or marked as delivered but not received, please contact our support team at <a
+                href="mailto:lucentalabs@gmail.com"
+                style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> within 14
+              days so we can assist with carrier claims and replacements.</p>
           </div>
         </div>
       </div>
@@ -4419,34 +4891,46 @@
         <div class="policy-header">
           <span class="policy-badge">30-Day Risk-Free Guarantee</span>
           <h3 class="policy-title">Refund &amp; Return Policy</h3>
-          <p class="policy-lead">We stand behind the quality of our beauty-tech devices with our 30-Day Risk-Free Guarantee. If you are not completely satisfied with your results, we are here to help.</p>
+          <p class="policy-lead">We stand behind the quality of our beauty-tech devices with our 30-Day Risk-Free
+            Guarantee. If you are not completely satisfied with your results, we are here to help.</p>
         </div>
         <div class="policy-body">
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">1</span> 30-Day Risk-Free Trial</h4>
-            <p class="policy-block-text">You have 30 calendar days from the date of delivery to request a return or full refund for your Lucenta Labs device. To initiate a return, please contact us at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with your order number and reason for return.</p>
+            <p class="policy-block-text">You have 30 calendar days from the date of delivery to request a return or full
+              refund for your Lucenta Labs device. To initiate a return, please contact us at <a
+                href="mailto:lucentalabs@gmail.com"
+                style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with your
+              order number and reason for return.</p>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">2</span> Return Eligibility &amp; Conditions</h4>
             <p class="policy-block-text">To be eligible for a return under our 30-day guarantee:
               <br>• The device must be free from physical damage caused by misuse, immersion in water, or drops.
               <br>• The item must include all original accessories, charging cables, and packaging.
-              <br>• Customers are responsible for return shipping costs unless the device arrived damaged or defective upon opening.
+              <br>• Customers are responsible for return shipping costs unless the device arrived damaged or defective
+              upon opening.
             </p>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">3</span> Damaged, Defective, or Incorrect Items</h4>
-            <p class="policy-block-text">Please inspect your order upon reception. If your device arrives damaged, defective, or does not turn on/charge:
-              <br>• Contact us immediately at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with photos or a short video demonstrating the issue.
-              <br>• We will send a brand-new replacement unit at zero cost to you or issue a full refund immediately—no return of the damaged unit required in most cases.
+            <p class="policy-block-text">Please inspect your order upon reception. If your device arrives damaged,
+              defective, or does not turn on/charge:
+              <br>• Contact us immediately at <a href="mailto:lucentalabs@gmail.com"
+                style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with
+              photos or a short video demonstrating the issue.
+              <br>• We will send a brand-new replacement unit at zero cost to you or issue a full refund immediately—no
+              return of the damaged unit required in most cases.
             </p>
             <div class="policy-highlight-box">
-              <strong>Hassle-Free Replacement:</strong> Defective items reported within 14 days are replaced immediately with priority dispatch.
+              <strong>Hassle-Free Replacement:</strong> Defective items reported within 14 days are replaced immediately
+              with priority dispatch.
             </div>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">4</span> Refund Processing</h4>
-            <p class="policy-block-text">Once your return is received and inspected, your refund will be processed back to your original payment method within 3 to 5 business days.</p>
+            <p class="policy-block-text">Once your return is received and inspected, your refund will be processed back
+              to your original payment method within 3 to 5 business days.</p>
           </div>
         </div>
       </div>
@@ -4456,27 +4940,42 @@
         <div class="policy-header">
           <span class="policy-badge">Legal Notice</span>
           <h3 class="policy-title">Terms of Service</h3>
-          <p class="policy-lead">Please read these terms carefully before accessing or using our website and purchasing our skincare technology devices.</p>
+          <p class="policy-lead">Please read these terms carefully before accessing or using our website and purchasing
+            our skincare technology devices.</p>
         </div>
         <div class="policy-body">
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">1</span> Overview &amp; Acceptable Use</h4>
-            <p class="policy-block-text">By visiting our site and/or purchasing from Lucenta Labs, you engage in our "Service" and agree to be bound by these Terms of Service. Our store sells at-home beauty and skincare tools, including microcurrent, thermal, and LED therapy devices designed strictly for cosmetic and external personal use.</p>
+            <p class="policy-block-text">By visiting our site and/or purchasing from Lucenta Labs, you engage in our
+              "Service" and agree to be bound by these Terms of Service. Our store sells at-home beauty and skincare
+              tools, including microcurrent, thermal, and LED therapy devices designed strictly for cosmetic and
+              external personal use.</p>
           </div>
           <div class="policy-block">
-            <h4 class="policy-block-title"><span class="policy-num">2</span> Product Disclaimer &amp; Safety Guidelines</h4>
-            <p class="policy-block-text"><strong>Cosmetic Device Notice:</strong> Lucenta Labs products (including the Lucenta V-Sculpt Pro and Lucenta Neck &amp; Face LED Sculptor) are cosmetic beauty tools intended for skin rejuvenation, muscle toning, and serum absorption. They are not medical devices and are not intended to diagnose, treat, cure, or prevent any medical condition or disease.</p>
+            <h4 class="policy-block-title"><span class="policy-num">2</span> Product Disclaimer &amp; Safety Guidelines
+            </h4>
+            <p class="policy-block-text"><strong>Cosmetic Device Notice:</strong> Lucenta Labs products (including the
+              Lucenta V-Sculpt Pro and Lucenta Neck &amp; Face LED Sculptor) are cosmetic beauty tools intended for skin
+              rejuvenation, muscle toning, and serum absorption. They are not medical devices and are not intended to
+              diagnose, treat, cure, or prevent any medical condition or disease.</p>
             <div class="policy-highlight-box">
-              <strong>Usage Restrictions:</strong> Do not use EMS microcurrent or thermal devices if you have a pacemaker, implanted metal electronic devices, active facial skin infections, open wounds, or severe medical skin conditions without consulting a physician prior to use. Always follow the included instruction manual regarding skin hydration and treatment times.
+              <strong>Usage Restrictions:</strong> Do not use EMS microcurrent or thermal devices if you have a
+              pacemaker, implanted metal electronic devices, active facial skin infections, open wounds, or severe
+              medical skin conditions without consulting a physician prior to use. Always follow the included
+              instruction manual regarding skin hydration and treatment times.
             </div>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">3</span> Pricing &amp; Modifications</h4>
-            <p class="policy-block-text">Prices for our products are subject to change without notice. We reserve the right at any time to modify or discontinue any product or service without liability. For any legal or operational inquiries regarding these terms, reach us at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>.</p>
+            <p class="policy-block-text">Prices for our products are subject to change without notice. We reserve the
+              right at any time to modify or discontinue any product or service without liability. For any legal or
+              operational inquiries regarding these terms, reach us at <a href="mailto:lucentalabs@gmail.com"
+                style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>.</p>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">4</span> Governing Law</h4>
-            <p class="policy-block-text">These Terms of Service and any separate agreements shall be governed by and construed in accordance with applicable commerce laws.</p>
+            <p class="policy-block-text">These Terms of Service and any separate agreements shall be governed by and
+              construed in accordance with applicable commerce laws.</p>
           </div>
         </div>
       </div>
@@ -4486,12 +4985,17 @@
         <div class="policy-header">
           <span class="policy-badge">Data Privacy &amp; Security</span>
           <h3 class="policy-title">Privacy Policy</h3>
-          <p class="policy-lead">Lucenta Labs respects your personal privacy. This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from our store.</p>
+          <p class="policy-lead">Lucenta Labs respects your personal privacy. This Privacy Policy describes how your
+            personal information is collected, used, and shared when you visit or make a purchase from our store.</p>
         </div>
         <div class="policy-body">
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">1</span> Information We Collect</h4>
-            <p class="policy-block-text">When you purchase an item, we collect order details including your name, shipping address, billing address, payment information (processed securely through encrypted gateways like Shopify Payments/PayPal), email address, and phone number. When you browse our site, we automatically collect device information, IP address, time zone, and cookies to improve site performance and analytics.</p>
+            <p class="policy-block-text">When you purchase an item, we collect order details including your name,
+              shipping address, billing address, payment information (processed securely through encrypted gateways like
+              Shopify Payments/PayPal), email address, and phone number. When you browse our site, we automatically
+              collect device information, IP address, time zone, and cookies to improve site performance and analytics.
+            </p>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">2</span> How We Use Your Information</h4>
@@ -4504,11 +5008,15 @@
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">3</span> Data Security</h4>
-            <p class="policy-block-text">Your personal and payment details are encrypted using Secure Sockets Layer (SSL) technology and industry-standard protocols. We do not store raw credit card numbers on our servers.</p>
+            <p class="policy-block-text">Your personal and payment details are encrypted using Secure Sockets Layer
+              (SSL) technology and industry-standard protocols. We do not store raw credit card numbers on our servers.
+            </p>
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title"><span class="policy-num">4</span> Contact Us</h4>
-            <p class="policy-block-text">For more information about our privacy practices or questions, please contact us by email at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>.</p>
+            <p class="policy-block-text">For more information about our privacy practices or questions, please contact
+              us by email at <a href="mailto:lucentalabs@gmail.com"
+                style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>.</p>
           </div>
         </div>
       </div>
@@ -4518,7 +5026,8 @@
         <div class="policy-header">
           <span class="policy-badge">Concierge Support</span>
           <h3 class="policy-title">Contact Information</h3>
-          <p class="policy-lead">We are here to assist you with any questions regarding your order, device usage, or shipping status.</p>
+          <p class="policy-lead">We are here to assist you with any questions regarding your order, device usage, or
+            shipping status.</p>
         </div>
         <div class="policy-body">
           <div class="policy-contact-card">
@@ -4541,7 +5050,11 @@
           </div>
           <div class="policy-block">
             <h4 class="policy-block-title">How To Reach Us For Orders &amp; Returns</h4>
-            <p class="policy-block-text">For return requests, order changes, or tracking support, please email us directly at <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with your order number in the subject line. Our dedicated beauty specialists will assist you within one business day.</p>
+            <p class="policy-block-text">For return requests, order changes, or tracking support, please email us
+              directly at <a href="mailto:lucentalabs@gmail.com"
+                style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a> with your
+              order number in the subject line. Our dedicated beauty specialists will assist you within one business
+              day.</p>
           </div>
         </div>
       </div>
@@ -4555,16 +5068,18 @@
   <footer class="footer">
     <div class="container-wide">
       <div class="footer-grid">
-        
+
         <div class="footer-col">
           <div class="footer-logo-wrap">
             <picture>
-            <source srcset="logo-footer-transparent.webp" type="image/webp">
-            <img src="logo-footer-transparent.png" alt="Lucenta Labs" class="footer-logo" width="907" height="597" loading="lazy" decoding="async">
-          </picture>
+              <source srcset="logo-footer-transparent.webp" type="image/webp">
+              <img src="logo-footer-transparent.png" alt="Lucenta Labs" class="footer-logo" width="907" height="597"
+                loading="lazy" decoding="async">
+            </picture>
           </div>
           <p class="footer-description">
-            Lucenta Labs redefines beauty technology with clinical microcurrent and photonic therapy designed for luxury minimalism and non-invasive facial sculpting.
+            Lucenta Labs redefines beauty technology with clinical microcurrent and photonic therapy designed for luxury
+            minimalism and non-invasive facial sculpting.
           </p>
         </div>
 
@@ -4582,11 +5097,16 @@
         <div class="footer-col">
           <h4 class="footer-heading">Customer Policies</h4>
           <ul class="footer-links">
-            <li><a href="#shipping-policy" class="footer-link" onclick="switchPolicyTab('shipping-policy', true)">Shipping Policy</a></li>
-            <li><a href="#refund-policy" class="footer-link" onclick="switchPolicyTab('refund-policy', true)">Refund &amp; Return Policy</a></li>
-            <li><a href="#terms-policy" class="footer-link" onclick="switchPolicyTab('terms-policy', true)">Terms of Service</a></li>
-            <li><a href="#privacy-policy" class="footer-link" onclick="switchPolicyTab('privacy-policy', true)">Privacy Policy</a></li>
-            <li><a href="#contact-info" class="footer-link" onclick="switchPolicyTab('contact-info', true)">Contact Information</a></li>
+            <li><a href="#shipping-policy" class="footer-link"
+                onclick="switchPolicyTab('shipping-policy', true)">Shipping Policy</a></li>
+            <li><a href="#refund-policy" class="footer-link" onclick="switchPolicyTab('refund-policy', true)">Refund
+                &amp; Return Policy</a></li>
+            <li><a href="#terms-policy" class="footer-link" onclick="switchPolicyTab('terms-policy', true)">Terms of
+                Service</a></li>
+            <li><a href="#privacy-policy" class="footer-link" onclick="switchPolicyTab('privacy-policy', true)">Privacy
+                Policy</a></li>
+            <li><a href="#contact-info" class="footer-link" onclick="switchPolicyTab('contact-info', true)">Contact
+                Information</a></li>
           </ul>
         </div>
 
@@ -4595,14 +5115,16 @@
           <p class="footer-description">
             Subscribe for exclusive clinical skincare guides, routine tips, and private member releases.
           </p>
-          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Lucenta Labs.');">
+          <form class="footer-newsletter-form"
+            onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Lucenta Labs.');">
             <div class="footer-input-wrap">
               <input type="email" placeholder="Enter your email" class="footer-input" required>
               <button type="submit" class="footer-submit">Join</button>
             </div>
           </form>
           <p style="font-size: 0.8125rem; color: #A8A29E; margin-top: 0.5rem;">
-            Concierge Support: <a href="mailto:lucentalabs@gmail.com" style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>
+            Concierge Support: <a href="mailto:lucentalabs@gmail.com"
+              style="color: var(--color-accent-rose); text-decoration: underline;">lucentalabs@gmail.com</a>
           </p>
         </div>
 
@@ -4626,7 +5148,8 @@
        ========================================================================== -->
   <div class="mobile-sticky-bar" id="mobile-sticky-bar">
     <div class="mobile-sticky-info">
-      <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="mobile-sticky-thumb" width="48" height="48" loading="lazy" decoding="async">
+      <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="mobile-sticky-thumb"
+        width="48" height="48" loading="lazy" decoding="async">
       <div class="mobile-sticky-meta">
         <h4>Lucenta V-Sculpt GlowWand</h4>
         <div>
@@ -4645,10 +5168,12 @@
        ========================================================================== -->
   <dialog id="product-modal" class="product-modal">
     <div class="product-modal__wrapper">
-      <button class="product-modal__close-btn" onclick="document.getElementById('product-modal').close()" aria-label="Close dialog">&#10005;</button>
+      <button class="product-modal__close-btn" onclick="document.getElementById('product-modal').close()"
+        aria-label="Close dialog">&#10005;</button>
       <div class="product-modal__grid">
         <div class="product-modal__media-col">
-          <img id="modal-product-img" src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta Product" class="product-modal__img" width="500" height="500" loading="lazy" decoding="async">
+          <img id="modal-product-img" src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta Product"
+            class="product-modal__img" width="500" height="500" loading="lazy" decoding="async">
         </div>
         <div class="product-modal__info-col">
           <span class="product-modal__vendor">Lucenta Labs • Clinical Beauty Tech</span>
@@ -4659,7 +5184,8 @@
             <span class="product-card__savings" id="modal-product-savings">Save 43%</span>
           </div>
           <p class="product-modal__desc" id="modal-product-desc">
-            The Lucenta V-Sculpt Pro utilizes targeted microcurrent technology and thermal warming to stimulate facial muscles, promote lymphatic drainage, and sharpen your natural jawline structure.
+            The Lucenta V-Sculpt Pro utilizes targeted microcurrent technology and thermal warming to stimulate facial
+            muscles, promote lymphatic drainage, and sharpen your natural jawline structure.
           </p>
           <ul class="product-card__features-list" id="modal-product-features" style="border: none; padding: 0.25rem 0;">
             <!-- Dynamic features populated in JS -->
@@ -4673,7 +5199,9 @@
             </button>
           </div>
           <div class="cart-drawer__guarantee" style="margin-top: 0.5rem;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             <span>Free 3–7 Day US Delivery • 30-Day Money-Back Guarantee</span>
           </div>
         </div>
@@ -4694,7 +5222,9 @@
     <!-- Free Shipping Progress -->
     <div class="cart-drawer__shipping-bar">
       <div class="shipping-progress-text">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
         <span>Congratulations! You qualify for Free US Shipping</span>
       </div>
       <div class="shipping-bar-track">
@@ -4714,11 +5244,15 @@
         <span id="cart-subtotal-val">$0.00 USD</span>
       </div>
       <button class="cart-drawer__checkout-btn" onclick="proceedToCheckout()">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
         <span>Checkout Securely</span>
       </button>
       <div class="cart-drawer__guarantee">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 6L9 17l-5-5" />
+        </svg>
         <span>30-Day Risk-Free Trial • 256-Bit Encrypted</span>
       </div>
     </div>
@@ -4726,7 +5260,9 @@
 
   <!-- Toast Notification Pop-up -->
   <div class="toast-notification" id="toast-notification">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M20 6L9 17l-5-5" />
+    </svg>
     <span id="toast-text">Item successfully added to cart</span>
   </div>
 
@@ -4940,6 +5476,15 @@
       updateCartUI();
       openCartDrawer();
       showToast(`${itemTitle} added to your bag`);
+      if (typeof fbq === 'function') {
+        fbq('track', 'AddToCart', {
+          content_name: itemTitle,
+          content_ids: [itemVariantId || handle],
+          content_type: 'product',
+          value: itemPrice,
+          currency: 'USD'
+        });
+      }
     }
 
     function updateCartUI() {
@@ -5027,6 +5572,13 @@
     }
 
     function proceedToCheckout() {
+      if (typeof fbq === 'function' && cart.length > 0) {
+        fbq('track', 'InitiateCheckout', {
+          num_items: cart.reduce((sum, item) => sum + item.qty, 0),
+          value: cart.reduce((sum, item) => sum + (item.price * item.qty), 0),
+          currency: 'USD'
+        });
+      }
       if (cart.length === 0) {
         showToast("Your cart is empty!");
         return;
@@ -5045,13 +5597,13 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ items: items })
           })
-          .then(() => {
-            window.location.href = '/checkout';
-          })
-          .catch(() => {
-            const permalink = cart.filter(i => i.variantId).map(i => `${i.variantId}:${i.qty}`).join(',');
-            window.location.href = `https://${storeDomain}/cart/${permalink}`;
-          });
+            .then(() => {
+              window.location.href = '/checkout';
+            })
+            .catch(() => {
+              const permalink = cart.filter(i => i.variantId).map(i => `${i.variantId}:${i.qty}`).join(',');
+              window.location.href = `https://${storeDomain}/cart/${permalink}`;
+            });
           return;
         }
       }
@@ -5178,40 +5730,40 @@
       /* ---- Element selectors and their animation types ---- */
       var ANIM_MAP = [
         /* Landing page sections */
-        { sel: '.hero-rating',             anim: 'fade',        stagger: false },
-        { sel: '.guarantee-strip',         anim: 'fade',        stagger: false },
-        { sel: '.guarantee-item',          anim: 'slide-up',    stagger: true  },
-        { sel: '.section-header',          anim: 'slide-up',    stagger: false },
-        { sel: '.section-subtitle',        anim: 'fade',        stagger: false },
-        { sel: '.product-card-wrapper',    anim: 'slide-up',    stagger: true  },
-        { sel: '.statement-content',       anim: 'slide-left',  stagger: false },
-        { sel: '.statement-imagery',       anim: 'slide-right', stagger: false },
+        { sel: '.hero-rating', anim: 'fade', stagger: false },
+        { sel: '.guarantee-strip', anim: 'fade', stagger: false },
+        { sel: '.guarantee-item', anim: 'slide-up', stagger: true },
+        { sel: '.section-header', anim: 'slide-up', stagger: false },
+        { sel: '.section-subtitle', anim: 'fade', stagger: false },
+        { sel: '.product-card-wrapper', anim: 'slide-up', stagger: true },
+        { sel: '.statement-content', anim: 'slide-left', stagger: false },
+        { sel: '.statement-imagery', anim: 'slide-right', stagger: false },
         { sel: '.breakdown-interactive-card', anim: 'slide-left', stagger: false },
         { sel: '.breakdown-features-list', anim: 'slide-right', stagger: false },
-        { sel: '.feature-point',           anim: 'slide-up',    stagger: true  },
-        { sel: '.ritual-step',             anim: 'slide-up',    stagger: true  },
-        { sel: '.reviews-header',          anim: 'slide-up',    stagger: false },
-        { sel: '.review-card',             anim: 'slide-up',    stagger: true  },
-        { sel: '.faq-item',                anim: 'slide-up',    stagger: true  },
-        { sel: '.footer-brand',            anim: 'fade',        stagger: false },
-        { sel: '.footer-col',              anim: 'slide-up',    stagger: true  },
+        { sel: '.feature-point', anim: 'slide-up', stagger: true },
+        { sel: '.ritual-step', anim: 'slide-up', stagger: true },
+        { sel: '.reviews-header', anim: 'slide-up', stagger: false },
+        { sel: '.review-card', anim: 'slide-up', stagger: true },
+        { sel: '.faq-item', anim: 'slide-up', stagger: true },
+        { sel: '.footer-brand', anim: 'fade', stagger: false },
+        { sel: '.footer-col', anim: 'slide-up', stagger: true },
         /* PDP selectors */
-        { sel: '.pdp-eyebrow',             anim: 'fade',        stagger: false },
-        { sel: '.pdp-title',               anim: 'slide-up',    stagger: false },
-        { sel: '.pdp-reviews-row',         anim: 'fade',        stagger: false },
-        { sel: '.pdp-price-box',           anim: 'slide-up',    stagger: false },
-        { sel: '.pdp-live-urgency',        anim: 'fade',        stagger: false },
-        { sel: '.pdp-short-desc',          anim: 'slide-up',    stagger: false },
-        { sel: '.pdp-actions-wrap',        anim: 'slide-up',    stagger: false },
-        { sel: '.pdp-trust-item',          anim: 'fade',        stagger: true  },
-        { sel: '.pdp-acc-item',            anim: 'slide-up',    stagger: true  },
-        { sel: '.pdp-science-header',      anim: 'slide-up',    stagger: false },
-        { sel: '.pdp-feature-card',        anim: 'slide-up',    stagger: true  },
-        { sel: '.related-card',            anim: 'slide-up',    stagger: true  },
-        { sel: '.pdp-related-header',      anim: 'slide-up',    stagger: false },
+        { sel: '.pdp-eyebrow', anim: 'fade', stagger: false },
+        { sel: '.pdp-title', anim: 'slide-up', stagger: false },
+        { sel: '.pdp-reviews-row', anim: 'fade', stagger: false },
+        { sel: '.pdp-price-box', anim: 'slide-up', stagger: false },
+        { sel: '.pdp-live-urgency', anim: 'fade', stagger: false },
+        { sel: '.pdp-short-desc', anim: 'slide-up', stagger: false },
+        { sel: '.pdp-actions-wrap', anim: 'slide-up', stagger: false },
+        { sel: '.pdp-trust-item', anim: 'fade', stagger: true },
+        { sel: '.pdp-acc-item', anim: 'slide-up', stagger: true },
+        { sel: '.pdp-science-header', anim: 'slide-up', stagger: false },
+        { sel: '.pdp-feature-card', anim: 'slide-up', stagger: true },
+        { sel: '.related-card', anim: 'slide-up', stagger: true },
+        { sel: '.pdp-related-header', anim: 'slide-up', stagger: false },
       ];
 
-      var DELAY_CLS = ['anim-d1','anim-d2','anim-d3','anim-d4','anim-d5','anim-d6','anim-d7'];
+      var DELAY_CLS = ['anim-d1', 'anim-d2', 'anim-d3', 'anim-d4', 'anim-d5', 'anim-d6', 'anim-d7'];
 
       /* ---- Prepare elements for scroll trigger ---- */
       function prepareElements() {
@@ -5355,7 +5907,7 @@
       }
 
       /* ---- 6. Customer Care & Policies Interactive Tabs Controller ---- */
-      window.switchPolicyTab = function(policyId, scrollIntoView) {
+      window.switchPolicyTab = function (policyId, scrollIntoView) {
         var tabBtns = document.querySelectorAll('.policy-tab-btn');
         var tabPanels = document.querySelectorAll('.policy-tab-panel');
         if (!tabBtns.length || !tabPanels.length) return;
@@ -5402,4 +5954,5 @@
   </script>
 
 </body>
+
 </html>
