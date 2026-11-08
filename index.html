@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Lucenta Labs | Luxury Facial Sculpting &amp; High-Tech Skincare Devices</title>
   <meta name="description" content="Sculpt, contour, and lift from the comfort of home. Clinically-inspired EMS microcurrent, thermal warming, and LED therapy at Lucenta Labs. Free US delivery.">
   <meta name="theme-color" content="#141312">
@@ -13,10 +13,14 @@
   <meta property="og:description" content="Experience non-invasive jawline contouring and medical-grade skin rejuvenation. 30-Day Risk-Free Trial.">
   <meta property="og:image" content="imgaes/unnamed.webp_20261025152135.jpg">
 
-  <!-- Premium Editorial & Sans Google Fonts -->
+  <!-- Performance Hints & Preloads -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.shopify.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="imgaes/unnamed.webp_20261025152135.webp" type="image/webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Shopify Storefront Web Components Script -->
   <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
@@ -97,6 +101,27 @@
       display: block;
       max-width: 100%;
       height: auto;
+    }
+
+    picture {
+      display: contents;
+    }
+
+    .press-marquee-track, .reviews-track {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+    }
+
+    .ambient-glow-orb {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+    }
+
+    .breakdown-section, .ritual-section, .comparison-section, .reviews-section, .faq-section, .policies-section {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 700px;
     }
 
     button {
@@ -2878,7 +2903,7 @@
       content: '';
       position: absolute;
       top: -60%;
-      left: -120%;
+      left: 0;
       width: 70%;
       height: 220%;
       background: linear-gradient(
@@ -2887,14 +2912,15 @@
         rgba(255, 255, 255, 0.22) 50%,
         transparent 100%
       );
-      transform: rotate(25deg);
+      transform: translateX(-180%) rotate(25deg);
       animation: luxuryCtaSheen 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       pointer-events: none;
+      will-change: transform;
     }
     @keyframes luxuryCtaSheen {
-      0%   { left: -120%; }
-      22%  { left: 220%; }
-      100% { left: 220%; }
+      0%   { transform: translateX(-180%) rotate(25deg); }
+      22%  { transform: translateX(380%) rotate(25deg); }
+      100% { transform: translateX(380%) rotate(25deg); }
     }
 
     /* 9. Seamless Infinite Marquee for Press Publications */
@@ -2958,6 +2984,53 @@
       }
       .hero-media-card {
         animation: none !important;
+      }
+    }
+
+  
+    /* Strict Mobile Viewport Overflow Protection */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    section, header, footer, nav, .hero-section, .statement-section, .products-section, 
+    .breakdown-section, .ritual-section, .comparison-section, .reviews-section, 
+    .faq-section, .policies-section, .guarantee-strip, .press-strip {
+      max-width: 100%;
+      overflow-x: clip;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        position: relative;
+      }
+
+      .container, .container-wide {
+        padding: 0 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .ambient-glow-orb--rose {
+        right: 0 !important;
+        width: 240px !important;
+        height: 240px !important;
+      }
+
+      .ambient-glow-orb--gold {
+        left: 0 !important;
+        width: 200px !important;
+        height: 200px !important;
+      }
+
+      /* Prevent horizontal translation animation from pushing past screen width on mobile */
+      .anim-slide-right, .anim-slide-left {
+        transform: translateY(24px) scale(0.98) !important;
       }
     }
 
@@ -3027,7 +3100,10 @@
 
         <!-- Centered High-Res Brand Logo -->
         <a href="#" class="header__brand" aria-label="Lucenta Labs Home">
-          <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo">
+          <picture>
+            <source srcset="logo-navbar-transparent.webp" type="image/webp">
+            <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo" width="952" height="682" loading="eager" fetchpriority="high" decoding="async">
+          </picture>
         </a>
 
         <!-- Header Actions -->
@@ -3135,19 +3211,28 @@
               muted
               playsinline
               preload="auto"
-              poster="imgaes/unnamed.webp_20261025152135.jpg"
+              poster="imgaes/unnamed.webp_20261025152135.webp"
             >
+              <source src="1025.webm" type="video/webm">
               <source src="1025.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
 
             <!-- Replacement Image: Transitions in with luxury fade when video completes -->
-            <img
-              id="hero-still"
-              src="imgaes/unnamed.webp_20261025152135.jpg"
-              alt="Lucenta V-Sculpt Pro on blush pink silk"
-              class="hero-still"
-            >
+            <picture>
+              <source srcset="imgaes/unnamed.webp_20261025152135.webp" type="image/webp">
+              <img
+                id="hero-still"
+                src="imgaes/unnamed.webp_20261025152135.jpg"
+                alt="Lucenta V-Sculpt Pro on blush pink silk"
+                class="hero-still"
+                width="1376"
+                height="768"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              >
+            </picture>
 
             <!-- Floating Video Pill -->
             <div class="hero-media-tag">
@@ -3274,7 +3359,10 @@
         </div>
 
         <div class="statement-imagery">
-          <img src="imgaes/Woman_using_facial_massager_device_20261025142138.jpg" alt="Lucenta Labs facial sculpting in everyday beauty ritual" class="statement-img">
+          <picture>
+            <source srcset="imgaes/Woman_using_facial_massager_device_20261025142138.webp" type="image/webp">
+            <img src="imgaes/Woman_using_facial_massager_device_20261025142138.jpg" alt="Lucenta Labs facial sculpting in everyday beauty ritual" class="statement-img" width="1024" height="1024" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
     </div>
@@ -3362,7 +3450,10 @@
                   <span class="pill-tag pill-tag--badge">Flagship Hero</span>
                 </div>
                 <div class="product-card__media-wrap" onclick="window.location.href='lucenta-v-sculpt-glowwand.html'">
-                  <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="product-card__image">
+                  <picture>
+                    <source srcset="imgaes/unnamed.webp_20261025152135.webp" type="image/webp">
+                    <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="product-card__image" width="1376" height="768" loading="lazy" decoding="async">
+                  </picture>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
@@ -3473,7 +3564,10 @@
                   <span class="pill-tag pill-tag--rose">LED Phototherapy</span>
                 </div>
                 <div class="product-card__media-wrap" onclick="window.location.href='lucenta-neck-face-led-sculptor.html'">
-                  <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Lucenta Neck & Face LED Sculptor" class="product-card__image">
+                  <picture>
+                    <source srcset="imgaes/Woman_applying_beauty_device_to_20261025141945.webp" type="image/webp">
+                    <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Lucenta Neck & Face LED Sculptor" class="product-card__image" width="1024" height="1024" loading="lazy" decoding="async">
+                  </picture>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
@@ -3584,7 +3678,10 @@
                   <span class="pill-tag pill-tag--badge">Most Popular • Save $50</span>
                 </div>
                 <div class="product-card__media-wrap" onclick="window.location.href='ultimate-v-contour-system.html'">
-                  <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg" alt="Ultimate V-Contour System Bundle" class="product-card__image">
+                  <picture>
+                    <source srcset="imgaes/Commercial_beauty_devices_on_silk_20261025142614.webp" type="image/webp">
+                    <img src="imgaes/Commercial_beauty_devices_on_silk_20261025142614.jpg" alt="Ultimate V-Contour System Bundle" class="product-card__image" width="1024" height="1024" loading="lazy" decoding="async">
+                  </picture>
                   <span class="product-card__quick-view">Quick View</span>
                 </div>
                 <div class="product-card__content">
@@ -3650,7 +3747,10 @@
         
         <!-- Interactive Anatomy Image with Pins -->
         <div class="breakdown-interactive-card">
-          <img src="imgaes/Skincare_device_feature_diagram_20261025133406.jpg" alt="Lucenta V-Sculpt Pro Feature Diagram" class="breakdown-image">
+          <picture>
+            <source srcset="imgaes/Skincare_device_feature_diagram_20261025133406.webp" type="image/webp">
+            <img src="imgaes/Skincare_device_feature_diagram_20261025133406.jpg" alt="Lucenta V-Sculpt Pro Feature Diagram" class="breakdown-image" width="1024" height="1024" loading="lazy" decoding="async">
+          </picture>
           
           <!-- Hotspot 1: Head -->
           <button class="hotspot-pin" style="top: 24%; left: 49%;" aria-label="Biocompatible EMS Head Details" onclick="showHotspot(1)">1</button>
@@ -3751,7 +3851,10 @@
         
         <div class="ritual-card">
           <div class="ritual-card__media">
-            <img src="imgaes/Woman_holding_skincare_device_20261025143628.jpg" alt="Step 1: Prep and Apply Serum">
+            <picture>
+              <source srcset="imgaes/Woman_holding_skincare_device_20261025143628.webp" type="image/webp">
+              <img src="imgaes/Woman_holding_skincare_device_20261025143628.jpg" alt="Step 1: Prep and Apply Serum" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
             <span class="ritual-card__step-num">01</span>
           </div>
           <div class="ritual-card__body">
@@ -3764,7 +3867,10 @@
 
         <div class="ritual-card">
           <div class="ritual-card__media">
-            <img src="imgaes/Woman_using_skincare_device_20261025133047.jpg" alt="Step 2: Sculpt and Lift">
+            <picture>
+              <source srcset="imgaes/Woman_using_skincare_device_20261025133047.webp" type="image/webp">
+              <img src="imgaes/Woman_using_skincare_device_20261025133047.jpg" alt="Step 2: Sculpt and Lift" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
             <span class="ritual-card__step-num">02</span>
           </div>
           <div class="ritual-card__body">
@@ -3777,7 +3883,10 @@
 
         <div class="ritual-card">
           <div class="ritual-card__media">
-            <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Step 3: Rejuvenate Neck and Décolletage">
+            <picture>
+              <source srcset="imgaes/Woman_applying_beauty_device_to_20261025141945.webp" type="image/webp">
+              <img src="imgaes/Woman_applying_beauty_device_to_20261025141945.jpg" alt="Step 3: Rejuvenate Neck and Décolletage" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
             <span class="ritual-card__step-num">03</span>
           </div>
           <div class="ritual-card__body">
@@ -4449,7 +4558,10 @@
         
         <div class="footer-col">
           <div class="footer-logo-wrap">
-            <img src="logo-footer-transparent.png" alt="Lucenta Labs" class="footer-logo">
+            <picture>
+            <source srcset="logo-footer-transparent.webp" type="image/webp">
+            <img src="logo-footer-transparent.png" alt="Lucenta Labs" class="footer-logo" width="907" height="597" loading="lazy" decoding="async">
+          </picture>
           </div>
           <p class="footer-description">
             Lucenta Labs redefines beauty technology with clinical microcurrent and photonic therapy designed for luxury minimalism and non-invasive facial sculpting.
@@ -4514,7 +4626,7 @@
        ========================================================================== -->
   <div class="mobile-sticky-bar" id="mobile-sticky-bar">
     <div class="mobile-sticky-info">
-      <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="mobile-sticky-thumb">
+      <img src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta V-Sculpt GlowWand" class="mobile-sticky-thumb" width="48" height="48" loading="lazy" decoding="async">
       <div class="mobile-sticky-meta">
         <h4>Lucenta V-Sculpt GlowWand</h4>
         <div>
@@ -4536,7 +4648,7 @@
       <button class="product-modal__close-btn" onclick="document.getElementById('product-modal').close()" aria-label="Close dialog">&#10005;</button>
       <div class="product-modal__grid">
         <div class="product-modal__media-col">
-          <img id="modal-product-img" src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta Product" class="product-modal__img">
+          <img id="modal-product-img" src="imgaes/unnamed.webp_20261025152135.jpg" alt="Lucenta Product" class="product-modal__img" width="500" height="500" loading="lazy" decoding="async">
         </div>
         <div class="product-modal__info-col">
           <span class="product-modal__vendor">Lucenta Labs • Clinical Beauty Tech</span>
@@ -5011,12 +5123,20 @@
     // 7. STICKY MOBILE BUY BAR ON SCROLL
     // ==========================================
     const mobileBar = document.getElementById('mobile-sticky-bar');
+    let mobileBarTicking = false;
     window.addEventListener('scroll', () => {
-      if (!mobileBar) return;
-      if (window.scrollY > 400) {
-        mobileBar.classList.add('is-visible');
-      } else {
-        mobileBar.classList.remove('is-visible');
+      if (!mobileBarTicking) {
+        window.requestAnimationFrame(() => {
+          if (mobileBar) {
+            if (window.scrollY > 400) {
+              mobileBar.classList.add('is-visible');
+            } else {
+              mobileBar.classList.remove('is-visible');
+            }
+          }
+          mobileBarTicking = false;
+        });
+        mobileBarTicking = true;
       }
     }, { passive: true });
 
@@ -5141,10 +5261,19 @@
       /* ---- 2. Subtle Hero Parallax Drift ---- */
       var heroMedia = document.getElementById('hero-media-container');
       if (heroMedia) {
+        var heroTicking = false;
         window.addEventListener('scroll', function () {
-          var scrollY = window.scrollY || window.pageYOffset;
-          var rate = scrollY * 0.12;
-          heroMedia.style.transform = 'translateY(' + rate + 'px)';
+          if (!heroTicking) {
+            window.requestAnimationFrame(function () {
+              var scrollY = window.scrollY || window.pageYOffset;
+              if (scrollY < 900) {
+                var rate = scrollY * 0.12;
+                heroMedia.style.transform = 'translate3d(0, ' + rate + 'px, 0)';
+              }
+              heroTicking = false;
+            });
+            heroTicking = true;
+          }
         }, { passive: true });
       }
 
