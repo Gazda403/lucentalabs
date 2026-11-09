@@ -1083,6 +1083,7 @@
     src="https://www.facebook.com/tr?id=29547078218223062&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <link rel="preload" as="image" href="imgaes/Woman_applying_beauty_device_to_20261025141945.webp" type="image/webp" fetchpriority="high">
 </head>
 <body>
   <!-- Top Luxury Scroll Reading Progress Bar -->
@@ -1176,7 +1177,7 @@
               </div>
             </div>
             <div class="pdp-how-to-use__video-wrap pdp-how-to-use__video-wrap--landscape">
-              <video controls playsinline preload="metadata">
+              <video controls playsinline preload="metadata" poster="imgaes/how-to-use-poster.webp">
                 <source src="how to use it.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -1695,7 +1696,7 @@
       var progressBar = document.getElementById('luxury-scroll-progress');
       if (progressBar) {
         var progressTicking = false;
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function (, {passive: true}) {
           if (!progressTicking) {
             requestAnimationFrame(function () {
               var total = document.documentElement.scrollHeight - window.innerHeight;

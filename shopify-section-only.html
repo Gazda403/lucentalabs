@@ -5059,7 +5059,7 @@
     // ==========================================
     const mobileBar = document.getElementById('mobile-sticky-bar');
     let mobileBarTicking = false;
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', (, {passive: true}) => {
       if (!mobileBarTicking) {
         window.requestAnimationFrame(() => {
           if (mobileBar) {
@@ -5176,7 +5176,7 @@
       var progressBar = document.getElementById('luxury-scroll-progress');
       if (progressBar) {
         var progressTicking = false;
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function (, {passive: true}) {
           if (!progressTicking) {
             requestAnimationFrame(function () {
               var total = document.documentElement.scrollHeight - window.innerHeight;
@@ -5193,7 +5193,7 @@
       var heroMedia = document.getElementById('hero-media-container');
       if (heroMedia) {
         var heroTicking = false;
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function (, {passive: true}) {
           if (!heroTicking) {
             window.requestAnimationFrame(function () {
               var scrollY = window.scrollY || window.pageYOffset;
