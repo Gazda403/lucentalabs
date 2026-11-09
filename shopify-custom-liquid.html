@@ -16,7 +16,11 @@
   <!-- Premium Editorial & Sans Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
+  </noscript>
 
   <!-- Shopify Storefront Web Components Script -->
   <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
@@ -34,7 +38,7 @@
       --color-surface: #FFFFFF;
       --color-text-main: #141312;
       --color-text-muted: #5F5B56;
-      --color-text-subtle: #8A8580;
+      --color-text-subtle: #6E6A65;
       --color-border: #E8E2DA;
       --color-border-light: #F0ECE5;
 
@@ -3024,7 +3028,7 @@
     fbq('init', '29547078218223062');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
+  <noscript><img height="1" width="1" style="display:none" alt=""
     src="https://www.facebook.com/tr?id=29547078218223062&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
@@ -3092,7 +3096,7 @@
         </button>
 
         <!-- Centered High-Res Brand Logo -->
-        <a href="#" class="header__brand" aria-label="Lucenta Labs Home">
+        <a href="/" class="header__brand" aria-label="Lucenta Labs Home">
           <picture>
             <source srcset="logo-navbar-transparent.webp" type="image/webp">
             <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo" width="952" height="682" loading="eager" fetchpriority="high" decoding="async">
@@ -3203,7 +3207,7 @@
               autoplay
               muted
               playsinline
-              preload="auto"
+              preload="metadata"
               poster="https://cdn.shopify.com/s/files/1/0807/5146/0491/files/Skincare_device_on_pink_silk_2K_20261025131647.jpg?v=1792932999"
             >
               <source src="1025.webm" type="video/webm">
@@ -4563,7 +4567,7 @@
           </p>
           <form class="footer-newsletter-form" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Lucenta Labs.');">
             <div class="footer-input-wrap">
-              <input type="email" placeholder="Enter your email" class="footer-input" required>
+              <input type="email" placeholder="Enter your email" class="footer-input" aria-label="Email address for exclusive VIP access" required>
               <button type="submit" class="footer-submit">Join</button>
             </div>
           </form>

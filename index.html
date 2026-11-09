@@ -23,12 +23,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="imgaes/unnamed.webp_20261025152135.webp" type="image/webp" fetchpriority="high">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  </noscript>
 
   <!-- Shopify Storefront Web Components Script -->
-  <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
+  <script type="module" defer src="https://cdn.shopify.com/storefront/web-components.js"></script>
 
   <style>
     /* ==========================================================================
@@ -43,7 +45,7 @@
       --color-surface: #FFFFFF;
       --color-text-main: #141312;
       --color-text-muted: #5F5B56;
-      --color-text-subtle: #8A8580;
+      --color-text-subtle: #6E6A65;
       --color-border: #E8E2DA;
       --color-border-light: #F0ECE5;
 
@@ -3253,7 +3255,7 @@
     fbq('init', '29547078218223062');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
+  <noscript><img height="1" width="1" style="display:none" alt=""
     src="https://www.facebook.com/tr?id=29547078218223062&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
@@ -3317,7 +3319,7 @@
         </button>
 
         <!-- Centered High-Res Brand Logo -->
-        <a href="#" class="header__brand" aria-label="Lucenta Labs Home">
+        <a href="/" class="header__brand" aria-label="Lucenta Labs Home">
           <picture>
             <source srcset="logo-navbar-transparent.webp" type="image/webp">
             <img src="logo-navbar-transparent.png" alt="Lucenta Labs" class="header__logo" width="952" height="682"
@@ -3451,7 +3453,7 @@
         <div class="hero-media-card" id="hero-media-container">
           <div class="hero-media-wrapper">
             <!-- Hero Video: Plays automatically and seamlessly replaced when ended -->
-            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto"
+            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="metadata"
               poster="imgaes/unnamed.webp_20261025152135.webp">
               <source src="1025.webm" type="video/webm">
               <source src="1025.mp4" type="video/mp4">
@@ -5118,7 +5120,7 @@
           <form class="footer-newsletter-form"
             onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Lucenta Labs.');">
             <div class="footer-input-wrap">
-              <input type="email" placeholder="Enter your email" class="footer-input" required>
+              <input type="email" placeholder="Enter your email" class="footer-input" aria-label="Email address for exclusive VIP access" required>
               <button type="submit" class="footer-submit">Join</button>
             </div>
           </form>
