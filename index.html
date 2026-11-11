@@ -22,7 +22,8 @@
   <link rel="dns-prefetch" href="https://cdn.shopify.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="imgaes/unnamed.webp_20261025152135.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="imgaes/hero-poster.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="video" href="1025.webm" type="video/webm">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
   <noscript>
@@ -3454,12 +3455,25 @@
         <div class="hero-media-card" id="hero-media-container">
           <div class="hero-media-wrapper">
             <!-- Hero Video: Plays automatically and seamlessly replaced when ended -->
-            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="metadata"
-              poster="imgaes/unnamed.webp_20261025152135.webp">
+            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto"
+              poster="imgaes/hero-poster.webp">
               <source src="1025.webm" type="video/webm">
               <source src="1025.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
+            <script>
+              (function () {
+                var v = document.getElementById('hero-video');
+                if (v) {
+                  v.muted = true;
+                  v.defaultMuted = true;
+                  var p = v.play();
+                  if (p !== undefined) {
+                    p.catch(function () {});
+                  }
+                }
+              })();
+            </script>
 
             <!-- Replacement Image: Transitions in with luxury fade when video completes -->
             <picture>
