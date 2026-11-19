@@ -280,7 +280,7 @@
       }
     }
 
-    /* Left: Media Gallery - Compact Side-by-Side Thumbnails on Mobile & Desktop */
+    /* Left: Media Gallery - Compact Side-by-Side Thumbnails on Mobile, Below on Desktop */
     .pdp-gallery-wrap {
       display: flex;
       flex-direction: row;
@@ -291,6 +291,13 @@
     @media (min-width: 768px) {
       .pdp-gallery-wrap {
         gap: 1rem;
+      }
+    }
+    /* Desktop: flip to column — main image on top, thumbs in a horizontal strip below */
+    @media (min-width: 992px) {
+      .pdp-gallery-wrap {
+        flex-direction: column;
+        gap: 0.75rem;
       }
     }
 
@@ -315,6 +322,17 @@
         gap: 0.65rem;
       }
     }
+    /* Desktop: thumbs become a horizontal row below the main image */
+    @media (min-width: 992px) {
+      .pdp-thumbs {
+        flex-direction: row;
+        width: 100%;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: visible;
+        gap: 0.65rem;
+      }
+    }
     .pdp-thumb {
       width: 56px;
       height: 56px;
@@ -332,6 +350,13 @@
         height: 84px;
       }
     }
+    /* Desktop: thumbs slightly larger in the horizontal strip */
+    @media (min-width: 992px) {
+      .pdp-thumb {
+        width: 88px;
+        height: 88px;
+      }
+    }
     .pdp-thumb.is-active {
       border-color: var(--color-accent-dark);
       box-shadow: var(--shadow-sm);
@@ -346,6 +371,7 @@
       position: relative;
       flex: 1;
       min-width: 0;
+      width: 100%;
       aspect-ratio: 1 / 1;
       background: #ECE5DF;
       border-radius: var(--radius-lg);
