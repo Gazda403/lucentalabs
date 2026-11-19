@@ -3230,35 +3230,26 @@
       }
     }
 
-    /* 9. Seamless Infinite Marquee for Press Publications */
+    /* 9. Elegant Single-Line Press Publications Row */
     .press-strip {
-      overflow: hidden;
       position: relative;
-      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      overflow: hidden;
     }
 
     .press-logos {
       display: flex;
       align-items: center;
-      gap: 3.5rem;
-      animation: pressMarqueeLoop 28s linear infinite;
-      width: max-content;
-      will-change: transform;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0.5rem 1rem;
     }
 
-    .press-logos:hover {
-      animation-play-state: paused;
-    }
-
-    @keyframes pressMarqueeLoop {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
+    .press-logos::-webkit-scrollbar {
+      display: none;
     }
 
     .press-logo-text {
@@ -6073,12 +6064,7 @@
       setTimeout(setupTiltCards, 1000);
       setTimeout(setupTiltCards, 2500);
 
-      /* ---- 5. Press Logos Seamless Infinite Marquee Cloner ---- */
-      var pressLogos = document.querySelector('.press-logos');
-      if (pressLogos && !pressLogos.dataset.cloned) {
-        pressLogos.innerHTML += pressLogos.innerHTML;
-        pressLogos.dataset.cloned = 'true';
-      }
+      
 
       /* ---- 6. Customer Care & Policies Interactive Tabs Controller ---- */
       window.switchPolicyTab = function (policyId, scrollIntoView) {
