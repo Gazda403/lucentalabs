@@ -1212,6 +1212,18 @@
       background: #2D2B29;
     }
 
+  
+    /* ---- Mobile: hide in-column how-to-use; show it after science section ---- */
+    @media (max-width: 991px) {
+      .pdp-left-col .pdp-how-to-use {
+        display: none;
+      }
+    }
+    @media (min-width: 992px) {
+      .pdp-how-to-use--mobile-only {
+        display: none;
+      }
+    }
   </style>
   <!-- Meta Pixel Code -->
   <script>
@@ -1582,6 +1594,28 @@
       </div>
     </div>
   </section>
+
+  <!-- Mobile-only: How to Use video placed after science section -->
+  <div class="pdp-how-to-use pdp-how-to-use--mobile-only" style="margin: 2rem 1rem 0;">
+    <div class="pdp-how-to-use__header">
+      <div class="pdp-how-to-use__icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pdp-how-to-use__title">How to Use</div>
+        <div class="pdp-how-to-use__subtitle">Watch the 5-minute sculpting ritual</div>
+      </div>
+    </div>
+    <div class="pdp-how-to-use__video-wrap pdp-how-to-use__video-wrap--portrait">
+      <video controls playsinline preload="none" poster="imgaes/greatvideo-poster.webp">
+        <source src="greatvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
 
   <!-- Related Products / Cross-Sell (As in references) -->
   <section class="pdp-related-section">
