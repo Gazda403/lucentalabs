@@ -665,6 +665,207 @@
     }
     .pdp-box-item svg { color: var(--color-accent-rose); }
 
+    
+    /* ==========================================================================
+       PC-ONLY VERIFIED REVIEWS CAROUSEL (Fills empty space beside video on PC)
+       ========================================================================== */
+    .pdp-pc-reviews-widget {
+      display: none;
+    }
+    @media (min-width: 992px) {
+      .pdp-pc-reviews-widget {
+        display: block;
+        margin-top: 1.75rem;
+        background: #FAF7F4;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: 1.15rem 1.15rem 0.9rem;
+        box-shadow: 0 4px 20px rgba(20, 19, 18, 0.04);
+        position: relative;
+        overflow: hidden;
+      }
+    }
+    .pdp-pc-reviews-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .pdp-pc-reviews-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pdp-pc-tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-accent-rose);
+      background: var(--color-accent-rose-soft);
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+    }
+    .pdp-pc-stars-top {
+      color: #D4AF37;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+    .pdp-pc-score {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
+    .pdp-pc-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pdp-pc-nav-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-text-main);
+      transition: all var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .pdp-pc-nav-btn:hover {
+      background: var(--color-text-main);
+      color: #FFFFFF;
+      border-color: var(--color-text-main);
+      transform: scale(1.05);
+    }
+    .pdp-pc-counter {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      font-variant-numeric: tabular-nums;
+      min-width: 44px;
+      text-align: center;
+    }
+    /* Viewport with visual peek of previous and next cards */
+    .pdp-pc-viewport {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding: 4px 0;
+    }
+    .pdp-pc-track {
+      display: flex;
+      align-items: stretch;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    .pdp-mini-card {
+      width: 84%;
+      flex-shrink: 0;
+      margin-right: 12px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      opacity: 0.35;
+      transform: scale(0.93);
+      transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 170px;
+    }
+    .pdp-mini-card.is-active {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 0 8px 24px rgba(20, 19, 18, 0.08);
+      border-color: rgba(20, 19, 18, 0.16);
+    }
+    .pdp-mini-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .pdp-mini-stars {
+      color: #D4AF37;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+    .pdp-mini-verified {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #276749;
+      background: #E6F4EA;
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .pdp-mini-text {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      line-height: 1.48;
+      color: var(--color-text-main);
+      margin: 0.55rem 0;
+      font-style: italic;
+    }
+    .pdp-mini-author {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--color-border-light);
+    }
+    .pdp-mini-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--color-accent-rose-soft);
+      color: var(--color-accent-rose);
+      font-weight: 700;
+      font-size: 0.72rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pdp-mini-name {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--color-text-main);
+    }
+    .pdp-mini-sub {
+      font-size: 0.7rem;
+      color: var(--color-text-subtle);
+    }
+    .pdp-pc-progress-track {
+      width: 100%;
+      height: 3px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-top: 0.85rem;
+    }
+    .pdp-pc-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--color-accent-rose);
+      border-radius: 9999px;
+    }
+
+
     /* ==========================================================================
        SCIENCE & EDITORIAL BREAKDOWN SECTION
        ========================================================================== */
@@ -1532,6 +1733,199 @@
             </div>
           </div>
 
+          <!-- PC-Only: Live Verified Customer Review Cards Widget (Fills empty spot beside video) -->
+          <div class="pdp-pc-reviews-widget" id="pdp-pc-reviews-widget">
+            <div class="pdp-pc-reviews-header">
+              <div class="pdp-pc-reviews-tag">
+                <span class="pdp-pc-tag-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  VERIFIED REVIEWS
+                </span>
+                <span class="pdp-pc-stars-top">★★★★★</span>
+                <span class="pdp-pc-score">4.9/5</span>
+              </div>
+              <div class="pdp-pc-nav">
+                <button type="button" class="pdp-pc-nav-btn pdp-pc-nav--prev" aria-label="Previous review">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span class="pdp-pc-counter" id="pdp-review-counter">01 / 10</span>
+                <button type="button" class="pdp-pc-nav-btn pdp-pc-nav--next" aria-label="Next review">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="pdp-pc-viewport">
+              <div class="pdp-pc-track" id="pdp-review-track">
+                <!-- Card 1 -->
+                <div class="pdp-mini-card is-active">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"I was skeptical about at-home microcurrent until day 10. My double chin is noticeably tighter, and morning puffiness drains away within minutes. Worth every single penny."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">SM</div>
+                    <div>
+                      <div class="pdp-mini-name">Sophia M. &mdash; New York, NY</div>
+                      <div class="pdp-mini-sub">3 weeks of daily sculpting</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"The warmth feels like an ultra-luxe hot stone facial. I use the red LED mode every evening with my hyaluronic serum and my neck lines have softened tremendously."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">CR</div>
+                    <div>
+                      <div class="pdp-mini-name">Claire R. &mdash; Austin, TX</div>
+                      <div class="pdp-mini-sub">1 month of consistent use</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"Using this on my jawline and cheekbones gives a lifted contour that my aesthetician actually commented on at my last appointment! The cheek definition is real."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">EW</div>
+                    <div>
+                      <div class="pdp-mini-name">Elena W. &mdash; Los Angeles, CA</div>
+                      <div class="pdp-mini-sub">5 weeks of sculpting ritual</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Clinician</span>
+                  </div>
+                  <p class="pdp-mini-text">"As a dermatology clinician, I appreciate the calibrated biological stimulation. The microcurrent and dual-wavelength photonics are clinical grade. I use it 5 nights a week."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">AP</div>
+                    <div>
+                      <div class="pdp-mini-name">Dr. Ananya P. &mdash; Chicago, IL</div>
+                      <div class="pdp-mini-sub">Dermatology Specialist &bull; 2 mos</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"The build quality is exquisite—feels like solid brushed metal jewelry. After 3 weeks of daily cheekbone sculpting, my face looks naturally lifted even without contour makeup."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">CD</div>
+                    <div>
+                      <div class="pdp-mini-name">Camille D. &mdash; Paris, France</div>
+                      <div class="pdp-mini-sub">4 weeks of daily sculpting</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"I used to spend $250 a month on salon lymphatic facials. This device paid for itself in two weeks. The battery lasts almost a month on a single charge too!"</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">HS</div>
+                    <div>
+                      <div class="pdp-mini-name">Harper S. &mdash; Seattle, WA</div>
+                      <div class="pdp-mini-sub">6 weeks of use</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"My cheekbones look higher and my jawline is sharper than in my twenties. Even my husband noticed after 10 days and asked if he could try it on his neck!"</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">OH</div>
+                    <div>
+                      <div class="pdp-mini-name">Olivia H. &mdash; San Francisco, CA</div>
+                      <div class="pdp-mini-sub">10 days of daily use</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"The blue LED mode cleared my stubborn hormonal jawline breakouts while the microcurrent lifted my jowls. Truly an all-in-one holy grail clinical device."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">CB</div>
+                    <div>
+                      <div class="pdp-mini-name">Chloe B. &mdash; London, UK</div>
+                      <div class="pdp-mini-sub">1 month of use</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"Takes literally 5 minutes while I'm watching TV. The morning puffiness around my jaw and under-eyes drains away immediately. I never travel without it now."</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">IK</div>
+                    <div>
+                      <div class="pdp-mini-name">Isabella K. &mdash; Miami, FL</div>
+                      <div class="pdp-mini-sub">2 weeks of daily use</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="pdp-mini-card">
+                  <div class="pdp-mini-top">
+                    <span class="pdp-mini-stars">★★★★★</span>
+                    <span class="pdp-mini-verified">Verified Buyer</span>
+                  </div>
+                  <p class="pdp-mini-text">"At 48, I was considering clinic fillers for sagging around my mouth and jaw. After one month with Lucenta, the tightness and firm feel is unbelievable. 10/10 recommendation!"</p>
+                  <div class="pdp-mini-author">
+                    <div class="pdp-mini-avatar">GM</div>
+                    <div>
+                      <div class="pdp-mini-name">Genevieve M. &mdash; Montreal, CA</div>
+                      <div class="pdp-mini-sub">7 weeks of consistent use</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Auto-Rotation 3s Progress Indicator -->
+            <div class="pdp-pc-progress-track">
+              <div class="pdp-pc-progress-bar" id="pdp-review-progress"></div>
+            </div>
+          </div>
+
+
         </div>
 
       </div>
@@ -1999,6 +2393,105 @@
       setupTiltCards();
       setTimeout(setupTiltCards, 800);
     })();
+  
+
+    /* ---- PC-Only 10-Card Live Review Carousel (Auto-changes every 3s) ---- */
+    (function setupPcLiveReviews() {
+      var widget = document.getElementById('pdp-pc-reviews-widget');
+      if (!widget) return;
+
+      var track = document.getElementById('pdp-review-track');
+      var cards = widget.querySelectorAll('.pdp-mini-card');
+      var prevBtn = widget.querySelector('.pdp-pc-nav--prev');
+      var nextBtn = widget.querySelector('.pdp-pc-nav--next');
+      var counter = document.getElementById('pdp-review-counter');
+      var progressBar = document.getElementById('pdp-review-progress');
+
+      if (!track || !cards.length) return;
+
+      var currentIndex = 0;
+      var total = cards.length;
+      var timer = null;
+
+      function updateCard() {
+        for (var i = 0; i < cards.length; i++) {
+          if (i === currentIndex) {
+            cards[i].classList.add('is-active');
+          } else {
+            cards[i].classList.remove('is-active');
+          }
+        }
+        // Center the active card with 8% peek of previous and next cards
+        track.style.transform = 'translateX(calc(8% - ' + currentIndex + ' * (84% + 12px)))';
+
+        if (counter) {
+          var curStr = (currentIndex + 1 < 10 ? '0' : '') + (currentIndex + 1);
+          var totStr = (total < 10 ? '0' : '') + total;
+          counter.textContent = curStr + ' / ' + totStr;
+        }
+
+        resetProgress();
+      }
+
+      function resetProgress() {
+        if (!progressBar) return;
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '0%';
+        void progressBar.offsetWidth; // Force layout reflow
+        progressBar.style.transition = 'width 3000ms linear';
+        progressBar.style.width = '100%';
+      }
+
+      function goNext() {
+        currentIndex = (currentIndex + 1) % total;
+        updateCard();
+      }
+
+      function goPrev() {
+        currentIndex = (currentIndex - 1 + total) % total;
+        updateCard();
+      }
+
+      function startTimer() {
+        stopTimer();
+        resetProgress();
+        timer = setInterval(goNext, 3000);
+      }
+
+      function stopTimer() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+        if (progressBar) {
+          progressBar.style.transition = 'none';
+        }
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          goPrev();
+          startTimer();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          goNext();
+          startTimer();
+        });
+      }
+
+      widget.addEventListener('mouseenter', stopTimer);
+      widget.addEventListener('mouseleave', startTimer);
+
+      // Initial setup
+      updateCard();
+      startTimer();
+    })();
+
   </script>
 </body>
 </html>
