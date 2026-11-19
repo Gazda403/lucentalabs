@@ -702,36 +702,41 @@
 
     
     /* ==========================================================================
-       PC-ONLY VERIFIED REVIEWS CAROUSEL (Fills empty space beside video on PC)
+       VERIFIED REVIEWS CAROUSEL (Live Verified Customer Review Cards Widget)
        ========================================================================== */
     .pdp-pc-reviews-widget {
-      display: none;
+      display: block;
+      margin-top: 1.35rem;
+      background: #FAF7F4;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 0.95rem 0.95rem 0.8rem;
+      box-shadow: 0 4px 20px rgba(20, 19, 18, 0.04);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      box-sizing: border-box;
     }
     @media (min-width: 992px) {
       .pdp-pc-reviews-widget {
-        display: block;
         margin-top: 1.75rem;
-        background: #FAF7F4;
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-lg);
         padding: 1.15rem 1.15rem 0.9rem;
-        box-shadow: 0 4px 20px rgba(20, 19, 18, 0.04);
-        position: relative;
-        overflow: hidden;
       }
     }
     .pdp-pc-reviews-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.85rem;
-      padding-bottom: 0.65rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.55rem;
       border-bottom: 1px solid var(--color-border-light);
+      gap: 6px;
     }
     .pdp-pc-reviews-tag {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      flex-wrap: wrap;
     }
     .pdp-pc-tag-badge {
       display: inline-flex;
@@ -759,7 +764,8 @@
     .pdp-pc-nav {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      flex-shrink: 0;
     }
     .pdp-pc-nav-btn {
       width: 28px;
@@ -781,13 +787,20 @@
       border-color: var(--color-text-main);
       transform: scale(1.05);
     }
+    /* Counter hidden on mobile, visible on desktop */
     .pdp-pc-counter {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--color-text-muted);
-      font-variant-numeric: tabular-nums;
-      min-width: 44px;
-      text-align: center;
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .pdp-pc-counter {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--color-text-muted);
+        font-variant-numeric: tabular-nums;
+        min-width: 44px;
+        text-align: center;
+      }
     }
     /* Viewport with visual peek of previous and next cards */
     .pdp-pc-viewport {
@@ -803,13 +816,13 @@
       will-change: transform;
     }
     .pdp-mini-card {
-      width: 84%;
+      width: 86%;
       flex-shrink: 0;
-      margin-right: 12px;
+      margin-right: 10px;
       background: #FFFFFF;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      padding: 1rem 1.15rem;
+      padding: 0.85rem 1rem;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
       opacity: 0.35;
       transform: scale(0.93);
@@ -817,7 +830,16 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 170px;
+      min-height: 155px;
+      box-sizing: border-box;
+    }
+    @media (min-width: 768px) {
+      .pdp-mini-card {
+        width: 84%;
+        margin-right: 12px;
+        padding: 1rem 1.15rem;
+        min-height: 170px;
+      }
     }
     .pdp-mini-card.is-active {
       opacity: 1;
@@ -2456,8 +2478,11 @@
             cards[i].classList.remove('is-active');
           }
         }
-        // Center the active card with 8% peek of previous and next cards
-        track.style.transform = 'translateX(calc(8% - ' + currentIndex + ' * (84% + 12px)))';
+        var isMobile = window.innerWidth < 768;
+        var cardW = isMobile ? '86%' : '84%';
+        var cardGap = isMobile ? '10px' : '12px';
+        var peek = isMobile ? '7%' : '8%';
+        track.style.transform = 'translateX(calc(' + peek + ' - ' + currentIndex + ' * (' + cardW + ' + ' + cardGap + ')))';
 
         if (counter) {
           var curStr = (currentIndex + 1 < 10 ? '0' : '') + (currentIndex + 1);
@@ -2521,6 +2546,26 @@
 
       widget.addEventListener('mouseenter', stopTimer);
       widget.addEventListener('mouseleave', startTimer);
+
+      // Touch swipe support for mobile
+      var touchStartX = 0;
+      var touchEndX = 0;
+      widget.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        stopTimer();
+      }, { passive: true });
+      widget.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        var diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            goNext();
+          } else {
+            goPrev();
+          }
+        }
+        startTimer();
+      }, { passive: true });
 
       // Initial setup
       updateCard();
