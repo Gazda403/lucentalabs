@@ -70,6 +70,8 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://cdn.shopify.com">
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
@@ -1118,6 +1120,98 @@
       }
     }
 
+  
+    /* Mobile Sticky Bottom Purchase Bar */
+    .mobile-sticky-pdp-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid var(--color-border);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      transform: translateY(120%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-sticky-pdp-bar.is-visible {
+      transform: translateY(0);
+    }
+    @media (min-width: 901px) {
+      .mobile-sticky-pdp-bar {
+        display: none !important;
+      }
+    }
+    .mobile-sticky-pdp-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .mobile-sticky-pdp-left img {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--color-border-light);
+    }
+    .mobile-sticky-pdp-text {
+      min-width: 0;
+    }
+    .mobile-sticky-pdp-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--color-text-main);
+    }
+    .mobile-sticky-pdp-price {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
+    .mobile-sticky-pdp-price .compare {
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      text-decoration: line-through;
+      margin-left: 4px;
+      font-weight: 400;
+    }
+    .mobile-sticky-pdp-price .save {
+      font-size: 0.7rem;
+      color: var(--color-badge-green);
+      font-weight: 700;
+      margin-left: 4px;
+    }
+    .mobile-sticky-pdp-btn {
+      background: var(--color-accent-dark);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 0.7rem 1.15rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.2s ease;
+    }
+    .mobile-sticky-pdp-btn:hover {
+      background: #2D2B29;
+    }
+
   </style>
   <!-- Meta Pixel Code -->
   <script>
@@ -1231,7 +1325,7 @@
               </div>
             </div>
             <div class="pdp-how-to-use__video-wrap pdp-how-to-use__video-wrap--portrait">
-              <video controls playsinline preload="metadata" poster="imgaes/greatvideo-poster.webp">
+              <video controls playsinline preload="none" poster="imgaes/greatvideo-poster.webp">
                 <source src="greatvideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -1274,6 +1368,14 @@
           <p class="pdp-short-desc">The Lucenta V-Sculpt GlowWand combines targeted microcurrent technology, 42°C soothing thermal warming, and multi-spectrum LED therapy into a medical-grade, luxury at-home skincare device. Engineered specifically to stimulate deep facial muscles, drain lymphatic fluids, and visibly sharpen cheekbone and jawline contours in just 5 minutes a day.</p>
 
           <!-- Purchase Actions: Qty + Add to Bag + Buy Now -->
+          <!-- Stock & Dispatch Badge -->
+          <div class="pdp-stock-badge" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; margin-bottom: 0.75rem; background: #F3EFE9; padding: 0.5rem 0.9rem; border-radius: var(--radius-pill);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #276749;">
+              <span style="width: 7px; height: 7px; background: #276749; border-radius: 50%; display: inline-block;"></span>
+              In Stock &bull; Ships within 24 Hours
+            </span>
+            <span style="color: #5F5B56; font-size: 0.74rem;">Tracked US Delivery</span>
+          </div>
           <div class="pdp-actions-wrap">
             <div class="pdp-qty-row">
               <div class="pdp-qty-picker">
@@ -1308,6 +1410,21 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
               <span><strong>Dermatologist Tested</strong> &mdash; Safe for all skin types, non-invasive.</span>
             </div>
+          </div>
+
+          <!-- Secure Payment Guarantee -->
+          <div class="pdp-payment-icons-wrap" style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 1rem; padding: 0.85rem 1rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md);">
+            <span style="font-size: 0.75rem; color: var(--color-text-subtle); display: flex; align-items: center; gap: 6px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Guaranteed Safe &amp; 256-Bit Encrypted Checkout
+            </span>
+            <div class="cart-payment-icons" style="display: flex; gap: 6px; align-items: center; justify-content: center; flex-wrap: wrap;">
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="Visa"><rect width="38" height="24" rx="4" fill="#FFFFFF" stroke="#E8E2DA"/><path d="M15.4 16.5H13.1L14.5 7.5H16.8L15.4 16.5ZM21.9 7.7C21.4 7.5 20.6 7.3 19.6 7.3C17.2 7.3 15.5 8.6 15.5 10.4C15.5 11.8 16.7 12.5 17.6 13C18.6 13.5 18.9 13.8 18.9 14.3C18.9 15 18 15.4 17.2 15.4C16.2 15.4 15.6 15.2 14.8 14.8L14.4 14.6L14 16.7C14.6 17 15.8 17.2 17 17.2C19.6 17.2 21.3 15.9 21.3 14C21.3 12.5 20.3 11.7 19.1 11.1C18.3 10.7 17.8 10.4 17.8 9.9C17.8 9.4 18.4 9 19.3 9C20.1 9 20.7 9.2 21.3 9.4L21.5 9.5L21.9 7.7ZM28.2 7.5H26.4C25.8 7.5 25.4 7.7 25.1 8.3L21.5 16.5H23.9L24.4 15.1H27.3L27.6 16.5H29.7L28.2 7.5ZM25 13.3L26.1 10.1C26.1 10.1 26.4 9.3 26.6 8.7H26.6C26.7 9.2 26.9 10.1 26.9 10.1L27.5 13.3H25ZM11.6 7.5H9.3L7 13.6L6.8 12.4C6.3 10.8 5 9.1 3.5 8.3L5.6 16.5H8.1L11.6 7.5Z" fill="#1A1F71"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="Mastercard"><rect width="38" height="24" rx="4" fill="#FFFFFF" stroke="#E8E2DA"/><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path d="M19 6.8a6.97 6.97 0 0 0-4 5.2 6.97 6.97 0 0 0 4 5.2 6.97 6.97 0 0 0 4-5.2 6.97 6.97 0 0 0-4-5.2Z" fill="#FF5F00"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="American Express"><rect width="38" height="24" rx="4" fill="#0077A6"/><path d="M6 15.5l1.6-3.8L6 8h2.5l1.2 2.8L11 8h2.3l-1.6 3.7 1.7 3.8h-2.4L9.7 12.5 8.4 15.5H6zm8.8 0V8h6.2c1.4 0 2.4.9 2.4 2.1 0 .9-.6 1.7-1.5 2 .9.3 1.4 1 1.4 2 0 1.2-1 2.1-2.4 2.1h-6.1zm2.3-4.4h3.6c.3 0 .6-.2.6-.5 0-.3-.3-.5-.6-.5h-3.6v1zm0 2.8h3.8c.4 0 .7-.2.7-.6 0-.3-.3-.5-.7-.5h-3.8v1.1zm8.7 1.6V8h6.5v1.9h-4.3v1.8h3.9v1.9h-3.9v1.9h4.3v1.9h-6.5z" fill="#FFFFFF"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="Apple Pay"><rect width="38" height="24" rx="4" fill="#141312"/><path d="M14.2 12.3c0-1.4.9-2.1 1-2.1-.7-1-1.8-1.1-2.1-1.1-1-.1-1.8.6-2.2.6-.5 0-1.2-.5-1.9-.5-1 0-1.9.6-2.4 1.5-1.1 1.8-.3 4.6.8 6.1.5.8 1.1 1.6 1.9 1.6.8 0 1.1-.5 2-.5.9 0 1.2.5 2 .5.8 0 1.4-.7 1.9-1.5.6-.9.8-1.7.9-1.8-.1 0-1.9-.7-1.9-2.3zM12.6 8.3c.4-.5.7-1.2.6-1.9-.6 0-1.4.4-1.8.9-.4.4-.7 1.1-.6 1.8.7.1 1.4-.3 1.8-.8z" fill="#FFFFFF"/><path d="M17.4 7h1.4v9.8h-1.4V7zm5.9 7.3h-3.2v-7h1.4v5.8h1.8v1.2zm3.2 2.6c-1.3 0-2.2-.9-2.2-2.1 0-1.3.9-2.1 2.2-2.1.6 0 1.1.2 1.4.5V11c0-.8-.6-1.3-1.4-1.3-.6 0-1.1.3-1.3.7l-1.1-.7c.4-.8 1.3-1.2 2.4-1.2 1.6 0 2.7.9 2.7 2.4v5.8h-1.3v-.8c-.3.6-.9 1-1.7 1zm.2-1.2c.7 0 1.3-.5 1.3-1.2v-.8c-.3-.3-.7-.4-1.2-.4-.8 0-1.3.4-1.3 1.1 0 .7.5 1.3 1.2 1.3zm6.6-4.9l-2 5.9h-1.4l.8-2.3-1.9-4.8h1.5l1.1 3.2 1-3.2h1.4l-.5 1.2z" fill="#FFFFFF"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="PayPal"><rect width="38" height="24" rx="4" fill="#FFFFFF" stroke="#E8E2DA"/><path d="M14.5 17.5l1.6-10.2h3.4c2.5 0 4 1.2 3.6 3.6-.3 2.1-1.9 3.3-3.8 3.3h-1.5l-.7 4.3h-2.6l1.2-1h-.2z" fill="#003087"/><path d="M17.5 17.5l1.1-7.2h3.4c1.8 0 3 .7 2.7 2.5-.3 2-1.8 3.2-3.6 3.2h-1.4l-.7 4.5h-2l.5-3z" fill="#0079C1"/></svg>
+      </div>
           </div>
 
           <!-- Micro-Accordions (Overview, Routine, In the Box, Shipping) -->
@@ -1551,11 +1668,36 @@
   </footer>
 
   <!-- Slide-Over Cart Drawer -->
+    <!-- Mobile Sticky Add-to-Bag Bar -->
+  <div class="mobile-sticky-pdp-bar" id="mobile-sticky-pdp-bar">
+    <div class="mobile-sticky-pdp-left">
+      <img src="imgaes/unnamed.webp_20261025152135.webp" alt="Lucenta V-Sculpt GlowWand" width="44" height="44" loading="lazy" decoding="async">
+      <div class="mobile-sticky-pdp-text">
+        <div class="mobile-sticky-pdp-title">Lucenta V-Sculpt GlowWand</div>
+        <div class="mobile-sticky-pdp-price">$39.99 <span class="compare">$69.99</span> <span class="save">Save 43%</span></div>
+      </div>
+    </div>
+    <button class="mobile-sticky-pdp-btn" onclick="addCurrentProductToBag('lucenta-v-sculpt-glowwand')">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span>Add to Bag</span>
+    </button>
+  </div>
+
   <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
   <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
     <div class="cart-header">
       <h3>Your Bag (<span id="cart-drawer-count">0</span>)</h3>
       <button onclick="closeCartDrawer()" aria-label="Close cart">&times;</button>
+    </div>
+    <!-- Free Shipping Progress -->
+    <div class="cart-shipping-bar" style="padding: 0.75rem 1.25rem; background: var(--color-bg); border-bottom: 1px solid var(--color-border-light); font-size: 0.8rem;">
+      <div style="font-weight: 600; color: var(--color-badge-green); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+        <span>Complimentary Tracked US Shipping Unlocked</span>
+      </div>
+      <div style="width: 100%; height: 6px; background: var(--color-border); border-radius: 9999px; overflow: hidden;">
+        <div style="height: 100%; background: var(--color-badge-green); border-radius: 9999px; width: 100%;"></div>
+      </div>
     </div>
     <div class="cart-body" id="cart-items-container">
       <!-- Dynamic cart items -->
@@ -1569,6 +1711,20 @@
         <span>Proceed to Checkout</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 0.85rem;">
+        <div style="font-size: 0.75rem; color: var(--color-text-subtle); display: flex; align-items: center; gap: 8px;">
+          <span>🔒 256-Bit SSL Encrypted</span>
+          <span>&bull;</span>
+          <span>🛡️ 30-Day Money-Back</span>
+        </div>
+        <div class="cart-payment-icons" style="display: flex; gap: 6px; align-items: center; justify-content: center; flex-wrap: wrap;">
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="Visa"><rect width="38" height="24" rx="4" fill="#FFFFFF" stroke="#E8E2DA"/><path d="M15.4 16.5H13.1L14.5 7.5H16.8L15.4 16.5ZM21.9 7.7C21.4 7.5 20.6 7.3 19.6 7.3C17.2 7.3 15.5 8.6 15.5 10.4C15.5 11.8 16.7 12.5 17.6 13C18.6 13.5 18.9 13.8 18.9 14.3C18.9 15 18 15.4 17.2 15.4C16.2 15.4 15.6 15.2 14.8 14.8L14.4 14.6L14 16.7C14.6 17 15.8 17.2 17 17.2C19.6 17.2 21.3 15.9 21.3 14C21.3 12.5 20.3 11.7 19.1 11.1C18.3 10.7 17.8 10.4 17.8 9.9C17.8 9.4 18.4 9 19.3 9C20.1 9 20.7 9.2 21.3 9.4L21.5 9.5L21.9 7.7ZM28.2 7.5H26.4C25.8 7.5 25.4 7.7 25.1 8.3L21.5 16.5H23.9L24.4 15.1H27.3L27.6 16.5H29.7L28.2 7.5ZM25 13.3L26.1 10.1C26.1 10.1 26.4 9.3 26.6 8.7H26.6C26.7 9.2 26.9 10.1 26.9 10.1L27.5 13.3H25ZM11.6 7.5H9.3L7 13.6L6.8 12.4C6.3 10.8 5 9.1 3.5 8.3L5.6 16.5H8.1L11.6 7.5Z" fill="#1A1F71"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="Mastercard"><rect width="38" height="24" rx="4" fill="#FFFFFF" stroke="#E8E2DA"/><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path d="M19 6.8a6.97 6.97 0 0 0-4 5.2 6.97 6.97 0 0 0 4 5.2 6.97 6.97 0 0 0 4-5.2 6.97 6.97 0 0 0-4-5.2Z" fill="#FF5F00"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="American Express"><rect width="38" height="24" rx="4" fill="#0077A6"/><path d="M6 15.5l1.6-3.8L6 8h2.5l1.2 2.8L11 8h2.3l-1.6 3.7 1.7 3.8h-2.4L9.7 12.5 8.4 15.5H6zm8.8 0V8h6.2c1.4 0 2.4.9 2.4 2.1 0 .9-.6 1.7-1.5 2 .9.3 1.4 1 1.4 2 0 1.2-1 2.1-2.4 2.1h-6.1zm2.3-4.4h3.6c.3 0 .6-.2.6-.5 0-.3-.3-.5-.6-.5h-3.6v1zm0 2.8h3.8c.4 0 .7-.2.7-.6 0-.3-.3-.5-.7-.5h-3.8v1.1zm8.7 1.6V8h6.5v1.9h-4.3v1.8h3.9v1.9h-3.9v1.9h4.3v1.9h-6.5z" fill="#FFFFFF"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="Apple Pay"><rect width="38" height="24" rx="4" fill="#141312"/><path d="M14.2 12.3c0-1.4.9-2.1 1-2.1-.7-1-1.8-1.1-2.1-1.1-1-.1-1.8.6-2.2.6-.5 0-1.2-.5-1.9-.5-1 0-1.9.6-2.4 1.5-1.1 1.8-.3 4.6.8 6.1.5.8 1.1 1.6 1.9 1.6.8 0 1.1-.5 2-.5.9 0 1.2.5 2 .5.8 0 1.4-.7 1.9-1.5.6-.9.8-1.7.9-1.8-.1 0-1.9-.7-1.9-2.3zM12.6 8.3c.4-.5.7-1.2.6-1.9-.6 0-1.4.4-1.8.9-.4.4-.7 1.1-.6 1.8.7.1 1.4-.3 1.8-.8z" fill="#FFFFFF"/><path d="M17.4 7h1.4v9.8h-1.4V7zm5.9 7.3h-3.2v-7h1.4v5.8h1.8v1.2zm3.2 2.6c-1.3 0-2.2-.9-2.2-2.1 0-1.3.9-2.1 2.2-2.1.6 0 1.1.2 1.4.5V11c0-.8-.6-1.3-1.4-1.3-.6 0-1.1.3-1.3.7l-1.1-.7c.4-.8 1.3-1.2 2.4-1.2 1.6 0 2.7.9 2.7 2.4v5.8h-1.3v-.8c-.3.6-.9 1-1.7 1zm.2-1.2c.7 0 1.3-.5 1.3-1.2v-.8c-.3-.3-.7-.4-1.2-.4-.8 0-1.3.4-1.3 1.1 0 .7.5 1.3 1.2 1.3zm6.6-4.9l-2 5.9h-1.4l.8-2.3-1.9-4.8h1.5l1.1 3.2 1-3.2h1.4l-.5 1.2z" fill="#FFFFFF"/></svg>
+        <svg width="34" height="22" viewBox="0 0 38 24" fill="none" role="img" aria-label="PayPal"><rect width="38" height="24" rx="4" fill="#FFFFFF" stroke="#E8E2DA"/><path d="M14.5 17.5l1.6-10.2h3.4c2.5 0 4 1.2 3.6 3.6-.3 2.1-1.9 3.3-3.8 3.3h-1.5l-.7 4.3h-2.6l1.2-1h-.2z" fill="#003087"/><path d="M17.5 17.5l1.1-7.2h3.4c1.8 0 3 .7 2.7 2.5-.3 2-1.8 3.2-3.6 3.2h-1.4l-.7 4.5h-2l.5-3z" fill="#0079C1"/></svg>
+      </div>
+      </div>
     </div>
   </aside>
 
@@ -1682,11 +1838,28 @@
             <img src="${i.image}" alt="${i.title}" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid #E8E2DA;">
             <div style="flex: 1;">
               <h5 style="font-size: 0.875rem; font-weight: 700;">${i.title}</h5>
-              <p style="font-size: 0.8125rem; color: #5F5B56;">$${i.price.toFixed(2)} USD &times; ${i.qty}</p>
+              <p style="font-size: 0.8125rem; color: #5F5B56; margin-bottom: 6px;">$${i.price.toFixed(2)} USD</p>
+              <div style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #E8E2DA; border-radius: 9999px; padding: 2px 8px;">
+                <button onclick="changeCartItemQty('${i.handle}', -1)" style="font-size: 0.85rem; line-height: 1; border: none; background: transparent; cursor: pointer; padding: 2px 4px;">&minus;</button>
+                <span style="font-size: 0.8rem; font-weight: 600;">${i.qty}</span>
+                <button onclick="changeCartItemQty('${i.handle}', 1)" style="font-size: 0.85rem; line-height: 1; border: none; background: transparent; cursor: pointer; padding: 2px 4px;">&plus;</button>
+              </div>
             </div>
-            <button onclick="removeCartItem('${i.handle}')" style="font-size: 0.8rem; color: #8A8580; text-decoration: underline;">Remove</button>
+            <button onclick="removeCartItem('${i.handle}')" style="font-size: 0.8rem; color: #8A8580; text-decoration: underline; background: none; border: none; cursor: pointer;">Remove</button>
           </div>
         `).join('');
+      }
+    }
+
+    
+    function changeCartItemQty(handle, delta) {
+      const item = cart.find(i => i.handle === handle);
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) {
+          cart = cart.filter(i => i.handle !== handle);
+        }
+        saveCart();
       }
     }
 
@@ -1704,6 +1877,26 @@
 
     // Init UI
     updateCartUI();
+
+    // Mobile Sticky Purchase Bar Scroll Trigger
+    const mobileStickyPdpBar = document.getElementById('mobile-sticky-pdp-bar');
+    let mobileStickyPdpTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!mobileStickyPdpTicking) {
+        window.requestAnimationFrame(() => {
+          if (mobileStickyPdpBar) {
+            if (window.scrollY > 380) {
+              mobileStickyPdpBar.classList.add('is-visible');
+            } else {
+              mobileStickyPdpBar.classList.remove('is-visible');
+            }
+          }
+          mobileStickyPdpTicking = false;
+        });
+        mobileStickyPdpTicking = true;
+      }
+    });
+
   </script>
 
   <!-- EXTRAORDINARY SCROLL ANIMATION & INTERACTION ENGINE -->
