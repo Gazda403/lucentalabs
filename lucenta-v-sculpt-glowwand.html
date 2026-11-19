@@ -1711,12 +1711,12 @@
           <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.2rem;">
             <div class="pdp-live-urgency">
             <span class="pulse-dot-green"></span>
-            <span>28 people viewing right now &middot; In stock, ships today</span>
+            <span><span class="pdp-live-viewers">24</span> people viewing right now &middot; In stock, ships today</span>
           </div>
             <div class="pdp-stock-badge" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; margin-bottom: 0.75rem; background: #F3EFE9; padding: 0.5rem 0.9rem; border-radius: var(--radius-pill);">
             <span style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #276749;">
               <span style="width: 7px; height: 7px; background: #276749; border-radius: 50%; display: inline-block;"></span>
-              In Stock &bull; Ships within 24 Hours
+              In Stock
             </span>
             <span style="color: #5F5B56; font-size: 0.74rem;">Tracked US Delivery</span>
           </div>
@@ -1970,7 +1970,7 @@
                   <div class="pdp-mini-author">
                     <div class="pdp-mini-avatar">CD</div>
                     <div>
-                      <div class="pdp-mini-name">Camille D. &mdash; Paris, France</div>
+                      <div class="pdp-mini-name">Camille D. &mdash; Scottsdale, AZ</div>
                       <div class="pdp-mini-sub">4 weeks of daily sculpting</div>
                     </div>
                   </div>
@@ -2018,7 +2018,7 @@
                   <div class="pdp-mini-author">
                     <div class="pdp-mini-avatar">CB</div>
                     <div>
-                      <div class="pdp-mini-name">Chloe B. &mdash; London, UK</div>
+                      <div class="pdp-mini-name">Chloe B. &mdash; Dallas, TX</div>
                       <div class="pdp-mini-sub">1 month of use</div>
                     </div>
                   </div>
@@ -2050,7 +2050,7 @@
                   <div class="pdp-mini-author">
                     <div class="pdp-mini-avatar">GM</div>
                     <div>
-                      <div class="pdp-mini-name">Genevieve M. &mdash; Montreal, CA</div>
+                      <div class="pdp-mini-name">Genevieve M. &mdash; Atlanta, GA</div>
                       <div class="pdp-mini-sub">7 weeks of consistent use</div>
                     </div>
                   </div>
@@ -2674,6 +2674,14 @@
       // Initial setup
       updateCard();
       startTimer();
+    })();
+
+    /* ---- Dynamic live viewers count on refresh (randomized between 5 values around 20) ---- */
+    (function initLiveViewers() {
+      var counts = [19, 22, 24, 27, 29];
+      var val = counts[Math.floor(Math.random() * counts.length)];
+      var els = document.querySelectorAll('.pdp-live-viewers');
+      els.forEach(function(el) { el.textContent = val; });
     })();
 
   </script>
