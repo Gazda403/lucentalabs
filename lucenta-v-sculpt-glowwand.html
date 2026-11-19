@@ -420,34 +420,54 @@
       text-underline-offset: 3px;
     }
 
-    /* Price Box */
+    /* Price Box - Sleek, Compact & Responsive */
     .pdp-price-box {
       display: flex;
-      align-items: baseline;
-      gap: 10px;
-      padding: 0.75rem 0;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 0.4rem 0;
       border-top: 1px solid var(--color-border-light);
       border-bottom: 1px solid var(--color-border-light);
     }
     .pdp-price-current {
-      font-size: 2rem;
+      font-size: 1.25rem;
       font-weight: 800;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
     }
     .pdp-price-compare {
-      font-size: 1.15rem;
+      font-size: 0.875rem;
       text-decoration: line-through;
       color: var(--color-text-subtle);
+      white-space: nowrap;
     }
     .pdp-savings-pill {
       background: var(--color-accent-rose-soft);
       color: var(--color-accent-rose);
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 2px 8px;
       border-radius: var(--radius-pill);
       text-transform: uppercase;
       letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    @media (min-width: 768px) {
+      .pdp-price-box {
+        gap: 12px;
+        padding: 0.65rem 0;
+      }
+      .pdp-price-current {
+        font-size: 1.75rem;
+      }
+      .pdp-price-compare {
+        font-size: 1.05rem;
+      }
+      .pdp-savings-pill {
+        font-size: 0.72rem;
+        padding: 3px 9px;
+      }
     }
 
     /* Live viewers urgency */
