@@ -215,28 +215,62 @@
     }
 
     /* Breadcrumbs */
+    /* Mobile-First Header & Gallery Space-Saving Layout */
+    .pdp-mobile-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 1.15rem;
+    }
+    .pdp-mobile-header .pdp-title {
+      font-size: clamp(1.65rem, 5.5vw, 2.15rem);
+      line-height: 1.15;
+      margin: 0;
+    }
+    .pdp-mobile-header .pdp-eyebrow {
+      margin-bottom: 0.1rem;
+    }
+    .pdp-desktop-header {
+      display: none;
+    }
+    @media (min-width: 992px) {
+      .pdp-mobile-header {
+        display: none;
+      }
+      .pdp-desktop-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+    }
+
     .breadcrumbs {
-      padding: 1.25rem 0 0.5rem;
+      padding: 0.75rem 0 0.25rem;
       font-size: 0.8125rem;
       color: var(--color-text-subtle);
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .breadcrumbs a:hover { color: var(--color-text-main); }
-    .breadcrumbs-sep { color: var(--color-border); }
-    .breadcrumbs-current { color: var(--color-text-main); font-weight: 600; }
-
-    /* ==========================================================================
-       PDP HERO SECTION (2-Column Showcase)
-       ========================================================================== */
-    .pdp-hero {
-      padding: 1.5rem 0 4rem;
+    @media (min-width: 768px) {
+      .breadcrumbs {
+        padding: 1.25rem 0 0.5rem;
+      }
     }
+
+    .pdp-hero {
+      padding: 0.75rem 0 3.5rem;
+    }
+    @media (min-width: 768px) {
+      .pdp-hero {
+        padding: 1.5rem 0 4rem;
+      }
+    }
+
     .pdp-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2.5rem;
+      gap: 1.25rem;
       align-items: start;
     }
     @media (min-width: 992px) {
@@ -246,36 +280,43 @@
       }
     }
 
-    /* Left: Media Gallery */
+    /* Left: Media Gallery - Compact Side-by-Side Thumbnails on Mobile & Desktop */
     .pdp-gallery-wrap {
       display: flex;
-      flex-direction: column-reverse;
-      gap: 1rem;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.65rem;
     }
     @media (min-width: 768px) {
       .pdp-gallery-wrap {
-        flex-direction: row;
-        align-items: flex-start;
+        gap: 1rem;
       }
     }
 
     .pdp-thumbs {
       display: flex;
-      gap: 0.65rem;
-      overflow-x: auto;
-      padding-bottom: 4px;
+      flex-direction: column;
+      gap: 0.45rem;
+      width: 56px;
+      flex-shrink: 0;
+      overflow-y: auto;
+      max-height: 100%;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 0;
+    }
+    .pdp-thumbs::-webkit-scrollbar {
+      display: none;
     }
     @media (min-width: 768px) {
       .pdp-thumbs {
-        flex-direction: column;
         width: 84px;
-        flex-shrink: 0;
-        overflow-x: visible;
+        gap: 0.65rem;
       }
     }
     .pdp-thumb {
-      width: 72px;
-      height: 72px;
+      width: 56px;
+      height: 56px;
       border-radius: var(--radius-sm);
       overflow: hidden;
       border: 2px solid transparent;
@@ -285,17 +326,25 @@
       flex-shrink: 0;
     }
     @media (min-width: 768px) {
-      .pdp-thumb { width: 84px; height: 84px; }
+      .pdp-thumb {
+        width: 84px;
+        height: 84px;
+      }
     }
     .pdp-thumb.is-active {
       border-color: var(--color-accent-dark);
       box-shadow: var(--shadow-sm);
     }
-    .pdp-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .pdp-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .pdp-main-media {
       position: relative;
       flex: 1;
+      min-width: 0;
       aspect-ratio: 1 / 1;
       background: #ECE5DF;
       border-radius: var(--radius-lg);
@@ -1228,6 +1277,25 @@
   <!-- PDP Hero: Interactive Gallery & Sticky Purchase Form -->
   <section class="pdp-hero">
     <div class="container">
+      <!-- Mobile-Only Product Header: Eyebrow + Title + Reviews above Gallery -->
+      <div class="pdp-mobile-header">
+        <span class="pdp-eyebrow">Complete Clinical Ritual • GlowWand + Neck Sculptor Bundle</span>
+          <h1 class="pdp-title">Ultimate V-Contour System (Dual-Device Set)</h1>
+
+          <!-- Reviews Row -->
+          <div class="pdp-reviews-row">
+            <div class="pdp-stars">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <span class="pdp-rating-num">5.0</span>
+            <a href="#reviews" class="pdp-reviews-link">(870+ verified sculptors)</a>
+          </div>
+      </div>
+
       <div class="pdp-grid">
 
         <!-- Left: Interactive Gallery -->
@@ -1251,6 +1319,7 @@
 
         <!-- Right: Sticky Purchase Column -->
         <div class="pdp-purchase-col">
+          <div class="pdp-desktop-header">
           <span class="pdp-eyebrow">Complete Clinical Ritual • GlowWand + Neck Sculptor Bundle</span>
           <h1 class="pdp-title">Ultimate V-Contour System (Dual-Device Set)</h1>
 
@@ -1266,8 +1335,7 @@
             <span class="pdp-rating-num">5.0</span>
             <a href="#reviews" class="pdp-reviews-link">(870+ verified sculptors)</a>
           </div>
-
-          <!-- Price Row -->
+        </div><!-- Price Row -->
           <div class="pdp-price-box">
             <span class="pdp-price-current">$59.99 USD</span>
             <span class="pdp-price-compare">$109.99 USD</span>
