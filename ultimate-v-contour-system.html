@@ -325,6 +325,7 @@
     /* Desktop: thumbs become a horizontal row below the main image */
     @media (min-width: 992px) {
       .pdp-thumbs {
+        order: 2;
         flex-direction: row;
         width: 100%;
         max-height: none;
@@ -378,6 +379,11 @@
       overflow: hidden;
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-md);
+    }
+    @media (min-width: 992px) {
+      .pdp-main-media {
+        order: 1;
+      }
     }
     .pdp-main-media img, .pdp-main-media video {
       width: 100%;
