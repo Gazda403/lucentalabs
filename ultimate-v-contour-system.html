@@ -136,6 +136,22 @@
       text-align: center;
     }
     .announcement-bar span { opacity: 0.95; }
+    .ann-mobile-text { display: none; }
+    @media (max-width: 768px) {
+      .announcement-bar {
+        padding: 0.28rem 0.5rem;
+        font-size: 0.68rem;
+        line-height: 1.25;
+      }
+      .ann-desktop-text { display: none; }
+      .ann-mobile-text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+    }
 
     /* Header */
     .header {
@@ -162,6 +178,25 @@
       .header__nav { display: none; }
       .header__inner { height: 72px; }
     }
+    @media (max-width: 768px) {
+      .header__inner { height: 44px; }
+      .header__logo { height: 30px !important; }
+      .header__cart-btn {
+        width: 32px;
+        height: 32px;
+      }
+      .header__cart-btn svg {
+        width: 15px;
+        height: 15px;
+      }
+      .header__cart-count {
+        width: 15px;
+        height: 15px;
+        font-size: 0.6rem;
+        top: -2px;
+        right: -2px;
+      }
+    }
     .header__link {
       font-size: 0.875rem;
       font-weight: 500;
@@ -182,7 +217,7 @@
       display: block;
     }
     @media (max-width: 600px) {
-      .header__logo { height: 50px; }
+      .header__logo { height: 30px; }
     }
 
     .header__cart-btn {
@@ -219,16 +254,98 @@
     .pdp-mobile-header {
       display: flex;
       flex-direction: column;
-      gap: 0.35rem;
-      margin-bottom: 1.15rem;
+      gap: 0.15rem;
+      margin-bottom: 0.35rem;
     }
     .pdp-mobile-header .pdp-title {
-      font-size: clamp(1.65rem, 5.5vw, 2.15rem);
-      line-height: 1.15;
+      font-size: clamp(1.2rem, 4.6vw, 1.4rem);
+      line-height: 1.12;
       margin: 0;
     }
     .pdp-mobile-header .pdp-eyebrow {
-      margin-bottom: 0.1rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0;
+    }
+    .pdp-mobile-header .pdp-reviews-row {
+      font-size: 0.76rem;
+      gap: 6px;
+    }
+    .pdp-mobile-header .pdp-stars svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    /* Mobile above-the-fold compact fit */
+    @media (max-width: 767px) {
+      .breadcrumbs {
+        padding: 0.15rem 0 0.05rem;
+        font-size: 0.68rem;
+        gap: 5px;
+      }
+      .pdp-hero {
+        padding: 0.15rem 0 2rem;
+      }
+      .pdp-grid {
+        gap: 0.35rem;
+      }
+      .pdp-gallery-wrap {
+        gap: 0.45rem;
+      }
+      .pdp-thumbs {
+        width: 44px;
+        gap: 0.3rem;
+      }
+      .pdp-thumb {
+        width: 44px;
+        height: 44px;
+      }
+      .pdp-main-media {
+        max-height: 200px;
+        max-width: 200px;
+      }
+      .pdp-purchase-col {
+        gap: 0.35rem;
+      }
+      .pdp-price-box {
+        padding: 0.25rem 0;
+        gap: 6px;
+      }
+      .pdp-price-current {
+        font-size: 1.25rem;
+      }
+      .pdp-live-urgency {
+        font-size: 0.74rem;
+        gap: 6px;
+      }
+      .pdp-stock-badge {
+        margin-bottom: 0.35rem !important;
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.74rem !important;
+      }
+      .pdp-actions-wrap {
+        gap: 0.35rem;
+        padding-top: 0.15rem;
+      }
+      .pdp-qty-picker {
+        height: 42px;
+      }
+      .pdp-qty-btn {
+        width: 30px;
+        height: 30px;
+      }
+      .pdp-qty-input {
+        width: 32px;
+        font-size: 0.85rem;
+      }
+      .btn-add-bag {
+        height: 42px;
+        font-size: 0.875rem;
+      }
+      .btn-express-checkout {
+        height: 42px;
+        font-size: 0.85rem;
+      }
     }
     .pdp-desktop-header {
       display: none;
@@ -1494,7 +1611,8 @@
 
   <!-- Top Announcement Bar -->
   <div class="announcement-bar">
-    <span><strong style="color: #F7EFEA; letter-spacing: 0.04em;">Black Friday Event:</strong> Up to 45% Off Sitewide &middot; Complimentary Tracked US Delivery &middot; 30-Day Risk-Free Trial</span>
+    <span class="ann-desktop-text"><strong style="color: #F7EFEA; letter-spacing: 0.04em;">Black Friday Event:</strong> Up to 45% Off Sitewide &middot; Complimentary Tracked US Delivery &middot; 30-Day Risk-Free Trial</span>
+    <span class="ann-mobile-text"><strong style="color: #F7EFEA;">Black Friday:</strong> Up to 45% Off &middot; Free US Delivery &middot; 30-Day Trial</span>
   </div>
 
   <!-- Header -->
